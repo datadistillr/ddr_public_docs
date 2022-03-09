@@ -4,24 +4,24 @@ description: This section explains now to connect your data sources to DataDisti
 
 # Connecting Your Data to DataDistillr
 
-Connecting your data sources to DataDistillr is as easy as filling out a form.  This section will guide you through the process of connecting your data source to DataDistillr.  Once you have connected your data source to DataDistillr, it is important to remember to connect it to your project(s) otherwise you will not be able to query your data!
+Connecting your data sources to DataDistillr can be as easy as filling out a form. Once you have connected your data source to DataDistillr, you must connect it to your project(s) in order to query your data.
 
 ### __Before You Begin__
 
-Before you begin, you will need to know a few things about the data source you are trying to connect to DataDistillr:
+Before you begin, you will need to know a few things about the data source you are trying to connect to DataDistillr.
 
-* What kind of data source are you connecting?
-* Usually you will need connection information such as IP address, or hostname and port.
-* Access credentials.
-* A unique name for your data source.  This is how you will access the data in queries.
+* the type of data source are you connecting to
+* connection information such as IP address or hostname, and port
+* any necessary access credentials
+* a unique name to refer to this data source in queries
 
 #### __Can I use LDAP or Active Directory with DataDistillr?__
 
-DataDistillr does support integrations with single sign on (SSO) systems, as well as enterprise identification and authentication systems such as LDAP and active directory.  These require an enterprise account, so please contact enterprise sales for more information.&#x20;
+DataDistillr supports integrations with single sign on (SSO) systems, or enterprise identification and authentication systems such as LDAP and active directory, if you have an enterprise account. Please contact enterprise sales for more information.&#x20;
 
 ## __Adding Your Data Source__
 
-At the top of the screen, click on the `Data Sources` link.  This will take you to the Data Sources screen where you can view the data sources you already have connected.&#x20;
+At the top of the screen, click on the `Data Sources` link. This will take you to the Data Sources screen where you can view the data sources you already have connected.&#x20;
 
 ![The Data Sources Button](</img/Screen Shot 2021-11-14 at 10.59.12 AM.png>)
 
@@ -44,6 +44,6 @@ The specific instructions for connecting to data sources can be found in the lin
 
 ### __Linking Your Data With A Project__
 
-The last step in connecting your data to DataDistillr is linking your data with a project.  The project is intended to filter down your data from all available data to just those data sources you are working with. &#x20;
+The last step in connecting your data to DataDistillr is linking your data with a project. The project is intended to filter down your data from all available data to just those data sources you are working with. &#x20;
 
 Here is how to [link data to your project](../linking-data-to-your-project.md).&#x20;
