@@ -21,6 +21,7 @@ nav:
         - Connect to APIs: connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/README.md
         - Connection Basics: connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/connection-basics.md
         - Passing Parameters: connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/passing-parameters.md
+        - JIRA: connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/jira.md
   
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
   - ❓ Getting Help: getting-help.md
@@ -57,18 +58,17 @@ theme:
     - navigation.indexes
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
   - meta
   - toc:
       permalink: "#"
-  - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
-  - md_in_html
-  - pymdownx.details
 
 extra: 
   social:
