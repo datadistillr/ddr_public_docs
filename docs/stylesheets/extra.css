@@ -26,4 +26,13 @@
    font-weight: 600;
    margin-bottom: 1em;
  }
-  
+
+  [data-md-color-primary="black"] .md-header {
+      background-color: #1a202c; /* gray-900 */
+  }
+  .md-footer-meta {
+      background-color: #2d3748; /* gray-800 */
+  }
+  .md-footer {
+      background-color: #1a202c; /* gray-900 */
+  }
