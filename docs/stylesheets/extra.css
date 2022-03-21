@@ -26,7 +26,7 @@
    font-weight: 600;
    margin-bottom: 1em;
  }
-
+  [data-md-color-primary="black"] .md-tabs,
   [data-md-color-primary="black"] .md-header {
       background-color: #1a202c; /* gray-900 */
   }
