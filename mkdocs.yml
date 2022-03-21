@@ -1,4 +1,5 @@
 site_name: DataDistillr
+site_url: https://docs.datadistillr.com
 
 nav:
   - Getting Started: 
@@ -22,7 +23,7 @@ nav:
       - Passing Parameters: connecting-data/connecting-to-apis-and-external-data/passing-parameters.md
 
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
-  - ❓ Getting Help: getting-help.md
+  - Getting Help: getting-help.md
 
 extra_css:
   - stylesheets/extra.css
@@ -87,5 +88,5 @@ plugins:
 
 
 
-copyright: Copyright &copy; 2021 DataDistillr
+copyright: Copyright &copy; 2022 DataDistillr
 
