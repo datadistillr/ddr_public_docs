@@ -37,12 +37,12 @@ To generate your API Key you can access your [account](https://airtable.com/acco
 
 | Endpoint | URL Params | Optional | Description |
 | -------- | ---------- | -------- | ----------  |
-| tables   | TableName  | priority |Returns the table and it's cells|
-|          |            | sources  |
-|          |            | tags     |
-|          |             | unaggregated | 
-|          |             | exclude_aggregate |
-|          |             | page |
+| tables   | TableName  | priority | Returns the table and it's cells|
+|          |            | sources  |             |
+|          |            | tags     |             |
+|          |            | unaggregated |         |
+|          |            | exclude_aggregate |    |
+|          |            | page |                 |
 
 
 
