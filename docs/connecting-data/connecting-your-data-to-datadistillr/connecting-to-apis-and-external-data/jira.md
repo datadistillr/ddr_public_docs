@@ -1,7 +1,7 @@
 # Connecting to JIRA
 
 ## JIRA Data Source Form
-To set up a data sourcr connection for JIRA, you will need to have:
+To set up a data source connection for JIRA, you will need to have:
 
 - A unique name for your data source connection to be used in queries
 - The domain of your Atlassian account
