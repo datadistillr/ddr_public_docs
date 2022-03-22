@@ -38,17 +38,17 @@ To generate your API Key you can access your [account](https://airtable.com/acco
 | Endpoint | URL Params | Optional | Description |
 | -------- | ---------- | -------- | ----------  |
 | tables   | TableName  | priority | Returns the table and it's cells|
-|          |            | sources  |             |
-|          |            | tags     |             |
-|          |            | unaggregated |         |
-|          |            | exclude_aggregate |    |
-|          |            | page |                 |
+|          |            |  sources               |
+|          |            |  tags                   |
+|          |            |  unaggregated           |
+|          |            |  exclude_aggregate      |
+|          |            |  page  |                 |
 
 
 
 ### Query Page Sidebar
 
-![JIRA Endpoints][image-2]
+![Airtable Endpoints][image-2]
 
 ## Sample Queries
 
@@ -99,9 +99,8 @@ LIMIT 100
 ```
 
 
-[image-6]: ../../../img/api/airtable-generate-api.png
-[image-5]: ../../../img/api/jira-manage-api-tokens.png
+[image-6]: ../../../img/api/airtable/airtable-generate-api.png
 [image-4]: ../../../img/api/jira-find-email.png
-[image-3]: ../../../img/api/airtable-base.png
-[image-1]: ../../../img/api/airtable-form.png
-[image-2]: ../../../img/api/jira-query-page-sidebar-dark.png
+[image-3]: ../../../img/api/airtable/airtable-base.png
+[image-1]: ../../../img/api/airtable/airtable-form.png
+[image-2]: ../../../img/api/airtable-endpoint.png
