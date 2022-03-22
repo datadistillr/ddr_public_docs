@@ -2,19 +2,21 @@
 description: How to Connect DataDistillr to a Simple API
 ---
 
-# Connection Basics
+# Custom APIs
 
-Let's start with connecting the most simple API possible.  There is a fantasy football API available here: [https://www.fantasyfootballdatapros.com/api/players/2019/1](https://www.fantasyfootballdatapros.com/api/players/2019/1){target="_blank"}.
+Let's start with connecting a very simple API.  There is a fantasy football API available here: [https://www.fantasyfootballdatapros.com/api/players/2019/1](https://www.fantasyfootballdatapros.com/api/players/2019/1){target="_blank"}.
 
-This API returns fantasy football players for a given year.  The data is returned in JSON format and is completely static.  Let's look at how you could connect this API to DataDistillr.  First, follow the [earlier instructions about connecting to a data source](../../).  When you get to the window to choose the data source type, select API as shown below.&#x20;
+This API returns fantasy football players for a given year.  The data is returned in JSON format and is completely static.&#x20;  
+
+### __Connecting to an API__
+
+Let's look at how you could connect this API to DataDistillr.  First, follow the [earlier instructions about connecting to a data source](../../).  When you get to the window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices](../../img/Screen Shot 2021-11-19 at 1.46.04 PM.png)
 
-### __Adding a Custom API__
-
 DataDistillr comes prepopulated with API configurations for popular APIs such as ServiceNow, SalesForce, Google Analytics and others.  In our case, we will need to select _Custom API_, as shown below.&#x20;
 
-![Select Custom API](<../../../img/Screen Shot 2021-11-19 at 1.48.27 PM.png>)
+![Select Custom API](<../../../img/CustomAPI_v0.7.2.png>)
 
 ### __Name Your Connection__
 
@@ -48,11 +50,9 @@ Once you've done that, save your work and you are ready to query!
 
 ### __Querying Your APIs__
 
-Now that you've added your data, you can query your data.  In the query veiw, you will see your endpoint listed, but if you want to type in a query, or use this endpoint in a pre-existing query, you can run a query like the one below:
+Now that you've added your data, you can query your data.  In the query view, you will see your endpoint listed, but if you want to type in a query, or use this endpoint in a pre-existing query, you can run a query like the one below:&#x20;
 
 ```sql
 SELECT * 
 FROM fantasyfootball.players
 ```
-
-Happy Distilling!

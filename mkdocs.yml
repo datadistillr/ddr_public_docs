@@ -2,7 +2,7 @@ site_name: DataDistillr
 site_url: https://docs.datadistillr.com
 
 nav:
-  - Getting Started: 
+  - Getting Started:
     - Getting Started: getting-started/README.md
     - Create Your Account: getting-started/create-your-account.md
     - Create Your First Project: getting-started/create-your-first-project.md
@@ -19,9 +19,30 @@ nav:
     - Connecting To Remote Storage: connecting-data/connecting-to-remote-storage.md
     - Connect To APIs And External Data:
       - Connect to APIs: connecting-data/connecting-to-apis-and-external-data/README.md
-      - Connection Basics: connecting-data/connecting-to-apis-and-external-data/connection-basics.md
+      - Custom APIs: connecting-data/connecting-to-apis-and-external-data/custom-apis.md
       - Passing Parameters: connecting-data/connecting-to-apis-and-external-data/passing-parameters.md
+      - Affinity: connecting-data/connecting-to-apis-and-external-data/affinity-api.md
+      - AirTable: connecting-data/connecting-to-apis-and-external-data/airtable-api.md
+      - Asana: connecting-data/connecting-to-apis-and-external-data/asana-api.md
+      - ClickUp: connecting-data/connecting-to-apis-and-external-data/clickup-api.md
+      - Crunchbase: connecting-data/connecting-to-apis-and-external-data/crunchbase-api.md
+      - Datadog: connecting-data/connecting-to-apis-and-external-data/datadog-api.md
+      - DonorSearch: connecting-data/connecting-to-apis-and-external-data/donorsearch-api.md
+      - Fiscal Data: connecting-data/connecting-to-apis-and-external-data/fiscaldata-api.md
+      - GitHub: connecting-data/connecting-to-apis-and-external-data/github-api.md
+      - Harmonic: connecting-data/connecting-to-apis-and-external-data/harmonic-api.md
       - JIRA: connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/jira.md
+      - Monday: connecting-data/connecting-to-apis-and-external-data/monday-api.md
+      - People Data Labs: connecting-data/connecting-to-apis-and-external-data/peopledatalabs-api.md
+      - Placer: connecting-data/connecting-to-apis-and-external-data/placer-api.md
+      - Quickbooks: connecting-data/connecting-to-apis-and-external-data/quickbooks-api.md
+      - Salesforce: connecting-data/connecting-to-apis-and-external-data/salesforce-api.md
+      - Servicenow: connecting-data/connecting-to-apis-and-external-data/servicenow-api.md
+      - Stripe: connecting-data/connecting-to-apis-and-external-data/stripe-api.md
+      - Twilio: connecting-data/connecting-to-apis-and-external-data/twilio-api.md
+      - UPC Database: connecting-data/connecting-to-apis-and-external-data/upc-database-api.md
+      - Veriphone: connecting-data/connecting-to-apis-and-external-data/veriphone-api.md
+
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
   - Getting Help: getting-help.md
 
@@ -32,7 +53,7 @@ theme:
   palette:
     - primary: black
     - accent: light blue
-  name: material 
+  name: material
   custom_dir: overrides
   font:
     text: Inter
@@ -69,7 +90,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-extra: 
+extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/datadistillr/

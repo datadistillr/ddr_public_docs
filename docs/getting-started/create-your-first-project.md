@@ -12,7 +12,7 @@ But first, you'll have to create a project. To create your first project, click 
 
 Once you've done that, the _Create Project_ screens will walk you through creating your first project.
 
-### __Step 1: Name Your Project__
+### __Name Your Project__
 
 After creating your project you will be taken to the screen below to name your project. Enter the project name and an optional description. Optionally, you can pick an icon and icon color.
 
