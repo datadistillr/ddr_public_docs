@@ -37,7 +37,7 @@ To generate your API Key you can access your [account](https://airtable.com/acco
 
 | Endpoint | URL Params | Optional | Description |
 | -------- | ---------- | -------- | ----------  |
-| <br><br>tables   | <br><br>TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and it's cells 
+| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and it's cells 
                  
 
 
