@@ -6,7 +6,7 @@ description: Using File Upload Directories in DataDistillr
 
 If you have files on your desktop, or you want to upload individual files to DataDistillr, you can create a _File Upload Directory_ in DataDistillr.  You can create as many upload directories as you like and associate as many upload directories as you want with projects.
 
-![Add an Upload Directory](<../../img/Screen Shot 2021-11-15 at 10.38.58 AM.png>)
+![Add an Upload Directory](<../img/Screen Shot 2021-11-15 at 10.38.58 AM.png>)
 
 Next, fill out the name of your data source. Don't forget to select the icon color and icon! Once you're done with this step, click _Save_.
 
@@ -23,6 +23,6 @@ Once you have created an upload file data source is that is linked to a project,
 
 
 <figure markdown>
-  ![File Uploader](../../img/Screen Shot 2021-11-15 at 11.36.44 AM.png){ justify-content="center" }
+  ![File Uploader](../img/Screen Shot 2021-11-15 at 11.36.44 AM.png){ justify-content="center" }
   <figcaption>File Uploader</figcaption>
 </figure>

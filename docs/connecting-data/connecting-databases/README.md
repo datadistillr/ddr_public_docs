@@ -28,10 +28,10 @@ The connection procedure for relational databases is essentially the same for mo
 
 After clicking on the `Add Data Source` button and selecting `Database`  you will see a selection of databases as shown below.  Simply select the database you are connecting to DataDistillr.&#x20;
 
-![Add a new data source to DataDistillr](<../../../img/Screen Shot 2021-11-14 at 7.50.19 PM.png>)
+![Add a new data source to DataDistillr](<../../img/Screen Shot 2021-11-14 at 7.50.19 PM.png>)
 
 After selecting a database type, you will see the form below.  For most relational databases, the form looks basically the same.  The example below is for a MySQL database.
 
-![MySQL Connection Form](<../../../img/Screen Shot 2021-11-14 at 7.59.39 PM.png>)
+![MySQL Connection Form](<../../img/Screen Shot 2021-11-14 at 7.59.39 PM.png>)
 
 Once you submit the form, your relational database is now connected to DataDistillr, but there is still one final step: [linking your data source to your project](../../linking-data-to-your-project.md).

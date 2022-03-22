@@ -18,7 +18,7 @@ If we wanted to see the Apache Foundation's projects, we could thus, create a UR
 
 To do that, simply follow the instructions on the previous page to set up a connection to GitHub, add an endpoint called `projects` and use the URL: `https://api.github.com/orgs/{org}/projects` in Endpoint URL field in your configuration, as shown below.
 
-![Github Project Example Configuration](<../../../img/Screen Shot 2021-12-20 at 10.35.38 PM.png>)
+![Github Project Example Configuration](<../../img/Screen Shot 2021-12-20 at 10.35.38 PM.png>)
 
 Once you have done this, you could execute the following query to retrieve the Apache Foundation's projects:
 
@@ -49,7 +49,7 @@ You can see that the parameters `lat`, `lng` and `date`.  When configuring your 
 
 For our sunrise example, you would add the parameters as shown in the screen shot below:
 
-![Adding Parameters to API Configuration](<../../../img/Screen Shot 2021-12-20 at 11.41.11 PM.png>)
+![Adding Parameters to API Configuration](<../../img/Screen Shot 2021-12-20 at 11.41.11 PM.png>)
 
 &#x20;Once you've added these parameters, you can pass these parameters in query as shown below:
 

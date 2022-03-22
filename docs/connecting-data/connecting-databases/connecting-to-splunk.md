@@ -21,13 +21,13 @@ Splunk’s primary use case is analyzing event logs with a timestamp. As such, d
 
 The Splunk data source form provides fields for setting the default 'Earliest Time' and 'Latest Time' values which determine the time range of data to return. These fields accept either a relative time (example: "-24h" for 24 hours ago) or an absolute time as a Unix timestamp (example: "1539907200" is Friday, October 19, 2018 00:00:00 GMT). As an example, setting Earliest Time to "-60m" and Latest Time to "now" will return data from the last hour. For a relative time, you can use any of the relative time formats specified in [the Splunk documentation](https://docs.splunk.com/Documentation/Splunk/8.0.3/SearchReference/SearchTimeModifiers){target="_blank"}.
 
-![Splunk Data Source Form](<../../../img/SplunkForm.png>)
+![Splunk Data Source Form](<../../img/SplunkForm.png>)
 
 #### Modifying Time Boundaries in the Query
 
 You can modify the time boundaries at query time via special filters in the `WHERE` clause. There are two special fields, `earliestTime` and `latestTime`, that can be set to bound the query. If they are not set, the query will be bounded to the defaults set in the data source configuration.
 
 <figure markdown>
-  ![Modifying Time Boundaries within the Query Window](<../../../img/SplunkModifyInQuery.png>){justify-content="center"}    
+  ![Modifying Time Boundaries within the Query Window](<../../img/SplunkModifyInQuery.png>){justify-content="center"}    
 </figure>
 

@@ -8,7 +8,7 @@ Let's start with connecting the most simple API possible.  There is a fantasy fo
 
 This API returns fantasy football players for a given year.  The data is returned in JSON format and is completely static.  Let's look at how you could connect this API to DataDistillr.  First, follow the [earlier instructions about connecting to a data source](../../).  When you get to the window to choose the data source type, select API as shown below.&#x20;
 
-![Select API from the available choices](../../../img/Screen Shot 2021-11-19 at 1.46.04 PM.png)
+![Select API from the available choices](../../img/Screen Shot 2021-11-19 at 1.46.04 PM.png)
 
 ### __Adding a Custom API__
 
@@ -36,13 +36,13 @@ FROM github.orgs
 
 For our example here, give your API a name, and then click on the Add button by the endpoints, as shown below.
 
-![Add your API](<../../../img/Screen Shot 2021-11-19 at 1.54.13 PM.png>)
+![Add your API](<../../img/Screen Shot 2021-11-19 at 1.54.13 PM.png>)
 
 ### __Adding an Endpoint__
 
 Now you are ready to add an endpoint to your API connection.  For our simple example, the only fields you will need to fill out are the endpoint name, the URL, the request method (`GET`) and the data format, as shown in the screenshot below.&#x20;
 
-![Adding an Endpoint](<../../../img/Screen Shot 2021-11-19 at 2.43.02 PM.png>)
+![Adding an Endpoint](<../../img/Screen Shot 2021-11-19 at 2.43.02 PM.png>)
 
 Once you've done that, save your work and you are ready to query!
 

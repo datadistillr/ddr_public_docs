@@ -1,0 +1,9 @@
+# Jetbrains editors (PHPStorm, etc)
+.idea/
+*.iml
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+docs/.DS_Store
