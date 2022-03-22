@@ -31,6 +31,7 @@ nav:
       - Fiscal Data: connecting-data/connecting-to-apis-and-external-data/fiscaldata-api.md
       - GitHub: connecting-data/connecting-to-apis-and-external-data/github-api.md
       - Harmonic: connecting-data/connecting-to-apis-and-external-data/harmonic-api.md
+      - JIRA: connecting-data/connecting-to-apis-and-external-data/jira.md
       - Monday: connecting-data/connecting-to-apis-and-external-data/monday-api.md
       - People Data Labs: connecting-data/connecting-to-apis-and-external-data/peopledatalabs-api.md
       - Placer: connecting-data/connecting-to-apis-and-external-data/placer-api.md
@@ -77,18 +78,17 @@ theme:
     - navigation.indexes
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
   - meta
   - toc:
       permalink: "#"
-  - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
-  - md_in_html
-  - pymdownx.details
 
 extra:
   social:
