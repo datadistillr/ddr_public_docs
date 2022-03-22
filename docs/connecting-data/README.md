@@ -46,4 +46,4 @@ The specific instructions for connecting to data sources can be found in the lin
 
 The last step in connecting your data to DataDistillr is linking your data with a project. The project is intended to filter down your data from all available data to just those data sources you are working with. &#x20;
 
-Here is how to [link data to your project](../linking-data-to-your-project.md).&#x20;
+Here is how to [link data to your project](linking-data-to-your-project.md).&#x20;
