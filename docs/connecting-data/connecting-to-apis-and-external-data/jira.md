@@ -97,9 +97,9 @@ LIMIT 100
 ```
 
 
-[image-6]: ../../../img/api/jira-create-new-api-token.png
-[image-5]: ../../../img/api/jira-manage-api-tokens.png
-[image-4]: ../../../img/api/jira-find-email.png
-[image-3]: ../../../img/api/jira-atlassian-organization.png
-[image-1]: ../../../img/api/jira-form-dark.png
-[image-2]: ../../../img/api/jira-query-page-sidebar-dark.png
+[image-6]: ../../img/api/jira/jira-create-new-api-token.png
+[image-5]: ../../img/api/jira/jira-manage-api-tokens.png
+[image-4]: ../../img/api/jira/jira-find-email.png
+[image-3]: ../../img/api/jira/jira-atlassian-organization.png
+[image-1]: ../../img/api/jira/jira-form-dark.png
+[image-2]: ../../img/api/jira/jira-query-page-sidebar-dark.png
