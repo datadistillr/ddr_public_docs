@@ -29,7 +29,7 @@ You can access your Base at [https://airtable.com/](https://airtable.com/).
 
 ![Finding your base][image-2] 
 
-You can find the Base ID in Hoghlighted section of the Base URL
+You can find the Base ID in Highlighted section of the Base URL
 
 
 `https://airtable.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
