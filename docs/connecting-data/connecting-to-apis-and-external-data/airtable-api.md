@@ -77,4 +77,4 @@ WHERE tableName='Form Responses 1'
 [image-1]: ../../img/api/airtable/airtable-form.png
 [image-2]: ../../img/api/airtable/airtable-base.png
 [image-3]: ../../img/api/airtable/airtable-endpoint.png
-[image-4]: ../../img/api/airtable/airtable-generate-api.png
+[image-4]: ../../../img/api/airtable/airtable-generate-api.png
