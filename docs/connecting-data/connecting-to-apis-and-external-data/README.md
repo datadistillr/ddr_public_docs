@@ -45,7 +45,7 @@ DataDistillr currently supports:
 * [Fiscal Data](fiscaldata-api.md)
 * [GitHub](github-api.md)
 * [Harmonic](harmonic-api.md)
-* JIRA
+* [JIRA](jira.md)
 * [Monday](monday-api.md)
 * [People Data Labs](peopledatalabs-api.md)
 * [Placer](placer-api.md)
