@@ -18,10 +18,10 @@ There are four plan tiers:
 :	$14.50 per user (average) $145 a month
 
 **Enterprise**
-:	Billed annually
+:	Billed annually. Contact their [sales team](https://www.atlassian.com/enterprise/contact?formType=pricing-quotes) to get a quote about a product or service.
 
 ### Rate Limits
-The JIRA API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status 429 and a message telling you that you've been limited.
+The JIRA API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
 
 Also as a means of preventing room "spam", API methods that involve sending messages to rooms or individual people are limited to 30 requests per minute.
 
@@ -72,16 +72,9 @@ Acceptable characters include:
 - underscores
 
 ### Domain
-An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company. 
+An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-You can access your Organization at [https://admin.atlassian.com/](https://admin.atlassian.com/) to find your domain.
-
-<figure markdown>
-  ![Finding your domain][image-3]{ width="100%" }
-  <figcaption>Domain</figcaption>
-</figure>
-
-!!! example "Steps to get your domain"
+!!! example "Steps for getting your domain"
 
     === "1. Home page"
 
@@ -104,7 +97,7 @@ You can access your Organization at [https://admin.atlassian.com/](https://admin
 ### User
 This is the email that is tied to your Atlassian account.
 
-!!! example "Steps to get your user"
+!!! example "Steps for getting your email"
 
     === "1. Home page"
 
@@ -126,9 +119,9 @@ This is the email that is tied to your Atlassian account.
 
 
 ### API Key
-To generate your API key, navigate to our Account where you will have the option to generate an API key as highlighted below. Copy this API key and enter it in the JIRA form under 'API key'.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API key'.
 
-!!! example "Steps to get API key"
+!!! example "Steps for getting the API key"
 
     === "1. Home page"
 
@@ -186,13 +179,12 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 
 ## Sample Queries
+Suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name like so: `#!sql FROM myjiraapi.<ENDPOINT>`.
+
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-
-Suppose that my JIRA API data source was called `myjiraapi`
-
-### Get Board Endpoint
-Suppose that I get a board with the ID of `1`. This will be the result.
+### Get Board 
+Suppose that I get a board with the ID of `1`. This board will only be returned if the user has permission to view it.
 
 ```sql title="Get Board endpoint"
 SELECT *
@@ -201,8 +193,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get All Boards Endpoint
-Suppose that I get a board with the ID of `1`. This will be the result. `SELECT` `#!sql SELECT`
+### Get All Boards 
+This only includes boards that the user has permission to view.
 
 ```sql title="Get All Boards endpoint"
 SELECT *
@@ -210,8 +202,8 @@ FROM `myjiraapi`.`/board`
 LIMIT 100
 ```
 
-### Get Epics Endpoint
-Suppose that I get a board with the ID of `1`. This will be the result. `#!sql SELECT * FROM table`
+### Get Epics 
+Suppose that I get a board with the ID of `1`. This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
 
 ```sql title="Get Epics endpoint" linenums="1" hl_lines="2"
 SELECT *
@@ -220,8 +212,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get Issues Endpoint
-Suppose that I get a board with the ID of `1`. This will be the result.
+### Get Issues 
+This only includes issues that the user has permission to view. An issue belongs to the board if its status is mapped to the board's column. Epic issues do not belong to the scrum boards. Note, if the user does not have permission to view the board, no issues will be returned at all. Issues returned from this resource include Agile fields, like sprint, closedSprints, flagged, and epic. By default, the returned issues are ordered by rank.
 
 ```sql title="Get Issues endpoint"
 SELECT *
@@ -230,130 +222,16 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-Please see the [Project license](#costs) for further details
+### Get Projects 
+Suppose that I get a board with the ID of `1`. If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
 
-### Get Projects Endpoint
-Suppose that I get a board with the ID of `1`. This will be the result.
-
-```sql title="Get Projects endpoint
+```sql title="Get Projects endpoint"
 SELECT *
 FROM `myjiraapi`.`/board/:boardId/project`
 WHERE `boardId`='1'
 LIMIT 100
 ```
 
-```py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
-```
-!!! note "Admon title"
-This is the body of the admonition
-
-??? question "Help me please"
-This is the body of my question
-
-
-=== "C"
-
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-
-
-
-
-!!! example
-
-    === "Unordered List"
-
-        ``` markdown title="List, unordered"
-        * Sed sagittis eleifend rutrum
-        * Donec vitae suscipit est
-        * Nulla tempor lobortis orci
-        ```
-
-    === "Ordered List"
-
-        ``` markdown title="List, ordered"
-        1. Sed sagittis eleifend rutrum
-        2. Donec vitae suscipit est
-        3. Nulla tempor lobortis orci
-        ```
-
-
-=== "C"
-
-    ``` c
-    #include <stdio.h>
-
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
-
-=== "C++"
-
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-- A unique name for your data source connection to be used in queries.
-- The Base ID (Called 'Project Path' on the form).
-- The API Key generated through your Airtable account.
-
-**Name**
-:	A unique name for your data source connection to be used in queries
-
-**Domain**
-:	The domain of you Atlassian account.
-
-**User**
-:	The email associated with your Atlassian account.
-
-**API key**
-:	The API token generated through your Atlassian account.
-
-!!! Name
-
-    The email associated with your Atlassian account.
-
-!!! Domain
-
-    The API token generated through your Atlassian account
-
-!!! User
-
-    The email associated with your Atlassian account.
-
-!!! API key
-
-    The API token generated through your Atlassian account
 
 [image-1]: ../../img/api/jira/jira-form-dark.png
 [image-2]: ../../img/api/jira/jira-query-page-sidebar-dark.png
