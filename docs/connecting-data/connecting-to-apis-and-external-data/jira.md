@@ -39,7 +39,6 @@ To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistil
 
 <figure markdown>
   ![Data Source Wizard][image-7]{ width="100%" }
-  <figcaption>Data Source Wizard</figcaption>
 </figure>
 
 
@@ -48,7 +47,6 @@ On the API screen, select JIRA from the list of API forms.
 
 <figure markdown>
   ![List of APIs][image-8]{ width="100%" }
-  <figcaption>List of APIs</figcaption>
 </figure>
 
 
@@ -59,7 +57,6 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 
 <figure markdown>
   ![JIRA Form][image-1]{ width="100%" }
-  <figcaption>JIRA Form</figcaption>
 </figure>
 
 
@@ -172,7 +169,6 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 <figure markdown>
   ![JIRA Endpoints][image-2]{ width="100%" }
-  <figcaption>Query Page Sidebar</figcaption>
 </figure>
 
 
