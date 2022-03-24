@@ -45,25 +45,57 @@ Acceptable characters include:
 * underscores
 
 ### API Key
-Once you have created a workspace in your Asana account, you can get the API key that you'll need to fill in the form. 
-Click on your account icon at the top right of your screen. Then choose `My Settings`.
-![Click on Assana Account Icon] [image-5]
+Once you have created a workspace in your Asana account, you can generate the API key that you'll need in order to fill in the form.
+
+Click on your account icon at the top right of your screen. Choose 'My Settings'.
+
+![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
+
+In your 'My Settings' window, click on the 'Apps' tab.
+
+![Click on the Apps Tab in the 'My Settings' window.] [image-6]
+
+Click on 'Manage Developer Apps' which opens a new tab in your browser.
+
+![Click on 'Manage Developer Apps'.] [image-7]
+
+In the 'Personal access tokens' section, choose 'Create new token'.
+
+![Click on 'Create new token'.] [image-8]
+
+Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click 'Create token'.
+
+![Enter name and check the checkbox. Click 'Create token'.] [image-9]
+
+Click 'Copy' to copy the token to your clipboard.
+
+![Click 'Copy' to copy the token.] [image-10]
+
+Paste the token into the 'API Key' field in the Asana form.
 
 ## Endpoints
-Please see https://developers.asana.com/docs/asana for more on Asana's endpoints.
-### Table
+Please see [Asana's API Reference](https://developers.asana.com/docs/asana) for more on Asana's endpoints.
+
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
 
-### Query Page Sidebar
+
+
+### Nav Tree
 <figure markdown>
-![Asana Query Page Sidebar] [image-2] {width=d}
+  ![Asana Query Page Sidebar] [image-2]{width=500}
 </figure>
 
 ## Sample Queries
 ### Get tasks
 
-[image-1]: ../../img/api/asana/asana-form-dark.png
+[image-1]: ../../img/api/asana/asana-form-light.png
 [image-2]: ../../img/api/asana/asana-query-page-sidebar.png
-[image-3]: ../../img/api/add-data-source-dark.png
-[image-4]:../../img/api/new-data-source-api-types.png
-[image-5]:../../img/api/asana/asana-account-icon.png
+[image-3]: ../../img/api/add-api.png
+[image-4]:../../img/api/asana/api-types-asana.png
+[image-5]:../../img/api/asana/asana-account-icon-settings.png
+[image-6]:../../img/api/asana/asana-settings-apps.png
+[image-7]:../../img/api/asana/asana-manage-dev-apps.png
+[image-8]:../../img/api/asana/asana-create-new-token.png
+[image-9]:../../img/api/asana/asana-create-new-token-form.png
+[image-10]:../../img/api/asana/asana-copy-token.png
