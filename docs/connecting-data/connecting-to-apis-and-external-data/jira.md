@@ -113,7 +113,7 @@ This is the email that is tied to your Atlassian account.
 
     === "3. Find email"
 
-        In the left-hand sidebar, click **Products** and there will be your domain under the "Jira settings" section.
+        In the left-hand sidebar, click **Email** and your email will be under the "Current email" section.
 
         ![Find Domain][image-4]
 
