@@ -53,7 +53,7 @@ On the API screen, select JIRA from the list of API forms.
 
 
 
-The following form will appear. Instructions can be found below on how to find the information requried to fill each field on the JIRA API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the JIRA API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -90,7 +90,7 @@ An Organization is a management layer that gives admins the ability to view and 
 
     === "3. Find Domain"
 
-        In the left-hand sidebar, click **Products** and there will be your domain under the "Jira settings" section.
+        In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
 
         ![Find Domain][image-12]
 
@@ -113,7 +113,7 @@ This is the email that is tied to your Atlassian account.
 
     === "3. Find email"
 
-        In the left-hand sidebar, click **Email** and your email will be under the "Current email" section.
+        In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
 
         ![Find Domain][image-4]
 
@@ -157,8 +157,6 @@ An API key is generated within your account page. The following steps will navig
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
-### Table
-
 | Endpoint                   | Required | Optional                                                                                                                                                                      | Description                                               |
 |----------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | `/board/{boardId}`         |          |                                                                                                                                                                               | Returns the board with the matching board ID.             |
@@ -179,9 +177,9 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 
 ## Sample Queries
-Suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name like so: `#!sql FROM myjiraapi.<ENDPOINT>`.
-
 The following queries are intended to help you get started, and make life simpler querying within your API.
+
+For the following examples, suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name like so: ``#!sql FROM `myjiraapi`.`<ENDPOINT>` ``.
 
 ### Get Board 
 This board will only be returned if the user has permission to view it.
@@ -233,14 +231,14 @@ LIMIT 100
 ```
 
 
-[image-1]: ../../img/api/jira/jira-form-dark.png
-[image-2]: ../../img/api/jira/jira-query-page-sidebar-dark.png
+[image-1]: ../../img/api/jira/jira-form-light.png
+[image-2]: ../../img/api/jira/jira-query-page-sidebar-light.png
 [image-3]: ../../img/api/jira/jira-atlassian-organization.png
 [image-4]: ../../img/api/jira/jira-find-email.png
 [image-5]: ../../img/api/jira/jira-manage-api-tokens.png
 [image-6]: ../../img/api/jira/jira-create-new-api-token.png
-[image-7]: ../../img/api/data-source-wizard-api.png
-[image-8]: ../../img/api/jira/jira-choose-jira-form.png
+[image-7]: ../../img/api/data-source-wizard-api-light.png
+[image-8]: ../../img/api/jira/jira-choose-jira-form-light.png
 [image-9]: ../../img/api/jira/jira-create-api-token.png
 [image-10]: ../../img/api/jira/jira-home-page.png
 [image-11]: ../../img/api/jira/jira-account-pop-up.png
