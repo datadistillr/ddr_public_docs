@@ -184,7 +184,7 @@ Suppose that my JIRA API data source was called `myjiraapi` and I want to query 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
 ### Get Board 
-Suppose that I get a board with the ID of `1`. This board will only be returned if the user has permission to view it.
+This board will only be returned if the user has permission to view it.
 
 ```sql title="Get Board endpoint"
 SELECT *
@@ -203,9 +203,9 @@ LIMIT 100
 ```
 
 ### Get Epics 
-Suppose that I get a board with the ID of `1`. This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
+This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
 
-```sql title="Get Epics endpoint" linenums="1" hl_lines="2"
+```sql title="Get Epics endpoint"
 SELECT *
 FROM `myjiraapi`.`/board/:boardId/epic`
 WHERE `boardId`='1'
@@ -223,7 +223,7 @@ LIMIT 100
 ```
 
 ### Get Projects 
-Suppose that I get a board with the ID of `1`. If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
+If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
 
 ```sql title="Get Projects endpoint"
 SELECT *
