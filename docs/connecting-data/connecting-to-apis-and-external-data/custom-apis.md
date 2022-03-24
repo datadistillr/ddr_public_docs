@@ -12,7 +12,11 @@ This API returns fantasy football players for a given year.  The data is returne
 
 Let's look at how you could connect this API to DataDistillr.  First, follow the [earlier instructions about connecting to a data source](../../).  When you get to the window to choose the data source type, select API as shown below.&#x20;
 
+<<<<<<< HEAD
 ![Select API from the available choices](../../img/api/select-api-form.png)
+=======
+![Select API from the available choices](../../img/api/add-new-data-source-api.png)
+>>>>>>> 4b96968 (Updated Asana docs)
 
 DataDistillr comes prepopulated with API configurations for popular APIs such as ServiceNow, SalesForce, Google Analytics and others.  In our case, we will need to select _Custom API_, as shown below.&#x20;
 
