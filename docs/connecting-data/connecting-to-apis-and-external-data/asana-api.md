@@ -78,19 +78,89 @@ Please see [Asana's API Reference](https://developers.asana.com/docs/asana) for 
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
-
+| Endpoint | Required | Optional |
+| ----------- | ----------- | ----------- |
+| `/tasks` | assignee<br>project<br>section<br>workspace<br> | completed_since<br>modified_since<br>limit<br>offset<br>opt_pretty<br>opt_fields |
+| `/users` | | workspace<br>team<br>limit<br>offset<br>opt_pretty<br>opt_fields |
+| `/workspaces` | | limit<br>offset<br>opt_pretty<br>opt_fields |
+| `/projects` | | workspace<br>team<br>archived<br>limit<br>offset<br>opt_pretty<br>opt_fields |
+| `/tags` | workspace | limit<br>offset<br>opt_pretty<br>opt_fields |
+| `/organizations/{workspace_gid}/teams` | | limit<br>offset<br>opt_pretty<br>opt_fields |
 
 
 ### Nav Tree
+
+The endpoints above will display as follows in the nav tree once your API has successfully connected.
+
 <figure markdown>
-  ![Asana Query Page Sidebar] [image-2]{width=500}
+  ![Asana Query Page Sidebar][image-2]{width=500}
 </figure>
 
 ## Sample Queries
-### Get tasks
+
+The following queries are intended to help you get started, and make life simpler querying within your API.
+
+Suppose that my Asana API data source was called `asanaapi2000`
+
+### Get Tasks Endpoint
+
+```sql
+SELECT *
+FROM asanaapi2000.`/tasks`
+WHERE `project`='1201829319351080'
+LIMIT 100
+```
+
+### Get Users Endpoint
+
+```sql
+SELECT *
+FROM asanaapi2000.`/users`
+WHERE `workspace`='944661173197038'
+AND `limit`='50'
+LIMIT 100
+```
+
+### Get Workspaces Endpoint
+
+```sql
+SELECT *
+FROM asanaapi2000.`/workspaces`
+LIMIT 100
+```
+
+### Get Projects Endpoint
+
+```sql
+SELECT *
+FROM asanaapi20000.`/projects`
+WHERE `workspace`='944661173197038'
+AND `limit`='10'
+LIMIT 100
+```
+
+### Get Tags Endpoint
+
+```sql
+SELECT *
+FROM asanaapi2000.`/tags`
+WHERE `workspace`='944661173197038'
+LIMIT 100
+```
+
+### Get Teams Endpoint
+
+```sql
+SELECT *
+FROM asanaapi2000.`/organizations/:workspace_gid/teams`
+WHERE `workspace_gid`='944661173197038'
+AND `limit`='10'
+LIMIT 100
+```
+
 
 [image-1]: ../../img/api/asana/asana-form-light.png
-[image-2]: ../../img/api/asana/asana-query-page-sidebar.png
+[image-2]: ../../img/api/asana/asana-nav-tree.png
 [image-3]: ../../img/api/add-api.png
 [image-4]:../../img/api/asana/api-types-asana.png
 [image-5]:../../img/api/asana/asana-account-icon-settings.png
