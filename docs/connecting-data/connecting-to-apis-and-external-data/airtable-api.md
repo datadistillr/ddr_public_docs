@@ -65,9 +65,9 @@ To generate your API Key, navigate to your [Account overview](https://airtable.c
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | URL Params | Optional                                                                 | Description                      |
-|----------|------------|--------------------------------------------------------------------------|----------------------------------|
-| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and it's cells |
+| Endpoint | URL Params | Optional | Description |
+| -------- | ---------- | -------- | ----------  |
+| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and its cells
 
 
 ### Nav Tree
@@ -95,7 +95,6 @@ WHERE tableName='Form Responses 1'
 ```
 
 
-[image-1]: ../../img/api/airtable/airtable-form.png
 [image-2]: ../../img/api/airtable/airtable-base.png
 [image-3]: ../../img/api/airtable/airtable-endpoint.png
 [image-4]: ../../img/api/airtable/airtable-generate-api.png
