@@ -22,7 +22,7 @@ nav:
       - Custom APIs: connecting-data/connecting-to-apis-and-external-data/custom-apis.md
       - Passing Parameters: connecting-data/connecting-to-apis-and-external-data/passing-parameters.md
       - Affinity: connecting-data/connecting-to-apis-and-external-data/affinity-api.md
-      - AirTable: connecting-data/connecting-to-apis-and-external-data/airtable-api.md
+      - Airtable: connecting-data/connecting-to-apis-and-external-data/airtable-api.md
       - Asana: connecting-data/connecting-to-apis-and-external-data/asana-api.md
       - ClickUp: connecting-data/connecting-to-apis-and-external-data/clickup-api.md
       - Crunchbase: connecting-data/connecting-to-apis-and-external-data/crunchbase-api.md
