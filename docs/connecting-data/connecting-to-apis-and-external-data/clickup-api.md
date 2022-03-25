@@ -1,7 +1,8 @@
----
-description: How to Connect DataDistillr to the ClickUp API
----
+# Connecting to ClickUp
 
-# ClickUp API
+## Creating a ClickUp Account
+Set up an account with [ClickUp](https://app.clickup.com/signup).
 
-Details coming soon!
+**Costs**
+
+**Rate Limits**
