@@ -99,5 +99,5 @@ WHERE tableName='Form Responses 1'
 [image-2]: ../../img/api/airtable/airtable-base.png
 [image-3]: ../../img/api/airtable/airtable-endpoint.png
 [image-4]: ../../img/api/airtable/airtable-generate-api.png
-[image-5]: ../../img/api/select-api-form.png
+[image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/airtable/select-Airtable-API.png
