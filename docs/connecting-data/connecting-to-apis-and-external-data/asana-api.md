@@ -4,7 +4,13 @@
 Set up an account with [Asana](https://asana.com/create-account).
 
 ### **Costs**
-There are a few different types of accounts: free, $10.99/month, and $24.99/month. You can check [HERE](https://asana.com/pricing) for details and comparison.
+There are a few different types of accounts:
+
+- Free
+- $10.99 per user per month billed annually or $13.49 billed monthly
+- $24.99 per user per month billed annually or $30.49 billed monthly
+
+You can check [HERE](https://asana.com/pricing) for details and comparison.
 
 ### **Rate Limits**
 Limits are allocated per authorization token. Limits may vary from token to token.
