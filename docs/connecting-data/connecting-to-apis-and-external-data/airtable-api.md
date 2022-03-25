@@ -4,7 +4,7 @@
 Set up an account with [Airtable](airtable.com). 
 
 __Costs__  
-There are several different types of accounts. There is a free version, a $10 and $20 version. You can check [HERE](https://airtable.com/wspBcisr7QHMSSfml/workspace/plans?ref=bp.skp2021hpub) for details and comparison.
+There are several different types of accounts. There is a free version, a $10 and $20 version. You can check [HERE](https://airtable.com/pricing?utm_source=google&utm_medium=cpc&utm_extra5=kwd-679972670361&utm_extra2=936407691&utm_extra10=110555500761&creative=465926015402&device=c&cx=us&targetid=kwd-679972670361&campaignid=936407691&adgroupid=110555500761&utm_campaign=brand_creator&utm_content=bofu_freetrial&gclid=EAIaIQobChMIiNntwOfh9gIVzmxvBB1EmgQIEAAYAiAAEgLkyfD_BwE) for details and comparison.
 
 
 __Rate Limits__  

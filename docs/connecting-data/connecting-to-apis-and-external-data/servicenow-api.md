@@ -1,24 +1,20 @@
 # ServiceNow API
 
 ## Creating a ServiceNow account
-Set up an account with [ServiceNow](https://www.atlassian.com/software/opsgenie/try).
-
-Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.
+Set up an account with [ServiceNow](https://www.servicenow.com/).
 
 
 ### Rate Limits
-The ServiceNow API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
-
-Also as a means of preventing room "spam", API methods that involve sending messages to rooms or individual people are limited to 30 requests per minute.
-
+To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
+You can create rules to limit requests for specific users, users with specific roles, or all users.
 
 ## How to Connect DataDistillr to ServiceNow
 To set up a data source connection for ServiceNow, you will need to have:
 
 - A unique name for your data source connection to be used in queries
-- The domain of your Atlassian account
-- The email associated with your Atlassian account
-- The API token generated through your Atlassian account
+- The Instance Name associated ServiceNow Instance
+- The Username associated with your ServiceNow Instance
+- The Password associated with your ServiceNow Instance
 
 ### Data Source Form
 To locate the ServiceNow form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
@@ -54,8 +50,8 @@ Acceptable characters include:
 - lowercase alphanumeric characters
 - underscores
 
-### Domain
-An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
+### Instance ID
+
 
 !!! example "Steps for getting your domain"
 
@@ -213,14 +209,14 @@ LIMIT 100
 ```
 
 
-[image-1]: ../../img/api/ServiceNow/ServiceNow-form-light.png
+[image-1]: ../../img/api/servicenow/servicenow-form.png
 [image-2]: ../../img/api/ServiceNow/ServiceNow-query-page-sidebar-light.png
 [image-3]: ../../img/api/ServiceNow/ServiceNow-atlassian-organization.png
 [image-4]: ../../img/api/ServiceNow/ServiceNow-find-email.png
 [image-5]: ../../img/api/ServiceNow/ServiceNow-manage-api-tokens.png
 [image-6]: ../../img/api/ServiceNow/ServiceNow-create-new-api-token.png
-[image-7]: ../../img/api/data-source-wizard-api-light.png
-[image-8]: ../../img/api/ServiceNow/ServiceNow-choose-ServiceNow-form-light.png
+[image-7]: ../../img/api/add-api.png
+[image-8]: ../../img/api/servicenow/select-servicenow-api.png
 [image-9]: ../../img/api/ServiceNow/ServiceNow-create-api-token.png
 [image-10]: ../../img/api/ServiceNow/ServiceNow-home-page.png
 [image-11]: ../../img/api/ServiceNow/ServiceNow-account-pop-up.png
