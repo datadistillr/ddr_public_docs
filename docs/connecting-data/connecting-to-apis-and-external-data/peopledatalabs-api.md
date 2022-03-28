@@ -10,13 +10,13 @@ Set up an account with [People Data Labs](https://www.peopledatalabs.com/signup)
 ### Costs
 This API has three pricing plans:
 
-**Startup** FREE TRIAL
+**Startup:** FREE TRIAL
 : $0.
 
-**Traction** MONTHLY API PACKAGES
+**Traction:** MONTHLY API PACKAGES
 : Tiered.
 
-**Scale** ENTERPRISE
+**Scale:** ENTERPRISE
 : Custom. For enterprises building platforms with people data at scale. [Speak to a data consultant](https://www.peopledatalabs.com/talk-to-sales)
 
 For more information about People Data Labs pricing visit [https://www.peopledatalabs.com/pricing](https://www.peopledatalabs.com/pricing)
@@ -62,14 +62,14 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 ### Name
 Enter any name that will help you recognize this data source within your query window.
 
-!!! info "Acceptable characters include"
+!!! info "Acceptable Characters Include"
 
     - lowercase alphanumeric characters
     - underscores
 
 
 ### API Key
-The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the People Data Labs form.
+The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the People Data Labs form under 'API Key'.
 
 !!! example "Steps for getting the API key"
 
