@@ -10,7 +10,7 @@ There are a few different types of accounts:
 - $10.99 per user per month billed annually or $13.49 billed monthly
 - $24.99 per user per month billed annually or $30.49 billed monthly
 
-You can check [HERE](https://asana.com/pricing) for details and comparison.
+[Details and Comparison](https://asana.com/pricing)
 
 ### **Rate Limits**
 Limits are allocated per authorization token. Limits may vary from token to token.
@@ -23,8 +23,8 @@ Duplication endpoints are limited to 5 concurrent jobs.
 ## How to Connect DataDisillr to Asana
 To set up a data source connection for Asana, you will need to have:
 
-- A unique name for your data source connection to be used in queries.
-- The API key generated through your Asana account.
+- A [unique name](/connecting-data/connecting-to-apis-and-external-data/asana-api/#name) for your data source connection to be used in queries.
+- The [API key](/connecting-data/connecting-to-apis-and-external-data/asana-api/#api-key) generated through your Asana account.
 
 ### Data Source Form
 
@@ -45,35 +45,39 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 ### Name
 Enter any name that will help you recognize this data source from within your query window.
 
-Acceptable characters include:
+!!! info "Acceptable Characters Include"
 
-* lowercase alphanumeric characters
-* underscores
+    - lowercase alphanumeric characters
+    - underscores
 
 ### API Key
-Once you have created a workspace in your Asana account, you can generate the API key that you'll need in order to fill in the form.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
 
-Click on your account icon at the top right of your screen. Choose 'My Settings'.
+!!! example "Steps for getting the API key"
 
-![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
+    === "1. Home page"
 
-In your 'My Settings' window, click on the 'Apps' tab.
+    In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
+    ![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
 
-![Click on the Apps Tab in the 'My Settings' window.] [image-6]
+    === "2. Account Settings"
+    
+    In the **My Settings** window, click on the **Apps** tab.
+    ![Click on the Apps Tab in the 'My Settings' window.] [image-6]
 
-Click on 'Manage Developer Apps' which opens a new tab in your browser.
+Click on **Manage Developer Apps** which opens a new tab in your browser.
 
 ![Click on 'Manage Developer Apps'.] [image-7]
 
-In the 'Personal access tokens' section, choose 'Create new token'.
+In the **Personal access tokens** section, choose **Create new token**.
 
 ![Click on 'Create new token'.] [image-8]
 
-Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click 'Create token'.
+Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
 
 ![Enter name and check the checkbox. Click 'Create token'.] [image-9]
 
-Click 'Copy' to copy the token to your clipboard.
+Click **Cop** to copy the token to your clipboard.
 
 ![Click 'Copy' to copy the token.] [image-10]
 
