@@ -53,20 +53,23 @@ Acceptable characters include:
 ### Instance ID
 
 
-??? example "Steps for finding your API credentials"
+!!! example "Steps for finding your API credentials"
 
-    Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
-    In the top right corner click the profile icon.
+    === "1. Home Page"
+        Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
+        In the top right corner click the profile avatar.
+        
+        ![ServiceNow Home Page][image-10]
     
-    ![ServiceNow Home Page][image-10]
+    ==="2. My Instance"
+        Click the "Manage instance password" tab.
+        
+        ![Find Instance creds][image-11]
     
-    Click the "Manage instance password" tab.
+    === "3. Instance Credentials" 
+        Here you will find your credentials necessary to connect your ServiceNow instance to DataDistillr.
     
-    ![Find Instance creds][image-11]
-    
-    Here you will find your credentials necessary to connect your ServiceNow instance to DataDistillr.
-    
-    ![Instance creds][image-12]
+        ![Instance creds][image-12]
 
 
 ## Endpoints
