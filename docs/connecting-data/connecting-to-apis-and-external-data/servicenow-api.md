@@ -53,84 +53,20 @@ Acceptable characters include:
 ### Instance ID
 
 
-!!! example "Steps for getting your domain"
+??? example "Steps for finding your API credentials"
 
-    === "1. Home page"
-
-        In the ServiceNow app, click your profile icon in the top right corner of the page.
-
-        ![ServiceNow Home Page][image-10]
-
-    === "2. Accout settings"
-
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
-
-        ![Account Pop Up][image-11]
-
-    === "3. Find Domain"
-
-        In the left-hand sidebar, click the **Products** link and your domain will be located in the "ServiceNow settings" section.
-
-        ![Find Domain][image-12]
-
-### User
-This is the email that is tied to your Atlassian account.
-
-!!! example "Steps for getting your email"
-
-    === "1. Home page"
-
-        In the ServiceNow app, click your profile icon in the top right corner of the page.
-
-        ![ServiceNow Home Page][image-10]
-
-    === "2. Accout settings"
-
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
-
-        ![Account Pop Up][image-11]
-
-    === "3. Find email"
-
-        In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
-
-        ![Find Domain][image-4]
-
-
-### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the ServiceNow form under 'API key'.
-
-!!! example "Steps for getting the API key"
-
-    === "1. Home page"
-
-        In the ServiceNow app, click your profile icon in the top right corner of the page.
-
-        ![ServiceNow Home Page][image-10]
-
-    === "2. Accout settings"
-
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
-
-        ![Account Pop Up][image-11]    
-
-    === "3. Go to security page"
-
-        In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
-
-        ![Go to your API manager][image-5]
-
-    === "4. Create new API key"
-
-        Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
-
-        ![Create a new API key][image-6]
-
-    === "5. Label token"
-
-        Give the your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
-
-        ![Label token][image-9]
+    Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
+    In the top right corner click the profile icon.
+    
+    ![ServiceNow Home Page][image-10]
+    
+    Click the "Manage instance password" tab.
+    
+    ![Find Instance creds][image-11]
+    
+    Here you will find your credentials necessary to connect your ServiceNow instance to DataDistillr.
+    
+    ![Instance creds][image-12]
 
 
 ## Endpoints
@@ -169,45 +105,6 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get All Boards
-This only includes boards that the user has permission to view.
-
-```sql title="Get All Boards endpoint"
-SELECT *
-FROM `myServiceNowapi`.`/board`
-LIMIT 100
-```
-
-### Get Epics
-This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
-
-```sql title="Get Epics endpoint"
-SELECT *
-FROM `myServiceNowapi`.`/board/:boardId/epic`
-WHERE `boardId`='1'
-LIMIT 100
-```
-
-### Get Issues
-This only includes issues that the user has permission to view. An issue belongs to the board if its status is mapped to the board's column. Epic issues do not belong to the scrum boards. Note, if the user does not have permission to view the board, no issues will be returned at all. Issues returned from this resource include Agile fields, like sprint, closedSprints, flagged, and epic. By default, the returned issues are ordered by rank.
-
-```sql title="Get Issues endpoint"
-SELECT *
-FROM `myServiceNowapi`.`/board/:boardId/issue`
-WHERE `boardId`='1'
-LIMIT 100
-```
-
-### Get Projects
-If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
-
-```sql title="Get Projects endpoint"
-SELECT *
-FROM `myServiceNowapi`.`/board/:boardId/project`
-WHERE `boardId`='1'
-LIMIT 100
-```
-
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
 [image-2]: ../../img/api/ServiceNow/ServiceNow-query-page-sidebar-light.png
@@ -218,6 +115,6 @@ LIMIT 100
 [image-7]: ../../img/api/add-api.png
 [image-8]: ../../img/api/servicenow/select-servicenow-api.png
 [image-9]: ../../img/api/ServiceNow/ServiceNow-create-api-token.png
-[image-10]: ../../img/api/ServiceNow/ServiceNow-home-page.png
-[image-11]: ../../img/api/ServiceNow/ServiceNow-account-pop-up.png
-[image-12]: ../../img/api/ServiceNow/ServiceNow-domain.png
+[image-10]: ../../img/api/servicenow/servicenow-homepage.png
+[image-11]: ../../img/api/servicenow/servicenow-get-creds.png
+[image-12]: ../../img/api/servicenow/servicenow-creds.png
