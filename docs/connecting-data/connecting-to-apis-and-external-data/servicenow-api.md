@@ -53,20 +53,23 @@ Acceptable characters include:
 ### Instance ID, Username and Password
 
 
-!!! example "Steps for finding your API credentials"
+!!! example 
 
     === "1. Home Page"
+
         Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
         In the top right corner click the profile avatar.
         
         ![ServiceNow Home Page][image-10]
     
-    ==="2. My Instance"
+    === "2. My Instance"
+
         Click the "Manage instance password" tab.
         
         ![Find Instance creds][image-11]
     
     === "3. Instance Credentials" 
+
         Here you will find your credentials necessary to connect your ServiceNow instance to DataDistillr.
     
         ![Instance creds][image-12]
@@ -96,7 +99,13 @@ The endpoints above will display as follows in the nav tree once your API has su
 ## Sample Queries
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my ServiceNow API data source was called `myservicenowapi` and I want to query an endpoint. The endpoint goes after the ServiceNow data source name like so: ``#!sql FROM `myServiceNowapi`.`<ENDPOINT>` ``.
+For the following examples, suppose that my ServiceNow API data source was called `myservicenowapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `myservicenowapi`.`<ENDPOINT>`
+    ```
 
 ### Get Tables
 
@@ -141,13 +150,8 @@ LIMIT 100
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
 [image-2]: ../../img/api/servicenow/servicenow-navtree.png
-[image-3]: ../../img/api/ServiceNow/ServiceNow-atlassian-organization.png
-[image-4]: ../../img/api/ServiceNow/ServiceNow-find-email.png
-[image-5]: ../../img/api/ServiceNow/ServiceNow-manage-api-tokens.png
-[image-6]: ../../img/api/ServiceNow/ServiceNow-create-new-api-token.png
 [image-7]: ../../img/api/add-api.png
 [image-8]: ../../img/api/servicenow/select-servicenow-api.png
-[image-9]: ../../img/api/ServiceNow/ServiceNow-create-api-token.png
 [image-10]: ../../img/api/servicenow/servicenow-homepage.png
 [image-11]: ../../img/api/servicenow/servicenow-get-creds.png
 [image-12]: ../../img/api/servicenow/servicenow-creds.png
