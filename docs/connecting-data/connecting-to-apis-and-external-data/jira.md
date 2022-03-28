@@ -151,7 +151,7 @@ An API key is generated within your account page. The following steps will navig
 
     === "5. Label token"
 
-        Give the your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
+        Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
 
         ![Label token][image-9]
 
