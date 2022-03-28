@@ -72,13 +72,13 @@ Acceptable characters include:
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint                   | Required | Optional                                                                                                                                                                      | Description                                               |
-|----------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| `/board/{boardId}`         |          |                                                                                                                                                                               | Returns the board with the matching board ID.             |
-| `/board`                   |          | startAt<br>maxResults<br>type<br>name<br>projectKeyOrId<br>accountIdLocation<br>projectLocation<br>includePrivate<br>negateLocationFiltering<br>orderBy<br>expand<br>filterId | Returns all boards.                                       |
-| `/board/{boardId}/epic`    |          | startAt<br>maxResults<br>done                                                                                                                                                 | Returns all epics from the board, for the given board ID. |
-| `/board/{boardId}/issue`   |          | startAt<br>maxResults<br>jql<br>validateQuery<br>fields<br>expand                                                                                                             | Returns all issues from a board, for a given board ID.    |
-| `/board/{boardId}/project` |          | startAt<br>maxResults                                                                                                                                                         | Returns all projects that are associated with the board.  |
+| Endpoint   | Required | URL Params  | Optional | Description                                      |
+|------------|----------|-------------|----------|--------------------------------------------------|
+| `tables`   |          | `tableName` |          | Returns the table with the matching `tableName`. |
+| `case`     |          |             |          | Returns Customer Service Management (CSM) cases. |
+| `user`     |          |             |          | Returns set of (CSM) accounts.                   |
+| `consumer` |          |             |          | Returns set of (CSM) consumer records.           |
+| `contact`  |          |             |          | Returns set of (CSM) consumer contacts.          |
 
 
 
@@ -93,21 +93,51 @@ The endpoints above will display as follows in the nav tree once your API has su
 ## Sample Queries
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my ServiceNow API data source was called `myServiceNowapi` and I want to query an endpoint. The endpoint goes after the ServiceNow data source name like so: ``#!sql FROM `myServiceNowapi`.`<ENDPOINT>` ``.
+For the following examples, suppose that my ServiceNow API data source was called `myservicenowapi` and I want to query an endpoint. The endpoint goes after the ServiceNow data source name like so: ``#!sql FROM `myServiceNowapi`.`<ENDPOINT>` ``.
 
-### Get Board
-This board will only be returned if the user has permission to view it.
+### Get Tables
 
-```sql title="Get Board endpoint"
+```sql title="Get Tables endpoint"
 SELECT *
-FROM `myServiceNowapi`.`/board/:boardId`
-WHERE `boardId`='1'
+FROM `myServiceNowapi`.`tables`
+WHERE `tableName`='sn_customerservice_case'
 LIMIT 100
 ```
 
+### Get Case
+
+```sql title="Get Case endpoint"
+SELECT *
+FROM `myServiceNowapi`.`case`
+LIMIT 100
+```
+
+### Get User
+
+```sql title="Get User endpoint"
+SELECT *
+FROM `myServiceNowapi`.`user`
+LIMIT 100
+```
+
+### Get Consumer
+
+```sql title="Get Consumer endpoint"
+SELECT *
+FROM `myServiceNowapi`.`consumer`
+LIMIT 100
+```
+
+### Get Contact
+
+```sql title="Get Contact endpoint"
+SELECT *
+FROM `myServiceNowapi`.`contact`
+LIMIT 100
+```
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
-[image-2]: ../../img/api/ServiceNow/ServiceNow-query-page-sidebar-light.png
+[image-2]: ../../img/api/servicenow/servicenow-navtree.png
 [image-3]: ../../img/api/ServiceNow/ServiceNow-atlassian-organization.png
 [image-4]: ../../img/api/ServiceNow/ServiceNow-find-email.png
 [image-5]: ../../img/api/ServiceNow/ServiceNow-manage-api-tokens.png
