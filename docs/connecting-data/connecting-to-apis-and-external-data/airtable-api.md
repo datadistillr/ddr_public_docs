@@ -1,7 +1,7 @@
 # Connecting to Airtable
 
-## Creating an Airtable account 
-Set up an account with [Airtable](airtable.com). 
+## Creating an Airtable account
+Set up an account with [Airtable](https://www.airtable.com/).
 
 __Costs__  
 There are several different types of accounts. There is a free version, a $10 and $20 version. You can check [HERE](https://airtable.com/pricing?utm_source=google&utm_medium=cpc&utm_extra5=kwd-679972670361&utm_extra2=936407691&utm_extra10=110555500761&creative=465926015402&device=c&cx=us&targetid=kwd-679972670361&campaignid=936407691&adgroupid=110555500761&utm_campaign=brand_creator&utm_content=bofu_freetrial&gclid=EAIaIQobChMIiNntwOfh9gIVzmxvBB1EmgQIEAAYAiAAEgLkyfD_BwE) for details and comparison.
@@ -29,7 +29,7 @@ On the API screen, select Airtable from list of API forms as shown in the image 
 
 ![Select Airtable API from available choices][image-6]
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Airtable API form. 
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Airtable API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -39,7 +39,7 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 
 Enter any name that will help you recognize this data source from within your query window. &#x20;
 
-Acceptable characters include: 
+Acceptable characters include:
 
 * lowercase alphanumeric characters
 * underscores
@@ -47,7 +47,7 @@ Acceptable characters include:
 ### Project Path (Base ID)
 You can access your Base ID at [https://airtable.com/](https://airtable.com/). Navigate to Bases along the top panel and click on your workspace as shown in the image below.
 
-![Finding your base][image-2] 
+![Finding your base][image-2]
 
 You can find the Project Path (Base ID) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
 
@@ -67,7 +67,7 @@ The table below shows a list of endpoints available to connect to within the Dat
 
 | Endpoint | URL Params | Optional | Description |
 | -------- | ---------- | -------- | ----------  |
-| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and it's cells 
+| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and it's cells
 
 
 ### Nav Tree
@@ -90,7 +90,7 @@ SELECT AT.id AS ID,
 AT.fields['Timestamp'] AS Times,
 AT.fields['Name'] AS Name,
 AT.fields['Email Address'] AS Address
-FROM myairtableapi.`tables` AS AT 
+FROM myairtableapi.`tables` AS AT
 WHERE tableName='Form Responses 1'
 ```
 
