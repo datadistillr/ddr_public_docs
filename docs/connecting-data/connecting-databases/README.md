@@ -34,4 +34,4 @@ After selecting a database type, you will see the form below.  For most relation
 
 ![MySQL Connection Form](<../../img/Screen Shot 2021-11-14 at 7.59.39 PM.png>)
 
-Once you submit the form, your relational database is now connected to DataDistillr, but there is still one final step: [linking your data source to your project](../../linking-data-to-your-project.md).
+Once you submit the form, your relational database is now connected to DataDistillr, but there is still one final step: [linking your data source to your project](../linking-data-to-your-project.md).
