@@ -1,0 +1,38 @@
+  :root {
+    --md-admonition-icon--attachment: url('data:image/svg+xml;charset=utf-8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 18A5.5 5.5 0 0 1 2 12.5 5.5 5.5 0 0 1 7.5 7H18a4 4 0 0 1 4 4 4 4 0 0 1-4 4H9.5A2.5 2.5 0 0 1 7 12.5 2.5 2.5 0 0 1 9.5 10H17v1.5H9.5a1 1 0 0 0-1 1 1 1 0 0 0 1 1H18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 18 8.5H7.5a4 4 0 0 0-4 4 4 4 0 0 0 4 4H17V18H7.5z"/></svg>')
+  }
+  .md-typeset .admonition.attachment,
+  .md-typeset details.attachment {
+    border-color: rgb(43, 155, 70);
+  }
+  .md-typeset .attachment > .admonition-title,
+  .md-typeset .attachment > summary {
+    background-color: rgba(43, 155, 70, 0.1);
+    border-color: rgb(43, 155, 70);
+  }
+  .md-typeset .attachment > .admonition-title::before,
+  .md-typeset .attachment > summary::before {
+    background-color: rgb(43, 155, 70);
+    -webkit-mask-image: var(--md-admonition-icon--attachment);
+            mask-image: var(--md-admonition-icon--attachment);
+  }
+
+.md-ellipsis{
+   font-weight: 600;
+ }
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link  {
+   font-size: 1.0rem;
+   font-weight: 600;
+   margin-bottom: 1em;
+ }
+  [data-md-color-primary="black"] .md-tabs,
+  [data-md-color-primary="black"] .md-header {
+      background-color: #1a202c; /* gray-900 */
+  }
+  .md-footer-meta {
+      background-color: #2d3748; /* gray-800 */
+  }
+  .md-footer {
+      background-color: #1a202c; /* gray-900 */
+  }
