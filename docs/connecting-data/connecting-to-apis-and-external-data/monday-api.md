@@ -4,4 +4,201 @@ description: How to Connect DataDistillr to the Monday API
 
 # Monday API
 
-Details coming soon!
+## Creating a Monday account
+Set up an account with [Monday](https://monday.com/).
+
+### Costs
+There are 4 pricing plans:
+
+**Student**
+: $0 seat / month.
+
+**Standard**
+: $10 seat / month. Total $30 per month.
+
+**Pro**
+: $16 seat / month. Total $48 per month.
+
+**Enterprise**
+: [Contact Sales](https://monday.com/pricing/).
+
+### Rate Limits
+The API uses a construct called complexity to define the cost of each query made.
+
+monday.com API rate limits are based on the complexity of the queries an app makes in a given time period. There are two limits to keep in mind:
+
+- A single query is limited to 5,000,000 complexity points 
+- All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the Admin section or the Access Tokens section 
+
+## How to Connect DataDistillr to Monday
+To set up a data source connect for Monday, you will need to have:
+
+- A [unique name](#name) for your data source connection to be used in queries
+- An [API token](#api-key) generated through your Monday.com account
+
+### Data Source Form
+To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+
+
+<figure markdown>
+  ![Data Source Wizard][image-0]{ width="100%" }
+</figure>
+
+
+On the API screen, select Monday from the list of API forms.
+
+
+<figure markdown>
+  ![List of APIs][image-1]{ width="100%" }
+</figure>
+
+
+The following form will appear. Instructions can be found below on how to find the information required to fill each on the Monday API form.
+
+Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
+
+
+<figure markdown>
+  ![Monday Form][image-3]{ width="100%" }
+</figure>
+
+### Name
+Enter any name that will help you recognize this data source within your query window.
+
+!!! info "Acceptable Characters Include"
+
+    - lowercase alphanumeric characters
+    - underscores
+
+
+### API Key
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Monday form under 'API key'.
+
+#### As an Admin
+
+!!! example "Steps for Getting API Key as Admin"
+
+    === "Home Page"
+    
+        ![Home Page][image-7]
+
+    === "Account Settings"
+    
+        ![Account Settings][image-8]
+
+    === "API Key"
+    
+        ![API Key][image-10]
+
+#### As a Developer
+
+!!! example "Steps for Getting API Key as Dev"
+
+    === "Home Page"
+    
+        ![Home Page][image-7]
+
+    === "Account Settings"
+    
+        ![Account Settings][image-9]
+
+    === "My Access Tokens"
+    
+        ![My Access Tokens][image-11]
+
+    === "API Key"
+    
+        ![API Key][image-12]
+        
+    
+
+
+
+
+## Endpoints
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+
+| Endpoint   | Required | Optional | Description |
+|------------|----------|----------|-------------|
+| `items`    |          |          |             |
+| `users`    |          |          |             |
+| `boards`   |          |          |             |
+| `updates`  |          |          |             |
+
+
+### Nav Tree
+The endpoints above will display as follows in the nav tree once your API has successfully connected.
+
+
+<figure markdown>
+  ![Monday Endpoints][image-5]{ width="100%" }
+</figure>
+
+
+## Sample Queries
+The following queries are intended to help you get started, and make like simpler querying within your API.
+
+For the following examples, suppose that my Monday API data source was called `mymondayapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Monday data source name.
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `mymondayapi`.`<ENDPOINT>`
+    ```
+
+### Items
+monday.com items are a core object in the platform. Items are the objects that hold the actual data within the board, to better illustrate this, you can think of a board as a table and an item as a single row in that table.
+
+```sql
+SELECT * 
+FROM `mymondayapi`.`items`
+LIMIT 1000
+```
+
+### Users
+Every user in monday.com is a part of an account (i.e. an organization) and could be a member or a guest in that account.
+
+Querying users returns one or multiple users.
+
+
+```sql
+SELECT * 
+FROM `mymondayapi`.`users`
+LIMIT 1000
+```
+
+### Boards
+monday.com boards are where users input all of their data. As such it is one of the core components of the platform, and one of the main objects you will need to be familiar with.
+
+A board’s structure is composed of rows (called items), groups of rows (called groups), and columns. The data of the board is stored in the items on the board as well as in the updates sections of each item. Each board has one or more owners and subscribers.
+
+Additionally, there are three different board types (main, shareable, private) and each board can have different sets of permissions. Querying boards can return one board, or a collection of boards.
+
+```sql
+SELECT * 
+FROM `mymondayapi`.`boards`
+LIMIT 1000
+```
+
+### Updates
+monday.com updates contain additional notes and information added to items outside their columns. The main form of communication within the platform takes place in the updates section.
+
+```sql
+SELECT * 
+FROM `mymondayapi`.`updates`
+LIMIT 1000
+```
+
+[image-0]: ../../img/api/data-source-wizard-api-light.png
+[image-1]: ../../img/api/monday/choose-form-monday-light.png
+[image-2]: ../../img/api/monday/choose-form-monday-dark.png
+[image-3]: ../../img/api/monday/monday-form-light.png
+[image-4]: ../../img/api/monday/monday-form-dark.png
+[image-5]: ../../img/api/monday/monday-nav-tree-light.png
+[image-6]: ../../img/api/monday/monday-nav-tree-dark.png
+[image-7]: ../../img/api/monday/monday-home-page.png
+[image-8]: ../../img/api/monday/monday-account-pop-up-admin.png
+[image-9]: ../../img/api/monday/monday-account-pop-up-dev.png
+[image-10]: ../../img/api/monday/monday-admin-api-key.png
+[image-11]: ../../img/api/monday/monday-dev-my-access-tokens.png
+[image-12]: ../../img/api/monday/monday-dev-api-key.png
