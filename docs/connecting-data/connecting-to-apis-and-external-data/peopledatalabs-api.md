@@ -50,115 +50,12 @@ An API key is generated within your account page. The following steps will navig
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
-!!! info "person/enrich"
-
-    Enrich a person record on a variety of fields
-
-    ??? danger "Required"
-    
-        none
-
-    ??? note "Optional"
-				
-        - name
-        - first_name
-        - last_name
-        - middle_name
-        - location
-        - street_address
-        - locality
-        - region
-        - country
-        - postal_code
-        - company
-        - school
-        - phone
-        - email
-        - email_hash
-        - profile
-        - lid
-        - birth_date
-        - min_likelihood
-        - required
-        - data_include
-        - include_if_matched
-        - titlecase
-        - pretty
-        - api_key
-
-
-
-!!! info "person/retrieve/{person_id}"
-
-    Retrieves a person based on a PDL ID.
-
-    ??? danger "Required"
-    
-        - person_id
-
-    ??? note "Optional"
-
-        - titlecase
-        - pretty
-        - api_key
-
-
-!!! info "person/identify"
-
-    Recover all related profiles for an identity
-
-    ??? danger "Required"
-    
-        none
-
-    ??? note "Optional"
-				
-        - name
-        - first_name
-        - last_name
-        - middle_name
-        - location
-        - street_address
-        - locality
-        - region
-        - country
-        - postal_code
-        - company
-        - school
-        - phone
-        - email
-        - email_hash
-        - profile
-        - lid
-        - birth_date
-        - min_likelihood
-        - required
-        - data_include
-        - include_if_matched
-        - titlecase
-        - pretty
-        - api_key
-
-
-!!! info "person/search"
-
-    Search in the People Data Labs Dataset
-
-    ??? danger "Required"
-    
-        none
-
-    ??? note "Optional"
-				
-        - query
-        - sql
-        - size
-        - scroll_token
-        - dataset
-        - data_include
-        - titlecase
-        - pretty
-        - api_key
+| Endpoint                       | Required  | Optional                                                                                                                                                                                                                                                                                                                 | Description                                   |
+|--------------------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| `/person/enrich`               |           | name<br>first_name<br>last_name<br>middle_name<br>location<br>street_address<br>locality<br>region<br>country<br>postal_code<br>company<br>school<br>phone<br>email<br>email_hash<br>profile<br>lid<br>birth_date<br>min_likelihood<br>required<br>data_included<br>include_if_matched<br>titlecase<br>pretty<br>api_key | Enrich a person record on a variety of fields |
+| `/person/retrieve/{person_id}` | person_id | titlecase<br>pretty<br>api_key                                                                                                                                                                                                                                                                                           | Retrieves a person based on a PDL ID.         |
+| `/person/identify`             |           | name<br>first_name<br>last_name<br>middle_name<br>location<br>street_address<br>locality<br>region<br>country<br>postal_code<br>company<br>school<br>phone<br>email<br>email_hash<br>profile<br>lid<br>birth_date<br>min_likelihood<br>required<br>data_included<br>include_if_matched<br>titlecase<br>pretty<br>api_key | Recover all related profiles for an identity. |
+| `/person/search`               |           | query<br>sql<br>size<br>scroll_token<br>dataset<br>data_include<br>titlecase<br>pretty<br>api_key                                                                                                                                                                                                                        | Search in the People Data Labs Dataset.       |
 
 
 ### Nav Tree
