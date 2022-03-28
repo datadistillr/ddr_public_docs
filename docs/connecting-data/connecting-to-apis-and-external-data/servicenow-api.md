@@ -1,4 +1,4 @@
-# ServiceNow API
+# Connecting to ServiceNow
 
 ## Creating a ServiceNow account
 Set up an account with [ServiceNow](https://www.servicenow.com/).
@@ -11,10 +11,10 @@ You can create rules to limit requests for specific users, users with specific r
 ## How to Connect DataDistillr to ServiceNow
 To set up a data source connection for ServiceNow, you will need to have:
 
-- A unique name for your data source connection to be used in queries
-- The Instance Name associated ServiceNow Instance
-- The Username associated with your ServiceNow Instance
-- The Password associated with your ServiceNow Instance
+- A [unique name](#name) for your data source connection to be used in queries
+- The [Instance Name](#instance-id-username-and-password) associated ServiceNow Instance
+- The [Username](#instance-id-username-and-password) associated with your ServiceNow Instance
+- The [Password](#instance-id-username-and-password) associated with your ServiceNow Instance
 
 ### Data Source Form
 To locate the ServiceNow form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
@@ -50,7 +50,7 @@ Acceptable characters include:
 - lowercase alphanumeric characters
 - underscores
 
-### Instance ID
+### Instance ID, Username and Password
 
 
 !!! example "Steps for finding your API credentials"
