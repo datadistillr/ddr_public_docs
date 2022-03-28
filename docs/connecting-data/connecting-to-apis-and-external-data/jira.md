@@ -1,3 +1,7 @@
+---
+description: How to Connect DataDistillr to the JIRA API
+---
+
 # JIRA API
 
 ## Creating a JIRA account
@@ -29,10 +33,10 @@ Also as a means of preventing room "spam", API methods that involve sending mess
 ## How to Connect DataDistillr to JIRA
 To set up a data source connection for JIRA, you will need to have:
 
-- A unique name for your data source connection to be used in queries
-- The domain of your Atlassian account
-- The email associated with your Atlassian account
-- The API token generated through your Atlassian account
+- A [unique name](#name) for your data source connection to be used in queries
+- The [domain](#domain) of your Atlassian account
+- The [email](#user) associated with your Atlassian account
+- The [API token](#api-key) generated through your Atlassian account
 
 ### Data Source Form
 To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
@@ -63,10 +67,11 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 ### Name
 Enter any name that will help you recognize this data source from within your query window.
 
-Acceptable characters include:
+!!! info "Acceptable Characters Include"
 
-- lowercase alphanumeric characters
-- underscores
+    - lowercase alphanumeric characters
+    - underscores
+
 
 ### Domain
 An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
@@ -175,12 +180,20 @@ The endpoints above will display as follows in the nav tree once your API has su
 ## Sample Queries
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name like so: ``#!sql FROM `myjiraapi`.`<ENDPOINT>` ``.
+For the following examples, suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `myjiraapi`.`<ENDPOINT>`
+    ```
+
+
 
 ### Get Board 
 This board will only be returned if the user has permission to view it.
 
-```sql title="Get Board endpoint"
+```sql
 SELECT *
 FROM `myjiraapi`.`/board/:boardId`
 WHERE `boardId`='1'
@@ -190,7 +203,7 @@ LIMIT 100
 ### Get All Boards 
 This only includes boards that the user has permission to view.
 
-```sql title="Get All Boards endpoint"
+```sql
 SELECT *
 FROM `myjiraapi`.`/board`
 LIMIT 100
@@ -199,7 +212,7 @@ LIMIT 100
 ### Get Epics 
 This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
 
-```sql title="Get Epics endpoint"
+```sql
 SELECT *
 FROM `myjiraapi`.`/board/:boardId/epic`
 WHERE `boardId`='1'
@@ -209,7 +222,7 @@ LIMIT 100
 ### Get Issues 
 This only includes issues that the user has permission to view. An issue belongs to the board if its status is mapped to the board's column. Epic issues do not belong to the scrum boards. Note, if the user does not have permission to view the board, no issues will be returned at all. Issues returned from this resource include Agile fields, like sprint, closedSprints, flagged, and epic. By default, the returned issues are ordered by rank.
 
-```sql title="Get Issues endpoint"
+```sql
 SELECT *
 FROM `myjiraapi`.`/board/:boardId/issue`
 WHERE `boardId`='1'
@@ -219,7 +232,7 @@ LIMIT 100
 ### Get Projects 
 If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
 
-```sql title="Get Projects endpoint"
+```sql
 SELECT *
 FROM `myjiraapi`.`/board/:boardId/project`
 WHERE `boardId`='1'
