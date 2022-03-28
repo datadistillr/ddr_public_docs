@@ -55,13 +55,13 @@ The API key is generated within your account page. The following steps will navi
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
-| Endpoint          | Required  | URL Parameters           | Optional                                      | Description                                                                                                         |
-|-------------------|-----------|--------------------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `lists`           |           |                          |                                               | Find the single best profile matching some attributes about a particular person.                                    |
-| `list`            | person_id | list_id                  |                                               | Directly lookup a specific profile using its PDL ID.                                                                |
-| `list_entry`      |           | list_id<br>list_entry_id | list_id<br>value_type<br>with_modified_names" | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
-| `fields`          |           |                          |                                               | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
-| `field_values`    |           |                          |                                               | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| Endpoint          | Required  | URL Parameters           | Optional                                                        | Description                                                                                                         |
+|-------------------|-----------|--------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `lists`           |           |                          |                                                                 | Returns a collection of all the lists visible to you                                                                |
+| `list`            | person_id | list_id                  |                                                                 | Gets the details for a specific list given the existing list id                                                     |
+| `list_entry`      |           | list_id<br>list_entry_id |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
+| `fields`          |           |                          | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| `field_values`    |           |                          | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
 
 
 ### Nav Tree
