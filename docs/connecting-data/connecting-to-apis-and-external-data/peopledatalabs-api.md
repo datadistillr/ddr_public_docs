@@ -8,7 +8,7 @@ description: How to Connect DataDistillr to the People Data Labs API
 Set up an account with [People Data Labs](https://www.peopledatalabs.com/signup).
 
 ### Costs
-There are three pricing plans:
+This API has three pricing plans:
 
 **Startup** FREE TRIAL
 : $0.
@@ -19,16 +19,18 @@ There are three pricing plans:
 **Scale** ENTERPRISE
 : Custom. For enterprises building platforms with people data at scale. [Speak to a data consultant](https://www.peopledatalabs.com/talk-to-sales)
 
+For more information about People Data Labs pricing visit [https://www.peopledatalabs.com/pricing](https://www.peopledatalabs.com/pricing)
+
 ### Rate Limits
 
-The default limit for free customers is 100/min. Our default limit for paying customers is 1000/min.
+The default limit for free customers is 100/min. The default limit for paying customers is 1000/min.
 
 #### The API Dashboard
 
 All accounts are given access to a [dashboard](https://www.peopledatalabs.com/main), which will allows you to manage your API keys, view usage and test new endpoints (when they are available).
 
 ## How to Connect DataDistillr to People Data Labs
-To set up a data source connect for People Data Labs, you will need to have:
+To set up a data source connection for People Data Labs, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
 - An [API token](#api-key) generated through your People Data Labs account
@@ -78,6 +80,8 @@ The API key is generated within your account page. The following steps will navi
         ![Home page][image-1]
 
     === "2. Account settings"
+
+        This is page contains the settings for your API token. You can modify the token's nickname and generate a new key in with **Roll This Key**.
 
         ![API keys][image-2]
 
