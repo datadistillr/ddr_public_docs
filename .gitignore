@@ -7,3 +7,6 @@
 .AppleDouble
 .LSOverride
 docs/.DS_Store
+
+# Windows
+desktop.ini
