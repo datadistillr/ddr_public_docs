@@ -2,7 +2,7 @@
 description: How to Connect DataDistillr to the JIRA API
 ---
 
-# JIRA API
+# Connecting to JIRA
 
 ## Creating a JIRA account
 Set up an account with [JIRA](https://www.atlassian.com/software/opsgenie/try).

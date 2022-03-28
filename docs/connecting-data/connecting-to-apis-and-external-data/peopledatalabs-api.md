@@ -2,7 +2,7 @@
 description: How to Connect DataDistillr to the People Data Labs API
 ---
 
-# People Data Labs API
+# Connecting to People Data Labs
 
 ## Creating a People Data Labs account
 Set up an account with [People Data Labs](https://www.peopledatalabs.com/signup).
