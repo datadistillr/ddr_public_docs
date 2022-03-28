@@ -72,6 +72,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+      cost: fontawesome/solid/dollar-sign
   features:
     - navigation.tabs
     - navigation.top
