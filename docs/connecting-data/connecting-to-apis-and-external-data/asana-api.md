@@ -30,17 +30,23 @@ To set up a data source connection for Asana, you will need to have:
 
 To locate the Asana form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-![Select API from the available choices] [image-3]
+<figure markdown>
+![Select API from the available choices] [image-3]{width=500}
+</figure>
 
 On the API screen, select Asana from the list of API types as shown in the image below.
 
-![Select Asana from API types] [image-4]
+<figure markdown>
+![Select Asana from API types] [image-4]{width=600}
+</figure>
 
 The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Asana API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
-![Asana Form] [image-1]
+<figure markdown>
+![Asana Form] [image-1]{width=600}
+</figure>
 
 ### Name
 Enter any name that will help you recognize this data source from within your query window.
