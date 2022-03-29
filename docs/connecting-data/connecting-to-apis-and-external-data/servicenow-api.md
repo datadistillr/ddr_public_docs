@@ -1,12 +1,15 @@
 # Connecting to ServiceNow
 
 ## Creating a ServiceNow account
-Set up an account with [ServiceNow](https://www.servicenow.com/).
+Set up an account with [ServiceNow](https://www.servicenow.com/){target="_blank"}.
 
+### Costs
+
+Get a custom quote from [ServiceNow](https://www.servicenow.com/lpgp/pricing-itsm.html?campid=29573&cid=p:all:dg:b:prsp:core_brand_prsp:ams:all&s_kwcid=AL!11692!3!529674030705!e!!g!!servicenow%20cost&ds_c=GOOG_AMS_All_EN_DEMANDGEN_ALBU_PRSP_Brand_EXA_&cmcid=71700000065217230&ds_ag=ServiceNow+Cost_EXA&cmpid=58700005783664262&ds_kids=p52805252935&gclid=Cj0KCQjw3IqSBhCoARIsAMBkTb36TvnRRoLA7mVtpVIDN9ZNZurDHz-EHtidmtp7af3b-A7PSShNmoUaAmDdEALw_wcB&gclsrc=aw.ds){target="_blank"}.
 
 ### Rate Limits
 To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
-You can create rules to limit requests for specific users, users with specific roles, or all users.
+You can create rules to limit requests for specific users, users with specific roles, or all users. You can learn more about that in the [ServiceNow](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
 
 ## How to Connect DataDistillr to ServiceNow
 To set up a data source connection for ServiceNow, you will need to have:
@@ -45,10 +48,10 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 ### Name
 Enter any name that will help you recognize this data source from within your query window.
 
-Acceptable characters include:
+!!! info "Acceptable Characters Include"
 
-- lowercase alphanumeric characters
-- underscores
+    - lowercase alphanumeric characters
+    - underscores
 
 ### Instance ID, Username and Password
 
@@ -70,7 +73,7 @@ Acceptable characters include:
     
     === "3. Instance Credentials" 
 
-        Here you will find your credentials necessary to connect your ServiceNow instance to DataDistillr.
+        Here you will find your credentials necessary (Instance name, Username and Password) to connect your ServiceNow instance to DataDistillr.
     
         ![Instance creds][image-12]
 
@@ -78,13 +81,13 @@ Acceptable characters include:
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint   | Required | URL Params  | Optional | Description                                      |
-|------------|----------|-------------|----------|--------------------------------------------------|
-| `tables`   |          | `tableName` |          | Returns the table with the matching `tableName`. |
-| `case`     |          |             |          | Returns Customer Service Management (CSM) cases. |
-| `user`     |          |             |          | Returns set of (CSM) accounts.                   |
-| `consumer` |          |             |          | Returns set of (CSM) consumer records.           |
-| `contact`  |          |             |          | Returns set of (CSM) consumer contacts.          |
+| Endpoint   | Required | URL Params  | Description                                      |
+|------------|----------|-------------|--------------------------------------------------|
+| `tables`   |          | `tableName` | Returns the table with the matching `tableName`. |
+| `case`     |          |             | Returns Customer Service Management (CSM) cases. |
+| `user`     |          |             | Returns set of (CSM) accounts.                   |
+| `consumer` |          |             | Returns set of (CSM) consumer records.           |
+| `contact`  |          |             | Returns set of (CSM) consumer contacts.          |
 
 
 
@@ -109,6 +112,8 @@ For the following examples, suppose that my ServiceNow API data source was calle
 
 ### Get Tables
 
+Retrieves multiple records for the specified table.
+
 ```sql title="Get Tables endpoint"
 SELECT *
 FROM `myServiceNowapi`.`tables`
@@ -118,6 +123,7 @@ LIMIT 100
 
 ### Get Case
 
+Retrieves a specified set of Customer Service Management (CSM) cases.
 ```sql title="Get Case endpoint"
 SELECT *
 FROM `myServiceNowapi`.`case`
@@ -126,6 +132,7 @@ LIMIT 100
 
 ### Get User
 
+Retrieves a specified set of Customer Service Management (CSM) accounts
 ```sql title="Get User endpoint"
 SELECT *
 FROM `myServiceNowapi`.`user`
@@ -134,6 +141,7 @@ LIMIT 100
 
 ### Get Consumer
 
+Retrieves a specified set of Customer Service Management (CSM) accounts
 ```sql title="Get Consumer endpoint"
 SELECT *
 FROM `myServiceNowapi`.`consumer`
@@ -141,6 +149,8 @@ LIMIT 100
 ```
 
 ### Get Contact
+
+Retrieves a specified set of Customer Service Management (CSM) contacts.
 
 ```sql title="Get Contact endpoint"
 SELECT *
