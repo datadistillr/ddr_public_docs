@@ -55,13 +55,13 @@ The API key is generated within your account page. The following steps will navi
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
-| Endpoint          | Required  | URL Parameters           | Optional                                                        | Description                                                                                                         |
-|-------------------|-----------|--------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `lists`           |           |                          |                                                                 | Returns a collection of all the lists visible to you                                                                |
-| `list`            | person_id | list_id                  |                                                                 | Gets the details for a specific list given the existing list id                                                     |
-| `list_entry`      |           | list_id<br>list_entry_id |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
-| `fields`          |           |                          | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
-| `field_values`    |           |                          | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| Endpoint       | Required  | URL Parameters           | Optional                                                        | Description                                                                                                         |
+|----------------|-----------|--------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `lists`        |           |                          |                                                                 | Returns a collection of all the lists visible to you                                                                |
+| `list`         | person_id | list_id                  |                                                                 | Gets the details for a specific list given the existing list id                                                     |
+| `list_entry`   |           | list_id<br>list_entry_id |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
+| `fields`       |           |                          | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| `field_values` |           |                          | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
 
 
 ### Nav Tree
@@ -83,62 +83,61 @@ Here's a sample `FROM` clause:
 FROM `myaffinityapi`.`<ENDPOINT>`
 ```
 
+### Lists
+ 
+You can use the `lists` endpoint to retrieve a list of all endpoints available to you.
 
-=== "Lists" 
-    
-    You can use the `lists` endpoint to retrieve a list of all endpoints available to you.
-    
-    ```sql
-    SELECT *
-    FROM `myaffinityapi`.`lists`
-    LIMIT 100
-    ```
+```sql
+SELECT *
+FROM `myaffinityapi`.`lists`
+LIMIT 100
+```
 
-=== "List"
-    
-    Gets the details for a specific list given the existing list id
-    
-    ```sql
-    SELECT *
-    FROM `myaffinityapi`.`list`
-    WHERE `person_id`='qEnOZ5Oh0poWnQ1luFBfVw_0000'
-    LIMIT 100
-    ```
+### List
 
-=== "List Entry"
-    
-    Each list comprises a number of entries. Each list entry has a creator, a list that it belongs to, and the underlying entity it represents depending on the type of the list (people, organizations or opportunities).
-    
-    ```sql
-    SELECT *
-    FROM `myaffinityapi`.`list_entry`
-    WHERE `list_id`='12345'
-    AND `list_entry_id`='54321'
-    LIMIT 100
-    ```
+Gets the details for a specific list given the existing list id
 
-=== "Fields"
-    
-    Returns all fields based on the parameters provided. Pass the `list_id` to only fetch fields that are specific to that list. Otherwise, all global and list-specific fields will be returned. Pass the `value_type` to fetch fields of specific value types. Otherwise, all fields of any type will be returned. Pass the `with_modified_names` flag to return the fields such that the names have the list name prepended to them.
-    
-    ```sql
-    SELECT *
-    FROM `myaffinityapi`.`fields`
-    WHERE `list_id`=12345
-    AND `value_type`=3
-    LIMIT 100
-    ```
+```sql
+SELECT *
+FROM `myaffinityapi`.`list`
+WHERE `person_id`='qEnOZ5Oh0poWnQ1luFBfVw_0000'
+LIMIT 100
+```
 
-=== "field_values"
+### List Entry
 
-    Field values are displayed in Affinity as the data in the cells of an Affinity spreadsheet. This endpoint returns all field values attached to a person, organization, opportunity, or list_entry.
+Each list comprises a number of entries. Each list entry has a creator, a list that it belongs to, and the underlying entity it represents depending on the type of the list (people, organizations or opportunities).
 
-    ```sql
-     SELECT *
-    FROM `myaffinityapi`.`fields`
-    WHERE `person_id`=12345
-    LIMIT 100
-    ```
+```sql
+SELECT *
+FROM `myaffinityapi`.`list_entry`
+WHERE `list_id`='12345'
+AND `list_entry_id`='54321'
+LIMIT 100
+```
+
+### Fields
+
+Returns all fields based on the parameters provided. Pass the `list_id` to only fetch fields that are specific to that list. Otherwise, all global and list-specific fields will be returned. Pass the `value_type` to fetch fields of specific value types. Otherwise, all fields of any type will be returned. Pass the `with_modified_names` flag to return the fields such that the names have the list name prepended to them.
+
+```sql
+SELECT *
+FROM `myaffinityapi`.`fields`
+WHERE `list_id`=12345
+AND `value_type`=3
+LIMIT 100
+```
+
+### Field Values
+
+Field values are displayed in Affinity as the data in the cells of an Affinity spreadsheet. This endpoint returns all field values attached to a person, organization, opportunity, or list_entry.
+
+```sql
+ SELECT *
+FROM `myaffinityapi`.`fields`
+WHERE `person_id`=12345
+LIMIT 100
+```
 
 
 [image-3]: ../../img/api/affinity/affinity-select-api.png
