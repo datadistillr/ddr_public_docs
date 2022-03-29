@@ -7,6 +7,8 @@ description: How to Connect DataDistillr to the Affinity API
 ### Rate Limits
 
 Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
+
+
 All API requests will be halted at 450K per user, per day. Your daily limit will reset the next day at 12AM (midnight) Pacific Time.
 
 ## How to Connect DataDistillr to Affinity
