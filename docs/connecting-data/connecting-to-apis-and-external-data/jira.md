@@ -2,7 +2,7 @@
 description: How to Connect DataDistillr to the JIRA API
 ---
 
-# JIRA API
+# Connecting to JIRA
 
 ## Creating a JIRA account
 Set up an account with [JIRA](https://www.atlassian.com/software/opsgenie/try).
@@ -121,7 +121,7 @@ This is the email that is tied to your Atlassian account.
 
 
 ### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API key'.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
 !!! example "Steps for getting the API key"
 
