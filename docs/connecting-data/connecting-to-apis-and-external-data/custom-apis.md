@@ -53,7 +53,7 @@ Once you've done that, save your work and you are ready to query!
 Now that you've added your data, you can query your data.  In the query view, you will see your endpoint listed, but if you want to type in a query, or use this endpoint in a pre-existing query, you can run a query like the one below:&#x20;
 
 ```sql
-SELECT * 
+SELECT *
 FROM fantasyfootball.players
 ```
 
