@@ -53,50 +53,49 @@ Enter any name that will help you recognize this data source from within your qu
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
 
-!!! example "Steps for getting the API key"
-    === "1. Home page"
-        In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
+=== "1. Home page"
+    In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
 
-        ![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
+    ![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
 
-    === "2. Account Settings"  
-        In the **My Settings** window, click on the **Apps** tab.
+=== "2. Account Settings"  
+    In the **My Settings** window, click on the **Apps** tab.
 
-        ![Click on the Apps Tab in the 'My Settings' window.] [image-6]
+    ![Click on the Apps Tab in the 'My Settings' window.] [image-6]
 
-    === "3. Apps"
-        Click on **Manage Developer Apps** which opens a new tab in your browser.
+=== "3. Apps"
+    Click on **Manage Developer Apps** which opens a new tab in your browser.
 
-        ![Click on 'Manage Developer Apps'.] [image-7]
+    ![Click on 'Manage Developer Apps'.] [image-7]
 
-    === "4. Personal Access Tokens"
-        In the **Personal access tokens** section, choose **Create new token**.
+=== "4. Personal Access Tokens"
+    In the **Personal access tokens** section, choose **Create new token**.
 
-        ![Click on 'Create new token'.] [image-8]
+    ![Click on 'Create new token'.] [image-8]
 
-    === "5. New Token"
-        Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
+=== "5. New Token"
+    Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
 
-        ![Enter name and check the checkbox. Click 'Create token'.] [image-9]
+    ![Enter name and check the checkbox. Click 'Create token'.] [image-9]
 
-    === "6. Copy Token"
-        Click **Copy** to copy the token to your clipboard.
+=== "6. Copy Token"
+    Click **Copy** to copy the token to your clipboard.
 
-        ![Click 'Copy' to copy the token.] [image-10]
+    ![Click 'Copy' to copy the token.] [image-10]
 
 ## Endpoints
 Please see [Asana's API Reference](https://developers.asana.com/docs/asana) for more on Asana's endpoints.
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
-| Endpoint | Required | Optional |
-| ----------- | ----------- | ----------- |
-| `/tasks` | assignee<br>project<br>section<br>workspace<br> | completed_since<br>modified_since<br>limit<br>offset<br>opt_pretty<br>opt_fields |
-| `/users` | | workspace<br>team<br>limit<br>offset<br>opt_pretty<br>opt_fields |
-| `/workspaces` | | limit<br>offset<br>opt_pretty<br>opt_fields |
-| `/projects` | | workspace<br>team<br>archived<br>limit<br>offset<br>opt_pretty<br>opt_fields |
-| `/tags` | workspace | limit<br>offset<br>opt_pretty<br>opt_fields |
-| `/organizations/{workspace_gid}/teams` | | limit<br>offset<br>opt_pretty<br>opt_fields |
+| Endpoint | Required | Optional | Description |
+|  ----------- | ----------- | ----------- | ----------- |
+| `/tasks` | assignee<br>project<br>section<br>workspace<br> |  completed_since<br>modified_since<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the tasks which match the parameters provided. |
+| `/users` | | workspace<br>team<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the users that the current user has access to. |
+| `/workspaces` | | limit<br>offset<br>opt_pretty<br>opt_fields | Returns the workspaces associated with the current user. |
+| `/projects` | | workspace<br>team<br>archived<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the projects associated with the current user. (Asana recommends filtering by team to avoid timeouts for large domains). |
+| `/tags` | workspace | limit<br>offset<br>opt_pretty<br>opt_fields | Returns the tags for the given workspace. |
+| `/organizations/{workspace_gid}/teams` | | limit<br>offset<br>opt_pretty<br>opt_fields | Returns all of the teams in the organization connected to the current user. |
 
 
 ### Nav Tree
