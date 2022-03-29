@@ -2,33 +2,7 @@
 description: How to Connect DataDistillr to the DonorSearch API
 ---
 
-# DonorSearch API
-
-## Creating a DonorSearch account
-Set up an account with [DonorSearch](https://www.atlassian.com/software/opsgenie/try).
-
-Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.
-
-### Costs
-There are four plan tiers:
-
-**Free**
-: $0 Always free for 10 users
-
-**Standard**
-:	$7.50 per user (average) $75 a month
-
-**Premium**
-:	$14.50 per user (average) $145 a month
-
-**Enterprise**
-:	Billed annually. Contact their [sales team](https://www.atlassian.com/enterprise/contact?formType=pricing-quotes) to get a quote about a product or service.
-
-### Rate Limits
-The DonorSearch API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
-
-Also as a means of preventing room "spam", API methods that involve sending messages to rooms or individual people are limited to 30 requests per minute.
-
+# Connecting to DonorSearch
 
 ## How to Connect DataDistillr to DonorSearch
 To set up a data source connection for DonorSearch, you will need to have:
@@ -74,14 +48,10 @@ Enter any name that will help you recognize this data source from within your qu
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint                   | Required | Optional                                                                                                                                                                      | Description                                               |
-|----------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| `/board/{boardId}`         |          |                                                                                                                                                                               | Returns the board with the matching board ID.             |
-| `/board`                   |          | startAt<br>maxResults<br>type<br>name<br>projectKeyOrId<br>accountIdLocation<br>projectLocation<br>includePrivate<br>negateLocationFiltering<br>orderBy<br>expand<br>filterId | Returns all boards.                                       |
-| `/board/{boardId}/epic`    |          | startAt<br>maxResults<br>done                                                                                                                                                 | Returns all epics from the board, for the given board ID. |
-| `/board/{boardId}/issue`   |          | startAt<br>maxResults<br>jql<br>validateQuery<br>fields<br>expand                                                                                                             | Returns all issues from a board, for a given board ID.    |
-| `/board/{boardId}/project` |          | startAt<br>maxResults                                                                                                                                                         | Returns all projects that are associated with the board.  |
-
+| Endpoint       | Required                           | Optional                                                                               | Description |
+|----------------|------------------------------------|----------------------------------------------------------------------------------------|-------------|
+| `donor_search` | firstName<br>lastName<br>homeState | middleName<br>homeStreetAddress<br>homeCity<br>homeZip<br>Employer<br>Age<br>Telephone |             |
+| `accountStats` |                                    |                                                                                        |             |
 
 
 ### Nav Tree
