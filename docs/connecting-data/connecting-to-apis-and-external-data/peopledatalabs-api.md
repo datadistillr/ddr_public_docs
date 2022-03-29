@@ -81,7 +81,7 @@ The API key is generated within your account page. The following steps will navi
 
     === "2. Account settings"
 
-        This is page contains the settings for your API token. You can modify the token's nickname and generate a new key in with **Roll This Key**.
+        This page contains the settings for your API token. You can modify the token's nickname and generate a new key with **Roll This Key**.
 
         ![API keys][image-2]
 
