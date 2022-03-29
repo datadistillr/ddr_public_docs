@@ -68,43 +68,38 @@ The table below shows a list of endpoints available to connect within the DataDi
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
 <figure markdown>
-  ![Affinity Endpoints][image-7]{ width="100%" }
+    ![Affinity Endpoints][image-7]{ width=100% }
 </figure>
-
 
 
 ## Sample Queries
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Affinity API data source was called `mypdlapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Affinity data source name.
+For the following examples, suppose that my Affinity API data source was called `myaffinityapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Affinity data source name.
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `mypdlapi`.`<ENDPOINT>`
+    FROM `myaffinityapi`.`<ENDPOINT>`
     ```
 
 
 
-### Enrich
-You can use the `v5/person/enrich` endpoint to enrich data on a person. The person enrichment API provides a one-to-one match, providing up-to-date information on a unique individual.
+### Lists
+You can use the `lists` endpoint to retrieve a list of all endpoints available to you.
 
 ```sql
 SELECT *
-FROM `mypdlapi`.`/person/enrich`
-WHERE `first_name`='John'
-AND `last_name`='Doe'
-AND `postal_code`='11111'
-AND `phone`='555-123-4567'
+FROM `myaffinityapi`.`lists`
 LIMIT 100
 ```
 
-### Retrieve
-The Person Retrieve API allows you to use a PDL Person ID (like `qEnOZ5Oh0poWnQ1luFBfVw_0000`) to get back the data associated with that ID. A PDL ID is a unique and permanent identifier for each record in our dataset, and so this endpoint allows you to directly retrieve the data for the exact record you are interested in.
+### List
+Gets the details for a specific list given the existing list id
 
 ```sql
 SELECT *
-FROM `mypdlapi`.`/person/retrieve/:person_id`
+FROM `myaffinityapi`.`list`
 WHERE `person_id`='qEnOZ5Oh0poWnQ1luFBfVw_0000'
 LIMIT 100
 ```
@@ -141,6 +136,6 @@ LIMIT 100
 [image-4]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-dark.png
 [image-5]: ../../img/api/affinity/affinity-form.png
 [image-6]: ../../img/api/peopledatalabs/peopledatalabs-form-dark.png
-[image-7]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-light.png
+[image-7]: ../../img/api/affinity/affinity-endpoints.png
 [image-8]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-dark.png
 [image-9]: ../../img/api/select-api-form.png
