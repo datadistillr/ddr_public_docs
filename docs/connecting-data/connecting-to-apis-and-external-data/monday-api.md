@@ -5,7 +5,7 @@ description: How to Connect DataDistillr to the Monday API
 # Monday API
 
 ## Creating a Monday account
-Set up an account with [Monday](https://monday.com/).
+Set up an account with [Monday][link-1]{target="_blank"}.
 
 ### Costs
 There are 4 pricing plans:
@@ -20,7 +20,7 @@ There are 4 pricing plans:
 : $16 seat / month. Total $48 per month.
 
 **Enterprise**
-: [Contact Sales](https://monday.com/pricing/).
+: [Contact Sales][link-2]{target="_blank"}.
 
 ### Rate Limits
 The API uses a construct called complexity to define the cost of each query made.
@@ -74,8 +74,7 @@ Enter any name that will help you recognize this data source within your query w
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Monday form under 'API key'.
 
-#### As an Admin
-Steps for Getting API Key as Admin
+#### Steps for getting the API key as an admin
 
 === "1. Home Page"
 
@@ -89,11 +88,8 @@ Steps for Getting API Key as Admin
 
     ![API Key][image-10]
 
-#### As a Developer
 
-Steps for Getting API Key as a Dev
-
-
+#### Steps for getting the API key as a developer
 
 === "1. Home Page"
     
@@ -110,10 +106,6 @@ Steps for Getting API Key as a Dev
 === "4. API Key"
     
     ![API Key][image-12]
-        
-    
-
-
 
 
 ## Endpoints
@@ -190,16 +182,19 @@ FROM `mymondayapi`.`updates`
 LIMIT 1000
 ```
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png
-[image-1]: ../../img/api/monday/choose-form-monday-light.png
-[image-2]: ../../img/api/monday/choose-form-monday-dark.png
-[image-3]: ../../img/api/monday/monday-form-light.png
-[image-4]: ../../img/api/monday/monday-form-dark.png
-[image-5]: ../../img/api/monday/monday-nav-tree-light.png
-[image-6]: ../../img/api/monday/monday-nav-tree-dark.png
-[image-7]: ../../img/api/monday/monday-home-page.png
-[image-8]: ../../img/api/monday/monday-account-pop-up-admin.png
-[image-9]: ../../img/api/monday/monday-account-pop-up-dev.png
-[image-10]: ../../img/api/monday/monday-admin-api-key.png
-[image-11]: ../../img/api/monday/monday-dev-my-access-tokens.png
-[image-12]: ../../img/api/monday/monday-dev-api-key.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/monday/choose-form-monday-light.png "API Data Source selection"
+[image-2]: ../../img/api/monday/choose-form-monday-dark.png "API Data Source selection"
+[image-3]: ../../img/api/monday/monday-form-light.png "Monday.com form"
+[image-4]: ../../img/api/monday/monday-form-dark.png "Monday.com form"
+[image-5]: ../../img/api/monday/monday-nav-tree-light.png "Monday.com endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/monday/monday-nav-tree-dark.png "Monday.com endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/monday/monday-home-page.png "Monday.com workspace page"
+[image-8]: ../../img/api/monday/monday-account-pop-up-admin.png "Admin page link in account settings pop up"
+[image-9]: ../../img/api/monday/monday-account-pop-up-dev.png "Developers page link in account settings pop up"
+[image-10]: ../../img/api/monday/monday-admin-api-key.png "Admin API token settings"
+[image-11]: ../../img/api/monday/monday-dev-my-access-tokens.png "Monday.com My Apps page"
+[image-12]: ../../img/api/monday/monday-dev-api-key.png "Developer API token settings"
+
+[link-1]: https://monday.com/ "Monday.com home page"
+[link-2]: https://monday.com/pricing/ "Monday.com pricing"

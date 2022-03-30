@@ -3,10 +3,9 @@
 *.iml
 
 # OS X
-.DS_Store
+*.DS_Store
 .AppleDouble
 .LSOverride
-docs/.DS_Store
 
 # Windows
-desktop.ini
+*desktop.ini
