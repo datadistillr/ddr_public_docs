@@ -152,7 +152,7 @@ Log into your monday.com account.
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
 ### How does GraphQL work?
-This API is build with GraphQL, a flexible query language that allows you to return as much or as little data as you need.
+This API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.
 
 Unlike REST APIs, the API of monday.com uses a single endpoint: `https://api.monday.com/v2`
 
@@ -160,7 +160,6 @@ GraphQL relies on a type system, where each object is a type and contains fields
 
 For example, the Board type contains scalar fields like name, id and description. It also contains an items field, which defines the items on that specific board and contains its own fields (like name, id, state).
 
-We at DataDistillr return all the fields that define a type.
 
 | Endpoint   | Required | Optional | Description                                   |
 |------------|----------|----------|-----------------------------------------------|
