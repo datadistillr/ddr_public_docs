@@ -73,10 +73,17 @@ For the following examples, suppose that my DonorSearch API data source was call
     FROM `mydonorsearchapi`.`<ENDPOINT>`
     ```
 
+### donor_search 
 
+```sql 
+SELECT * FROM donor_search.ds
+WHERE firstName = 'Monty' and
+lastName = 'Rahman' and
+homeState = 'Maryland'and
+Telephone = '4435389571'
+LIMIT 1000
+```
 
-### Get Board
-This board will only be returned if the user has permission to view it.
 
 
 [image-1]: ../../img/api/donorsearch/donorsearch-form.png
