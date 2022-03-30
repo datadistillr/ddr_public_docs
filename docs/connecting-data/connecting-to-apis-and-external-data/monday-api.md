@@ -7,31 +7,27 @@ description: How to Connect DataDistillr to the Monday API
 ## Creating a Monday account
 Set up an account with [Monday][link-1]{target="_blank"}.
 
-### Costs
-There are 4 pricing plans:
+!!! note "Costs"
 
-**Student**
-: $0 seat / month.
+    There are 4 pricing plans:
 
-**Standard**
-: $10 seat / month. Total $30 per month.
+    - **Student:** $0 seat / month.
+    - **Standard:** $10 seat / month. Total $30 per month.
+    - **Pro:** $16 seat / month. Total $48 per month.
+    - **Enterprise:** [Contact Sales][link-4]{target="_blank"}.
 
-**Pro**
-: $16 seat / month. Total $48 per month.
-
-**Enterprise**
-: [Contact Sales][link-4]{target="_blank"}.
-
-
-For more information about Monday.com pricing please visit [https://monday.com/pricing/][link-5]{target="_blank"}
+    For more information about Monday.com pricing please visit [https://monday.com/pricing/][link-5]{target="_blank"}
 
 ### Rate Limits
-The API uses a construct called complexity to define the cost of each query made.
 
-monday.com API rate limits are based on the complexity of the queries an app makes in a given time period. There are two limits to keep in mind:
+!!! warning "Rate Limits"
 
-- A single query is limited to 5,000,000 complexity points 
-- All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the [Admin](#steps-for-getting-the-api-key-as-an-admin) section or the [Access Tokens](#steps-for-getting-the-api-key-as-a-developer) section 
+    The API uses a construct called complexity to define the cost of each query made.
+
+    Monday.com API rate limits are based on the complexity of the queries an app makes in a given time period. There are two limits to keep in mind:
+
+    - A single query is limited to 5,000,000 complexity points
+    - All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the [Admin](#steps-for-getting-the-api-key-as-an-admin) section or the [Access Tokens](#steps-for-getting-the-api-key-as-a-developer) section
 
 ## How to Connect DataDistillr to Monday
 To set up a data source connect for Monday, you will need to have:
@@ -75,7 +71,7 @@ Enter any name that will help you recognize this data source within your query w
 
 
 ### API Key
-You will need a valid authentication through an access token. Each user has their own API token, this grants API access to all the boards to which the user has access (i.e. they're subscribed to).
+You will need valid authentication through an access token. Each user has their own API token, this grants API access to all the boards to which the user has access (i.e. they're subscribed to).
 
 Currently, monday.com only offers V2 API tokens, which are all personal tokens. To access your API tokens, you can use one of two methods depending on your user level.
 
@@ -92,7 +88,7 @@ Log into your monday.com account.
 
 === "1. Home Page"
 
-    Click on your avatar in the bottom left corner of your screen
+    Click on your avatar (picture icon) in the bottom left corner of your screen
 
     ![Home Page][image-7]
 
@@ -118,13 +114,13 @@ Log into your monday.com account.
 
 === "1. Home Page"
 
-    Click on your avater (picture icon) in the bottom left corner of you screen.
+    Click on your avatar (picture icon) in the bottom left corner of your screen.
     
     ![Home Page][image-7]
 
 === "2. Account Settings"
 
-    Select **Developer** from the resulting menu.
+    Select **Developers** from the resulting menu.
 
     ![Account Settings][image-9]
 
@@ -142,7 +138,14 @@ Log into your monday.com account.
 
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+
+| Endpoint   | Required | Optional | Description                                   |
+|------------|----------|----------|-----------------------------------------------|
+| `items`    |          |          | Returns the items where the user has access   |
+| `users`    |          |          | Returns the users where the user has access   |
+| `boards`   |          |          | Returns the boards where the user has access  |
+| `updates`  |          |          | Returns the updates where the user has access |
 
 ### How does GraphQL work?
 This API is built with GraphQL, a flexible query language that allows you to return as much or as little data as you need.
@@ -151,15 +154,10 @@ Unlike REST APIs, the API of monday.com uses a single endpoint: `https://api.mon
 
 GraphQL relies on a type system, where each object is a type and contains fields that define it. These fields can be scalars (such as integers) or can be objects themselves. Some fields also take arguments, which can be used to limit, filter, or sort the data that is returned.
 
-For example, the Board type contains scalar fields like name, id and description. It also contains an items field, which defines the items on that specific board and contains its own fields (like name, id, state).
+For example, the Board type contains scalar fields like name, id, and description. It also contains an items field, which defines the items on that specific board and contains its own fields (like name, id, state).
 
 
-| Endpoint   | Required | Optional | Description                                   |
-|------------|----------|----------|-----------------------------------------------|
-| `items`    |          |          | Returns the items where the user has access   |
-| `users`    |          |          | Returns the users where the user has access   |
-| `boards`   |          |          | Returns the boards where the user has access  |
-| `updates`  |          |          | Returns the updates where the user has access |
+
 
 
 ### Nav Tree
@@ -172,7 +170,7 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 
 ## Sample Queries
-The following queries are intended to help you get started, and make like simpler querying within your API.
+The following queries are intended to help you get started, and make life simpler querying within your API.
 
 For the following examples, suppose that my Monday API data source was called `mymondayapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Monday data source name.
 
