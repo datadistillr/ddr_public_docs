@@ -2,10 +2,10 @@
 description: How to Connect DataDistillr to the UPC Database API
 ---
 
-# UPC Database API
+# Connecting to UPC Database
 
 ## Creating a UPC Database account
-Set up an account with [UPC Database](https://upcdatabase.org/).
+Set up an account with [UPC Database][link-1]{target="_blank"}.
 
 ???+ cost
 
@@ -61,29 +61,29 @@ Enter any name that will help you recognize this data source within your query w
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the UPC Database form under 'API key'.
 
-!!! example "Steps For Getting the API Key"
+##### Steps for getting the API key
 
-    === "1. Home Page"
-   
-        While in the UPC Database home page, click the **Your Account** drop down menu and then click on **Dashboard**.
-    
-        ![Home Page][image-7]
+=== "1. Home Page"
 
-    === "2. Dashboard"
-    
-        This page displays your account information. Click on **API Keys** in the sidebar.
+    While in the UPC Database home page, click the **Your Account** drop down menu and then click on **Dashboard**.
 
-        ![Dashboard][image-8]
+    ![Home Page][image-7]
 
-    === "3. API Key"
+=== "2. Dashboard"
 
-        In this page you can create and remove tokens from your account.
+    This page displays your account information. Click on **API Keys** in the sidebar.
 
-        ![API Key][image-9]
+    ![Dashboard][image-8]
+
+=== "3. API Key"
+
+    In this page you can create and remove tokens from your account.
+
+    ![API Key][image-9]
 
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint            | Required     | Optional | Description                                                              |
 |---------------------|--------------|----------|--------------------------------------------------------------------------|
@@ -158,14 +158,16 @@ FROM `myupcdbapi`.`/currency/symbols`
 LIMIT 1000
 ```
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png
-[image-1]: ../../img/api/upcdb/choose-form-upc-light.png
-[image-2]: ../../img/api/upcdb/choose-form-upc-dark.png
-[image-3]: ../../img/api/upcdb/upc-form-light.png
-[image-4]: ../../img/api/upcdb/upc-form-dark.png
-[image-5]: ../../img/api/upcdb/upc-nav-tree-light.png
-[image-6]: ../../img/api/upcdb/upc-nav-tree-dark.png
-[image-7]: ../../img/api/upcdb/upc-home.png
-[image-8]: ../../img/api/upcdb/upc-dashboard.png
-[image-9]: ../../img/api/upcdb/upc-api-keys.png
-[image-10]: ../../img/api/upcdb/upc-api-history.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/upcdb/choose-form-upc-light.png "API Data Source selection"
+[image-2]: ../../img/api/upcdb/choose-form-upc-dark.png "API Data Source selection"
+[image-3]: ../../img/api/upcdb/upc-form-light.png "UPC Database form"
+[image-4]: ../../img/api/upcdb/upc-form-dark.png "UPC Database form"
+[image-5]: ../../img/api/upcdb/upc-nav-tree-light.png "UPC Database endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/upcdb/upc-nav-tree-dark.png "UPC Database endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/upcdb/upc-home.png "UPC Database home page"
+[image-8]: ../../img/api/upcdb/upc-dashboard.png "UPC Database account dashboard"
+[image-9]: ../../img/api/upcdb/upc-api-keys.png "API token settings"
+[image-10]: ../../img/api/upcdb/upc-api-history.png "API history settings"
+
+[link-1]: https://upcdatabase.org/ "UPC Database" 
