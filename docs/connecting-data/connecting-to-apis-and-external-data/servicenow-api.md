@@ -53,11 +53,11 @@ Enter any name that will help you recognize this data source from within your qu
     - lowercase alphanumeric characters
     - underscores
 
-### Instance ID, Username and Password
+### Instance ID, Username, and Password
 
 === "1. Home Page"
 
-    Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
+    Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do){target=_blank}.
     In the top right corner click the profile avatar.
     
     ![ServiceNow Home Page][image-10]
@@ -78,13 +78,13 @@ Enter any name that will help you recognize this data source from within your qu
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint   | Required | URL Params  | Description                                      |
-|------------|----------|-------------|--------------------------------------------------|
-| `tables`   |          | `tableName` | Returns the table with the matching `tableName`. |
-| `case`     |          |             | Returns Customer Service Management (CSM) cases. |
-| `user`     |          |             | Returns set of (CSM) accounts.                   |
-| `consumer` |          |             | Returns set of (CSM) consumer records.           |
-| `contact`  |          |             | Returns set of (CSM) consumer contacts.          |
+| Endpoint   | URL Params  | Description                                      |
+|------------|-------------|--------------------------------------------------|
+| `tables`   | `tableName` | Returns the table with the matching `tableName`. |
+| `case`     |             | Returns Customer Service Management (CSM) cases. |
+| `user`     |             | Returns set of (CSM) accounts.                   |
+| `consumer` |             | Returns set of (CSM) consumer records.           |
+| `contact`  |             | Returns set of (CSM) consumer contacts.          |
 
 
 
