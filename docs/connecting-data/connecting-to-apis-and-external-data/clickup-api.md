@@ -12,7 +12,7 @@ Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
     - Business Plus - $29 per member per month
     - Enterprise
 
-[Details and Comparison](https://clickup.com/pricing){target=_blank}
+    [Details and Comparison](https://clickup.com/pricing){target=_blank}
 
 ???+ rlimit "Rate Limits"
 
@@ -33,7 +33,7 @@ To set up a data source connection for ClickUp, you will need to have:
 
 ### Data Source Form
 
-To locate the ClickUp form, follow the steps in [Connecting Your Data to DataDistillr](../../){target=_blank}. When you get to the window to choose the data source type, select API as shown below.
+To locate the ClickUp form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
 ![Select API from the available choices][image-1]{width=600}
@@ -62,7 +62,7 @@ Enter any name that will help you recognize this data source from within your qu
     - underscores
 
 ### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the ClickUp form under 'API key'.
 
 === "1. Home page"
     In the ClickUp app, click your profile icon in the bottom left corner of the page.
@@ -82,7 +82,7 @@ An API key is generated within your account page. The following steps will navig
 ## Endpoints
 Please see [ClickUp's API Reference](https://clickup.com/api){target=_blank} for more on ClickUp's endpoints.
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/){target=_blank} Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
 | Endpoint | Required | Optional | Description |
 |  ----------- | ----------- | ----------- | ----------- |
@@ -105,9 +105,17 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-Suppose that my ClickUp API data source was called `clickupapi2000`
+For the following examples, suppose that my ClickUp API data source was called `clickupapi2000`, and I want to query an endpoint. The endpoint goes after the ClickUp data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `clickupapi2000`.`<ENDPOINT>`
+    ```
 
 ### Get Tasks Endpoint
+
+This query returns all tasks within the specified list, including closed tasks.
 
 ```sql
 SELECT *
@@ -119,6 +127,8 @@ LIMIT 10
 
 ### Get Spaces Endpoint
 
+This query returns all spaces associated with the specified team.
+
 ```sql
 SELECT *
 FROM clickupapi2000.`/team/:team_id/space`
@@ -127,6 +137,8 @@ LIMIT 10
 ```
 ### Get Folders Endpoint
 
+This query returns all folders within the specified space.
+
 ```sql
 SELECT *
 FROM clickupapi2000.`/space/:space_id/folder`
@@ -134,6 +146,8 @@ WHERE `space_id`='3110392'
 LIMIT 10
 ```
 ### Get Lists Endpoint
+
+This query returns all lists within the specified folder.
 
 ```sql
 SELECT *
@@ -144,6 +158,8 @@ LIMIT 10
 ```
 ### Get Folder-less Lists Endpoint
 
+This query returns all lists within the specified space.
+
 ```sql
 SELECT *
 FROM clickupapi2000.`/space/:space_id/list`
@@ -151,6 +167,8 @@ WHERE `space_id`='3110392'
 LIMIT 10
 ```
 ### Get Space Tags Endpoint
+
+This query returns all tags associated with the specified space.
 
 ```sql
 SELECT *
