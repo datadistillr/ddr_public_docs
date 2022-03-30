@@ -16,6 +16,8 @@ Set up an account with [UPC Database][link-1]{target="_blank"}.
     - **Standard:** $10 per month.
     - **Professional:** $50 per month.
 
+    For more information about UPC Database pricing, please visit [https://upcdatabase.org/api-pricing][link-2]{target="_blank"}
+
 ???+ rlimit "Rate Limits"
 
     API does not have information about rate limits.
@@ -114,6 +116,7 @@ For the following examples, suppose that my UPC Database API data source was cal
 
 
 ### Get Product
+With this endpoint you can search information about a SKU with the ID of the product.
 
 ```sql
 SELECT * 
@@ -123,6 +126,7 @@ LIMIT 1000
 ```
 
 ### Search for Product
+With this endpoint you can search products with keywords.
 
 ```sql
 SELECT * 
@@ -132,6 +136,7 @@ LIMIT 1000
 ```
 
 ### Retrieve List of The Latest Currency
+With this endpoint you can get the currencies that are supported.
 
 ```sql
 SELECT * 
@@ -141,7 +146,8 @@ LIMIT 1000
 ```
 
 ### Retrieve List of Historic Currency
-
+With this endpoint you can get the currencies that were supported throughout history
+.
 ```sql
 SELECT * 
 FROM `myupcdbapi`.`/currency/history`
@@ -151,6 +157,7 @@ LIMIT 1000
 ```
 
 ### Retrieve List of Currency Symbols
+With this endpoint you can get the symbols of the currencies.
 
 ```sql
 SELECT * 
@@ -170,4 +177,5 @@ LIMIT 1000
 [image-9]: ../../img/api/upcdb/upc-api-keys.png "API token settings"
 [image-10]: ../../img/api/upcdb/upc-api-history.png "API history settings"
 
-[link-1]: https://upcdatabase.org/ "UPC Database" 
+[link-1]: https://upcdatabase.org/signup "UPC Database sign up" 
+[link-2]: https://upcdatabase.org/api-pricing "UPC Database pricing" 
