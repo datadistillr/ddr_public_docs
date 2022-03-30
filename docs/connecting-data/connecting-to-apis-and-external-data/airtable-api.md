@@ -1,10 +1,26 @@
+---
+description: How to Connect DataDistillr to the Airtable API
+---
+
 # Connecting to Airtable
 
 ## Creating an Airtable account
 Set up an account with [Airtable](https://www.airtable.com/).
 
-__Costs__  
-There are several different types of accounts. There is a free version, a $10 and $20 version. You can check [HERE](https://www.airtable.com/pricing) for details and comparison.
+### Costs  
+There are several different types of accounts. 
+
+**Free**
+: $0 Free for up to 5 users
+
+**Plus**
+: $10 per seat/month
+
+**Pro**
+: $20
+
+**Enterprise**
+You can check [HERE](https://www.airtable.com/pricing) for details and comparison.
 
 
 __Rate Limits__  
