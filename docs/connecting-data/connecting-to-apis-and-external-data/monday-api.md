@@ -7,7 +7,7 @@ description: How to Connect DataDistillr to the Monday API
 ## Creating a Monday account
 Set up an account with [Monday][link-1]{target="_blank"}.
 
-!!! note "Costs"
+???+ cost
 
     There are 4 pricing plans:
 
@@ -18,9 +18,7 @@ Set up an account with [Monday][link-1]{target="_blank"}.
 
     For more information about Monday.com pricing please visit [https://monday.com/pricing/][link-5]{target="_blank"}
 
-### Rate Limits
-
-!!! warning "Rate Limits"
+???+ rlimit "Rate Limits"
 
     The API uses a construct called complexity to define the cost of each query made.
 
