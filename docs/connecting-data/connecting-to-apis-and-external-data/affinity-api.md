@@ -4,6 +4,10 @@ description: How to Connect DataDistillr to the Affinity API
 
 # Affinity API
 
+### Cost
+
+You can [contact](https://www.affinity.co/request-demo?utm_campaign=Capterra&utm_source=capterra&utm_medium=ppc) Affinity for a free demo and pricing.
+
 ### Rate Limits
 
 Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
