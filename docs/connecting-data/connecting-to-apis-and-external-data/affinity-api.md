@@ -51,8 +51,7 @@ Enter any name that will help you recognize this data source within your query w
 
 
 ### API Key
-The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Affinity form.
-
+The API key is generated within your account's settings page. Head over to the [Affinity docs](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-API-Key) to learn how to generate your API Key. Once created, copy the key and enter it in the Affinity form.
 
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
