@@ -4,14 +4,22 @@ description: How to Connect DataDistillr to the Affinity API
 
 # Affinity API
 
+## Creating an Affinity account
+
+You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and to create an account.
+
+
 ### Cost
 
-You can [contact](https://www.affinity.co/request-demo?utm_campaign=Capterra&utm_source=capterra&utm_medium=ppc){target=_blank} Affinity for a free demo and pricing.
+You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and pricing.
 
 ### Rate Limits
 
 Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
-Proffesional tier gets 40,000 calls; Premium tier gets 100,000 calls; Enterprise tier gets unlimited calls.
+
+- Professional tier: 40,000 calls. 
+- Premium tier: 100,000 calls. 
+- Enterprise tier: unlimited calls.
 
 All API requests will be halted at 450K per user, per day. Your daily limit will reset the next day at 12AM (midnight) Pacific Time.
 
@@ -23,7 +31,7 @@ To set up a data source connect for Affinity, you will need to have:
 
 
 ### Data Source Form
-To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../connecting-to-apis-and-external-data/custom-apis). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
   ![Data Source Wizard][image-9]{ width="100%" }
@@ -60,13 +68,13 @@ The API key is generated within your account's settings page. Head over to the [
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
-| Endpoint       | Required  | URL Parameters           | Optional                                                        | Description                                                                                                         |
-|----------------|-----------|--------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `lists`        |           |                          |                                                                 | Returns a collection of all the lists visible to you                                                                |
-| `list`         | person_id | list_id                  |                                                                 | Gets the details for a specific list given the existing list id                                                     |
-| `list_entry`   |           | list_id<br>list_entry_id |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
-| `fields`       |           |                          | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
-| `field_values` |           |                          | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| Endpoint       | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
+|----------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `lists`        |                          |           |                                                                 | Returns a collection of all the lists visible to you                                                                |
+| `list`         | list_id                  | person_id |                                                                 | Gets the details for a specific list given the existing list id                                                     |
+| `list_entry`   | list_id<br>list_entry_id |           |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
+| `fields`       |                          |           | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| `field_values` |                          |           | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
 
 
 ### Nav Tree
@@ -138,7 +146,7 @@ LIMIT 100
 Field values are displayed in Affinity as the data in the cells of an Affinity spreadsheet. This endpoint returns all field values attached to a person, organization, opportunity, or list_entry.
 
 ```sql
- SELECT *
+SELECT *
 FROM `myaffinityapi`.`fields`
 WHERE `person_id`=12345
 LIMIT 100
