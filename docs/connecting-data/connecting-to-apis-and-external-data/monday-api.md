@@ -111,7 +111,7 @@ Log into your monday.com account.
 
 === "3. API Key"
 
-    Go to the **API** section. Your API token will be located here. If you haven't created an API token you will be ablel to 'Generate a "API v2 Token"'. If you already have an API token you can also create a new to replace your current token by clicking **Regenerate**.
+    Go to the **API** section. Your API token will be located here. If you haven't created an API token you will be able to 'Generate a "API v2 Token"'. If you already have an API token you can also create a new one to replace your current token by clicking **Regenerate**.
 
     ![API Key][image-10]
 
