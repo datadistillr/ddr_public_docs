@@ -7,13 +7,6 @@ description: How to Connect DataDistillr to the Monday API
 ## Creating a Monday account
 Set up an account with [Monday][link-1]{target="_blank"}.
 
-The monday GraphQL API is part of the [monday apps framework][link-2]{target="_blank"} and allows developers to programmatically access and update data inside a monday.com account.
-
-!!! attention "Warning"
-
-    monday.com is different from other APIs in that it uses [GraphQL][link-3]{target="_blank"} to deliver responses to the request you make.
-
-
 ### Costs
 There are 4 pricing plans:
 
