@@ -58,10 +58,7 @@ Enter any name that will help you recognize this data source within your query w
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-Many datasets are associated with only one data table, and thus, one API endpoint. There are some datasets comprised of more than one data table, and therefore have more than one endpoint.
-
-
-
+There are a total of 80 endpoints. Many datasets are associated with only one data table, and thus, one API endpoint. There are some datasets comprised of more than one data table, and therefore have more than one endpoint.
 
 Note that every API URL begins with the base URL:
 
@@ -77,13 +74,10 @@ Thus, the full API request URL would be the Base URL + Endpoint.
     https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates
     ```
 
-### Methods
-**All requests will be HTTP GET requests**. Our APIs accept the GET method, one of the most common HTTP methods. The GET method is used to request data only (not modify). Note that GET requests can be cached, remain in browser history, be bookmarked, and have length restrictions.
-
 ### Parameters
 Parameters can be included in an API request by modifying the URL. This will specify the criteria to determine which records will be returned, as well as the ordering and format of the data returned. More information about each parameter can be found below.
 
-Available parameters include:
+Available parameters include (every endpoint has these as optional parameters):
 
 - Fields
 - Filters
@@ -182,32 +176,11 @@ The table below lists the available endpoints by dataset and data table.
 
 
 ### Nav Tree
-The endpoints above will display as follows in the nav tree once your API has successfully connected.
+The endpoints above will display as follows in the nav tree once your API has successfully connected. Note: the endpoints displayed in the previous picture are only the first nine endpoints.
 
 <figure markdown>
   ![Fiscal Data Endpoints][image-5]{ width="100%" }
 </figure>
-
-!!! note ""
-
-    These are only the first 9 endpoints.
-
-
-
-
-## Response Codes
-
-| Response Code | Description                                                        |
-|---------------|--------------------------------------------------------------------|
-| 200           | OK - Response to a successful GET request                          |
-| 304           | 	Not modified - Cached response                                    |
-| 400           | 	Bad Request - Request was malformed                               |
-| 403           | 	Forbidden - API Key is not valid                                  |
-| 404           | 	Not Found - When a non-existent resource is requested             |
-| 405           | 	Method Not Allowed - Attempting anything other than a GET request |
-| 429           | 	Too Many Requests - Request failed due to rate limiting           |
-| 500           | 	Internal Server Error - The server failed to fulfill a request    |
-
 
 ## Sample Queries
 The following queries are intended to help you get started, and make like simpler querying within your API. These are just 5 out of the 80 endpoints available.
