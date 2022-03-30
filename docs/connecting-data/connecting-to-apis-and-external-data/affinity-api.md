@@ -7,7 +7,7 @@ description: How to Connect DataDistillr to the Affinity API
 ### Rate Limits
 
 Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
-
+Proffesional tier gets 40,000 calls; Premium tier gets 100,000 calls; Enterprise tier gets unlimited calls.
 
 All API requests will be halted at 450K per user, per day. Your daily limit will reset the next day at 12AM (midnight) Pacific Time.
 
