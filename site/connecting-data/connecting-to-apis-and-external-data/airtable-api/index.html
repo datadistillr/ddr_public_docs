@@ -1207,15 +1207,9 @@
 
 <h1 id="connecting-to-airtable">Connecting to Airtable<a class="headerlink" href="#connecting-to-airtable" title="Permanent link">#</a></h1>
 <h2 id="creating-an-airtable-account">Creating an Airtable account<a class="headerlink" href="#creating-an-airtable-account" title="Permanent link">#</a></h2>
-<<<<<<< HEAD
 <p>Set up an account with <a href="https://www.airtable.com/">Airtable</a>.</p>
 <p><strong>Costs</strong><br />
 There are several different types of accounts. There is a free version, a $10 and $20 version. You can check <a href="https://www.airtable.com/pricing">HERE</a> for details and comparison.</p>
-=======
-<p>Set up an account with <a href="airtable.com">Airtable</a>. </p>
-<p><strong>Costs</strong><br />
-There are several different types of accounts. There is a free version, a $10 and $20 version. You can check <a href="https://airtable.com/wspBcisr7QHMSSfml/workspace/plans?ref=bp.skp2021hpub">HERE</a> for details and comparison.</p>
->>>>>>> cc026f4 (Continued Clickup API docs. Added custom admonitions.)
 <p><strong>Rate Limits</strong><br />
 The Airtable API is limited to 5 requests per second per base. If you exceed this rate, you will receive a 429 status code and will need to wait 30 seconds before subsequent requests will succeed.</p>
 <h2 id="how-to-connect-datadisillr-to-airtable">How to Connect DataDisillr to Airtable<a class="headerlink" href="#how-to-connect-datadisillr-to-airtable" title="Permanent link">#</a></h2>
@@ -1230,31 +1224,19 @@ The Airtable API is limited to 5 requests per second per base. If you exceed thi
 <p><img alt="Select API from the available choices" src="../../../img/api/select-api-form.png" /></p>
 <p>On the API screen, select Airtable from list of API forms as shown in the image below.</p>
 <p><img alt="Select Airtable API from available choices" src="../../../img/api/airtable/select-Airtable-API.png" /></p>
-<<<<<<< HEAD
 <p>The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Airtable API form.</p>
-=======
-<p>The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Airtable API form. </p>
->>>>>>> cc026f4 (Continued Clickup API docs. Added custom admonitions.)
 <p>Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!</p>
 <p><img alt="Airtable Form" src="../../../img/api/airtable/airtable-form.png" /></p>
 <h3 id="name">Name<a class="headerlink" href="#name" title="Permanent link">#</a></h3>
 <p>Enter any name that will help you recognize this data source from within your query window. &#x20;</p>
-<<<<<<< HEAD
 <p>Acceptable characters include:</p>
-=======
-<p>Acceptable characters include: </p>
->>>>>>> cc026f4 (Continued Clickup API docs. Added custom admonitions.)
 <ul>
 <li>lowercase alphanumeric characters</li>
 <li>underscores</li>
 </ul>
 <h3 id="project-path-base-id">Project Path (Base ID)<a class="headerlink" href="#project-path-base-id" title="Permanent link">#</a></h3>
 <p>You can access your Base ID at <a href="https://airtable.com/">https://airtable.com/</a>. Navigate to Bases along the top panel and click on your workspace as shown in the image below.</p>
-<<<<<<< HEAD
 <p><img alt="Finding your base" src="../../../img/api/airtable/airtable-base.png" /></p>
-=======
-<p><img alt="Finding your base" src="../../../img/api/airtable/airtable-base.png" /> </p>
->>>>>>> cc026f4 (Continued Clickup API docs. Added custom admonitions.)
 <p>You can find the Project Path (Base ID) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.</p>
 <p><code>https://airtable.com/</code><mark>YOUR_BASE_ID</mark><code>/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide</code></p>
 <h3 id="api-key">API Key<a class="headerlink" href="#api-key" title="Permanent link">#</a></h3>
@@ -1291,11 +1273,7 @@ The Airtable API is limited to 5 requests per second per base. If you exceed thi
 <span class="k">AT</span><span class="p">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Times</span><span class="p">,</span><span class="w"></span>
 <span class="k">AT</span><span class="p">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span><span class="w"></span>
 <span class="k">AT</span><span class="p">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;Email Address&#39;</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Address</span><span class="w"></span>
-<<<<<<< HEAD
 <span class="k">FROM</span><span class="w"> </span><span class="n">myairtableapi</span><span class="p">.</span><span class="o">`</span><span class="n">tables</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">AT</span><span class="w"></span>
-=======
-<span class="k">FROM</span><span class="w"> </span><span class="n">myairtableapi</span><span class="p">.</span><span class="o">`</span><span class="n">tables</span><span class="o">`</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">AT</span><span class="w"> </span>
->>>>>>> cc026f4 (Continued Clickup API docs. Added custom admonitions.)
 <span class="k">WHERE</span><span class="w"> </span><span class="n">tableName</span><span class="o">=</span><span class="s1">&#39;Form Responses 1&#39;</span><span class="w"></span>
 </code></pre></div>
 
