@@ -7,25 +7,19 @@ description: How to Connect DataDistillr to the Veriphone API
 ## Creating a Veriphone account
 Set up an account with [Veriphone](https://veriphone.io/#page-top).
 
-### Costs
-There are four pricing plans:
+???+ cost
 
-**STARTER**
-: $6.99 per month.
+    There are four pricing plans:
+    
+    - **STARTER:** $6.99 per month.
+    - **PROFESSIONAL:** $29 per month.
+    - **BUSINESS:** $79 per month.
+    - **ENTERPRISE:** $199 per month.
 
-**PROFESSIONAL**
-: $29 per month.
-
-**BUSINESS**
-: $79 per month.
-
-**ENTERPRISE**
-: $199 per month.
-
-
-### Rate Limits
-API has no information about rate limits.
-
+???+ rlimit "Rate Limits"
+    
+    API has no information about rate limits.
+    
 ## How to Connect DataDistillr to Veriphone
 To set up a data source connect for Veriphone, you will need to have:
 
