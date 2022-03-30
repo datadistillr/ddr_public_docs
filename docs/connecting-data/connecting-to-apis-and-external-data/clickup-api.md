@@ -119,7 +119,7 @@ This query returns all tasks within the specified list, including closed tasks.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/list/:list_id/task`
+FROM `clickupapi2000`.`/list/:list_id/task`
 WHERE `list_id`='175636929'
 AND `include_closed`='true'
 LIMIT 10
@@ -131,7 +131,7 @@ This query returns all spaces associated with the specified team.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/team/:team_id/space`
+FROM `clickupapi2000`.`/team/:team_id/space`
 WHERE `team_id`='3054541'
 LIMIT 10
 ```
@@ -141,7 +141,7 @@ This query returns all folders within the specified space.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/space/:space_id/folder`
+FROM `clickupapi2000`.`/space/:space_id/folder`
 WHERE `space_id`='3110392'
 LIMIT 10
 ```
@@ -151,7 +151,7 @@ This query returns all lists within the specified folder.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/folder/:folder_id/list`
+FROM `clickupapi2000`.`/folder/:folder_id/list`
 WHERE `folder_id`='96278401'
 LIMIT 10
 
@@ -162,7 +162,7 @@ This query returns all lists within the specified space.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/space/:space_id/list`
+FROM `clickupapi2000`.`/space/:space_id/list`
 WHERE `space_id`='3110392'
 LIMIT 10
 ```
@@ -172,7 +172,7 @@ This query returns all tags associated with the specified space.
 
 ```sql
 SELECT *
-FROM clickupapi2000.`/space/:space_id/tag`
+FROM `clickupapi2000`.`/space/:space_id/tag`
 WHERE `space_id`='3110392'
 LIMIT 10
 ```
