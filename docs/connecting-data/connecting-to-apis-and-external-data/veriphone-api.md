@@ -64,21 +64,19 @@ Enter any name that will help you recognize this data source within your query w
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Veriphone form under 'API key'.
 
-!!! example "Steps for Getting the API Key"
+##### Steps for Getting the API Key
 
-    === "1. Dashboard"
+=== "1. Dashboard"
 
-        In your Veriphone dashboard, go to your account settings by clicking on the **SETTINGS** button or the blue button.
-    
-        ![Home Page][image-7]
+    In your Veriphone dashboard, go to your account settings by clicking on the **SETTINGS** button or the blue button.
 
-    === "2. API Key"
+    ![Home Page][image-7]
 
-        Here you can reset your API token.    
+=== "2. API Key"
 
-        ![API Key][image-8]
-        
+    Here you can reset your API token.    
 
+    ![API Key][image-8]
 
 
 ## Endpoints
