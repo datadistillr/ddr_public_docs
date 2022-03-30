@@ -14,14 +14,14 @@
 
 ## Connecting Data
 
-* [Connecting Your Data to DataDistillr](connecting-data/connecting-your-data-to-datadistillr/README.md)
-  * [Uploading Files](connecting-data/connecting-your-data-to-datadistillr/uploading-files.md)
-  * [Connecting Databases](connecting-data/connecting-your-data-to-datadistillr/connecting-databases/README.md)
-    * [Connecting to Splunk](connecting-data/connecting-your-data-to-datadistillr/connecting-databases/connecting-to-splunk.md)
-  * [Connecting to Remote Storage](connecting-data/connecting-your-data-to-datadistillr/connecting-to-remote-storage.md)
-  * [Connecting to APIs and External Data](connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/README.md)
-    * [Connection Basics](connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/connection-basics.md)
-    * [Passing Parameters](connecting-data/connecting-your-data-to-datadistillr/connecting-to-apis-and-external-data/passing-parameters.md)
+* [Connecting Your Data to DataDistillr](connecting-data/README.md)
+  * [Uploading Files](connecting-data/uploading-files.md)
+  * [Connecting Databases](connecting-data/connecting-databases/README.md)
+    * [Connecting to Splunk](connecting-data/connecting-databases/connecting-to-splunk.md)
+  * [Connecting to Remote Storage](connecting-data/connecting-to-remote-storage.md)
+  * [Connecting to APIs and External Data](connecting-data/connecting-to-apis-and-external-data/README.md)
+    * [Custom APIs](connecting-data/connecting-to-apis-and-external-data/custom-apis.md)
+    * [Passing Parameters](connecting-data/connecting-to-apis-and-external-data/passing-parameters.md)
 * [Linking Data to Your Project](connecting-data/linking-data-to-your-project.md)
 
 ***
