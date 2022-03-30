@@ -59,16 +59,29 @@ Enter any name that will help you recognize this data source from within your qu
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
 
+<<<<<<< HEAD
 === "1. Home page"
+=======
+!!! example "Steps for getting the API key"
+
+    === "1. Home page"
+
+>>>>>>> parent of ec8fc98 (Continued fixing requested changes)
     In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
 
     ![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
 
+<<<<<<< HEAD
 === "2. Account Settings"  
+=======
+    === "2. Account Settings"
+    
+>>>>>>> parent of ec8fc98 (Continued fixing requested changes)
     In the **My Settings** window, click on the **Apps** tab.
 
     ![Click on the Apps Tab in the 'My Settings' window.] [image-6]
 
+<<<<<<< HEAD
 === "3. Apps"
     Click on **Manage Developer Apps** which opens a new tab in your browser.
 
@@ -86,6 +99,23 @@ An API key is generated within your account page. The following steps will navig
 
 === "6. Copy Token"
     Click **Copy** to copy the token to your clipboard.
+=======
+Click on **Manage Developer Apps** which opens a new tab in your browser.
+
+![Click on 'Manage Developer Apps'.] [image-7]
+
+In the **Personal access tokens** section, choose **Create new token**.
+
+![Click on 'Create new token'.] [image-8]
+
+Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
+
+![Enter name and check the checkbox. Click 'Create token'.] [image-9]
+
+Click **Cop** to copy the token to your clipboard.
+
+![Click 'Copy' to copy the token.] [image-10]
+>>>>>>> parent of ec8fc98 (Continued fixing requested changes)
 
     ![Click 'Copy' to copy the token.] [image-10]
 
