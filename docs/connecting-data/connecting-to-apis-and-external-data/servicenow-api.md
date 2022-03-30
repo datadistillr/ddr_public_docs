@@ -55,27 +55,24 @@ Enter any name that will help you recognize this data source from within your qu
 
 ### Instance ID, Username and Password
 
+=== "1. Home Page"
 
-!!! example 
-
-    === "1. Home Page"
-
-        Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
-        In the top right corner click the profile avatar.
-        
-        ![ServiceNow Home Page][image-10]
+    Head over to your ServiceNow [developer portal](https://developer.servicenow.com/dev.do).
+    In the top right corner click the profile avatar.
     
-    === "2. My Instance"
+    ![ServiceNow Home Page][image-10]
 
-        Click the "Manage instance password" tab.
-        
-        ![Find Instance creds][image-11]
-    
-    === "3. Instance Credentials" 
+=== "2. My Instance"
 
-        Here you will find your credentials necessary (Instance name, Username and Password) to connect your ServiceNow instance to DataDistillr.
+    Click the "Manage instance password" tab.
     
-        ![Instance creds][image-12]
+    ![Find Instance creds][image-11]
+
+=== "3. Instance Credentials" 
+
+    Here you will find your credentials necessary (Instance name, Username and Password) to connect your ServiceNow instance to DataDistillr.
+
+    ![Instance creds][image-12]
 
 
 ## Endpoints
