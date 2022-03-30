@@ -157,7 +157,7 @@ LIMIT 100
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
 [image-2]: ../../img/api/servicenow/servicenow-navtree.png
-[image-7]: ../../img/api/add-api.png
+[image-7]: ../../img/api/data-source-wizard-api-light.png
 [image-8]: ../../img/api/servicenow/select-servicenow-api.png
 [image-10]: ../../img/api/servicenow/servicenow-homepage.png
 [image-11]: ../../img/api/servicenow/servicenow-get-creds.png
