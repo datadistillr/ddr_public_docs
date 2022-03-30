@@ -12,7 +12,7 @@ Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
     - Business Plus - $29 per member per month
     - Enterprise
 
-[Details and Comparison](https://clickup.com/pricing){target=_blank}
+[Details and Comparison](https://clickup.com/pricing)
 
 ???+ rlimit "Rate Limits"
 
@@ -24,7 +24,7 @@ Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
 
     If you exceed this rate, you will receive a 429 status code.
 
-## How to Connect DataDistillr to ClickUp
+## How to Connect DataDistillr to Clickup
 
 To set up a data source connection for ClickUp, you will need to have:
 
