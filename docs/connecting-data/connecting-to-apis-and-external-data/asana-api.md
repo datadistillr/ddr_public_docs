@@ -1,7 +1,7 @@
 # Connecting to the Asana API
 
 ## Creating an Asana account
-Set up an account with [Asana](https://asana.com/create-account).
+Set up an account with [Asana](https://asana.com/create-account){target=_blank}.
 
 ### **Costs**
 There are a few different types of accounts:
@@ -10,7 +10,7 @@ There are a few different types of accounts:
 - $10.99 per user per month billed annually or $13.49 billed monthly
 - $24.99 per user per month billed annually or $30.49 billed monthly
 
-[Details and Comparison](https://asana.com/pricing)
+[Details and Comparison](https://asana.com/pricing){target=_blank}
 
 ### **Rate Limits**
 Limits are allocated per authorization token. Limits may vary from token to token.
@@ -75,7 +75,7 @@ An API key is generated within your account page. The following steps will navig
 === "2. Account Settings"  
 =======
     === "2. Account Settings"
-    
+
 >>>>>>> parent of ec8fc98 (Continued fixing requested changes)
     In the **My Settings** window, click on the **Apps** tab.
 
