@@ -7,24 +7,18 @@ description: How to Connect DataDistillr to the UPC Database API
 ## Creating a UPC Database account
 Set up an account with [UPC Database](https://upcdatabase.org/).
 
-### Costs
-There are four pricing plans:
+???+ cost
 
-**Free**
-: $0 per month.
+    There are four pricing plans:
+    
+    - **Free:** $0 per month.
+    - **Hobbyist:** $2.50 per month.
+    - **Standard:** $10 per month.
+    - **Professional:** $50 per month.
 
-**Hobbyist**
-: $2.50 per month.
+???+ rlimit "Rate Limits"
 
-**Standard**
-: $10 per month.
-
-**Professional**
-: $50 per month.
-
-
-### Rate Limits
-API does not have information about rate limits.
+    API does not have information about rate limits.
 
 ## How to Connect DataDistillr to UPC Database
 To set up a data source connect for UPC Database, you will need to have:
