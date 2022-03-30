@@ -2,10 +2,10 @@
 description: How to Connect DataDistillr to the Veriphone API
 ---
 
-# Veriphone API
+# Connecting to Veriphone
 
 ## Creating a Veriphone account
-Set up an account with [Veriphone](https://veriphone.io/#page-top).
+Set up an account with [Veriphone][link-1]{target="_blank"}.
 
 ???+ cost
 
@@ -15,6 +15,8 @@ Set up an account with [Veriphone](https://veriphone.io/#page-top).
     - **PROFESSIONAL:** $29 per month.
     - **BUSINESS:** $79 per month.
     - **ENTERPRISE:** $199 per month.
+
+    For more information about Veriphone's pricing, please visit [https://veriphone.io/pricing][link-2]{target="_blank"}
 
 ???+ rlimit "Rate Limits"
     
@@ -80,7 +82,7 @@ An API key is generated within your account page. The following steps will navig
 
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint | Required | Optional                    | Description                                                                     |
 |----------|----------|-----------------------------|---------------------------------------------------------------------------------|
@@ -105,7 +107,6 @@ For the following examples, suppose that my Veriphone API data source was called
     ```sql
     FROM `myapi`.`<ENDPOINT>`
     ```
-
 
 ### Verify
 For valid numbers, it will also return the number's type (mobile, land line, toll free, etc...) the carrier and other fields as described in the output section bellow.
@@ -132,12 +133,15 @@ LIMIT 1000
 ```
 
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png
-[image-1]: ../../img/api/veriphone/choose-form-veriphone-light.png
-[image-2]: ../../img/api/veriphone/choose-form-veriphone-dark.png
-[image-3]: ../../img/api/veriphone/veriphone-form-light.png
-[image-4]: ../../img/api/veriphone/veriphone-form-dark.png
-[image-5]: ../../img/api/veriphone/veriphone-nav-tree-light.png
-[image-6]: ../../img/api/veriphone/veriphone-nav-tree-dark.png
-[image-7]: ../../img/api/veriphone/veriphone-dashboard.png
-[image-8]: ../../img/api/veriphone/veriphone-settings-censored.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/veriphone/choose-form-veriphone-light.png "API Data Source selection"
+[image-2]: ../../img/api/veriphone/choose-form-veriphone-dark.png "API Data Source selection"
+[image-3]: ../../img/api/veriphone/veriphone-form-light.png "Veriphone form"
+[image-4]: ../../img/api/veriphone/veriphone-form-dark.png "Veriphone form"
+[image-5]: ../../img/api/veriphone/veriphone-nav-tree-light.png "Veriphone endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/veriphone/veriphone-nav-tree-dark.png "Veriphone endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/veriphone/veriphone-dashboard.png "Veriphone account dashboard"
+[image-8]: ../../img/api/veriphone/veriphone-settings-censored.png "Account settings"
+
+[link-1]: https://veriphone.io/#page-top "Veriphone home page" 
+[link-2]: https://veriphone.io/pricing "Veriphone pricing" 
