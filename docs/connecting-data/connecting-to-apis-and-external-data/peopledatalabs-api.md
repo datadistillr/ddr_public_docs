@@ -5,7 +5,7 @@ description: How to Connect DataDistillr to the People Data Labs API
 # Connecting to People Data Labs
 
 ## Creating a People Data Labs account
-Set up an account with [People Data Labs](https://www.peopledatalabs.com/signup).
+Set up an account with [People Data Labs][link-1]{target="_blank"}.
 
 ### Costs
 This API has three pricing plans:
@@ -17,9 +17,9 @@ This API has three pricing plans:
 : Tiered.
 
 **Scale:** ENTERPRISE
-: Custom. For enterprises building platforms with people data at scale. [Speak to a data consultant](https://www.peopledatalabs.com/talk-to-sales)
+: Custom. For enterprises building platforms with people data at scale. [Speak to a data consultant][link-2]{target="_blank"}
 
-For more information about People Data Labs pricing visit [https://www.peopledatalabs.com/pricing](https://www.peopledatalabs.com/pricing)
+For more information about People Data Labs pricing visit [https://www.peopledatalabs.com/pricing][link-3]{target="_blank"}
 
 ### Rate Limits
 
@@ -27,7 +27,7 @@ The default limit for free customers is 100/min. The default limit for paying cu
 
 #### The API Dashboard
 
-All accounts are given access to a [dashboard](https://www.peopledatalabs.com/main), which will allows you to manage your API keys, view usage and test new endpoints (when they are available).
+All accounts are given access to a [dashboard][link-4]{target="_blank"}, which will allows you to manage your API keys, view usage and test new endpoints (when they are available).
 
 ## How to Connect DataDistillr to People Data Labs
 To set up a data source connection for People Data Labs, you will need to have:
@@ -40,13 +40,13 @@ To set up a data source connection for People Data Labs, you will need to have:
 To locate the People Data Labs form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
-  ![Data Source Wizard][image-9]{ width="100%" }
+  ![Data Source Wizard][image-0]{ width="100%" }
 </figure>
 
 On the API screen, select People Data Labs from the list of API forms.
 
 <figure markdown>
-  ![List of APIs][image-3]{ width="100%" }
+  ![List of APIs][image-1]{ width="100%" }
 </figure>
 
 The following form will appear. Instructions can be found below on how to find the information required to fill each field on the People Data Labs API form.
@@ -55,7 +55,7 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 
 
 <figure markdown>
-  ![People Data Labs Form][image-5]{ width="100%" }
+  ![People Data Labs Form][image-3]{ width="100%" }
 </figure>
 
 
@@ -71,20 +71,19 @@ Enter any name that will help you recognize this data source within your query w
 ### API Key
 The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the People Data Labs form under 'API Key'.
 
-!!! example "Steps for getting the API key"
+#### Steps for getting the API key
 
-    === "1. Home page"
-    
-        Click the **API Keys** button
+=== "1. Home page"
 
-        ![Home page][image-1]
+    Click the **API Keys** button
 
-    === "2. Account settings"
+    ![Home page][image-7]
 
-        This page contains the settings for your API token. You can modify the token's nickname and generate a new key with **Roll This Key**.
+=== "2. Account settings"
 
-        ![API keys][image-2]
+    This page contains the settings for your API token. You can modify the token's nickname and generate a new key with **Roll This Key**.
 
+    ![API keys][image-8]
 
 
 ## Endpoints
@@ -102,7 +101,7 @@ The table below shows a list of endpoints available to connect within the DataDi
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
 <figure markdown>
-  ![People Data Labs Endpoints][image-7]{ width="100%" }
+  ![People Data Labs Endpoints][image-5]{ width="100%" }
 </figure>
 
 
@@ -117,8 +116,6 @@ For the following examples, suppose that my People Data Labs API data source was
     ```sql
     FROM `mypdlapi`.`<ENDPOINT>`
     ```
-
-
 
 ### Enrich
 You can use the `v5/person/enrich` endpoint to enrich data on a person. The person enrichment API provides a one-to-one match, providing up-to-date information on a unique individual.
@@ -169,12 +166,17 @@ AND `phone`='555-123-4567'
 LIMIT 100
 ```
 
-[image-1]: ../../img/api/peopledatalabs/people-data-labs-home-page.png
-[image-2]: ../../img/api/peopledatalabs/people-data-labs-api-keys.png
-[image-3]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-light.png
-[image-4]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-dark.png
-[image-5]: ../../img/api/peopledatalabs/peopledatalabs-form-light.png
-[image-6]: ../../img/api/peopledatalabs/peopledatalabs-form-dark.png
-[image-7]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-light.png
-[image-8]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-dark.png
-[image-9]: ../../img/api/data-source-wizard-api-light.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-light.png "API Data Source selection"
+[image-2]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-dark.png "API Data Source selection"
+[image-3]: ../../img/api/peopledatalabs/peopledatalabs-form-light.png "People Data Labs form"
+[image-4]: ../../img/api/peopledatalabs/peopledatalabs-form-dark.png "People Data Labs form"
+[image-5]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-light.png "People Data Labs endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/peopledatalabs/peopledatalabs-nav-tree-dark.png "People Data Labs endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/peopledatalabs/people-data-labs-home-page.png "People Data Labs account home page"
+[image-8]: ../../img/api/peopledatalabs/people-data-labs-api-keys.png "People Data Labs API token settings"
+
+[link-1]: https://www.peopledatalabs.com/signup "People Data Labs sign up"
+[link-2]: https://www.peopledatalabs.com/talk-to-sales "People Data Labs customer support"
+[link-3]: https://www.peopledatalabs.com/pricing "People Data Labs pricing"
+[link-4]: https://www.peopledatalabs.com/main "People Data Labs account dashboard"
