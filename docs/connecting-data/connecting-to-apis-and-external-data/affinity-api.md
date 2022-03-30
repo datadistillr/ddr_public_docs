@@ -148,4 +148,4 @@ LIMIT 100
 [image-3]: ../../img/api/affinity/affinity-select-api.png
 [image-5]: ../../img/api/affinity/affinity-form.png
 [image-7]: ../../img/api/affinity/affinity-endpoints.png
-[image-9]: ../../img/api/select-api-form.png
+[image-9]: ../../img/api/data-source-wizard-api-light.png
