@@ -3,17 +3,16 @@ description: How to Connect DataDistillr to the Fiscal Data API
 ---
 
 ## Connecting to Fiscal Data
-Set up an account with [Fiscal Data]().
-
+No account is necessary for this API. Here is the website [https://fiscaldata.treasury.gov/][link-0]{target="_blank"}
 
 ???+ cost
 
-    The costs is
+    This API is free.
 
 
 ???+ rlimit "Rate limits"
 
-    The rate limits are
+    The API does not have any information about rate limits.
 
 
 ## How to Connect DataDistillr to Fiscal Data
@@ -57,7 +56,46 @@ Enter any name that will help you recognize this data source within your query w
 
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+
+Many datasets are associated with only one data table, and thus, one API endpoint. There are some datasets comprised of more than one data table, and therefore have more than one endpoint.
+
+
+
+
+Note that every API URL begins with the base URL:
+
+``` 
+https://api.fiscaldata.treasury.gov/services/api/fiscal_service
+```
+
+Thus, the full API request URL would be the Base URL + Endpoint. 
+
+!!! example "Full API request example"
+
+    ``` 
+    https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates
+    ```
+
+### Methods
+**All requests will be HTTP GET requests**. Our APIs accept the GET method, one of the most common HTTP methods. The GET method is used to request data only (not modify). Note that GET requests can be cached, remain in browser history, be bookmarked, and have length restrictions.
+
+### Parameters
+Parameters can be included in an API request by modifying the URL. This will specify the criteria to determine which records will be returned, as well as the ordering and format of the data returned. More information about each parameter can be found below.
+
+Available parameters include:
+
+- Fields
+- Filters
+- Sorting
+- Format
+- Pagination
+    - page[size]
+    - page[number]
+
+
+
+The table below lists the available endpoints by dataset and data table.
 
 | Endpoint                                              | Table Name                                                                      | Dataset                                                                                                |
 |-------------------------------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
@@ -150,24 +188,73 @@ The endpoints above will display as follows in the nav tree once your API has su
   ![Fiscal Data Endpoints][image-5]{ width="100%" }
 </figure>
 
-## Sample Queries
-The following queries are intended to help you get started, and make like simpler querying within your API.
+!!! note ""
 
-For the following examples, suppose that my Fiscal Data API data source was called `myapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Fiscal Data data source name.R]
+    These are only the first 9 endpoints.
+
+
+
+
+## Response Codes
+
+| Response Code | Description                                                        |
+|---------------|--------------------------------------------------------------------|
+| 200           | OK - Response to a successful GET request                          |
+| 304           | 	Not modified - Cached response                                    |
+| 400           | 	Bad Request - Request was malformed                               |
+| 403           | 	Forbidden - API Key is not valid                                  |
+| 404           | 	Not Found - When a non-existent resource is requested             |
+| 405           | 	Method Not Allowed - Attempting anything other than a GET request |
+| 429           | 	Too Many Requests - Request failed due to rate limiting           |
+| 500           | 	Internal Server Error - The server failed to fulfill a request    |
+
+
+## Sample Queries
+The following queries are intended to help you get started, and make like simpler querying within your API. These are just 5 out of the 80 endpoints available.
+
+For the following examples, suppose that my Fiscal Data API data source was called `myfiscaldataapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Fiscal Data data source name:
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `myapi`.`<ENDPOINT>`
+    FROM `myfiscaldataapi`.`<ENDPOINT>`
     ```
 
+### Treasury Reporting Rates of Exchange
+From the Treasury Reporting Rates of Exchange dataset, we are 
 
-### Endpoint 1
+- only return specific fields (country_currency_desc, exchange_rate, record_date), 
+- only return data on the Canadian Dollar and Mexican Peso, and 
+- only return data that falls between January 1, 2020, and the present.
 
 ```sql
 SELECT * 
-FROM `table`
-WHERE `column`='value'
+FROM `myfiscaldataapi`.`Treasury Reporting Rates of Exchange`
+WHERE `fields`='country_currency_desc, exchange_rate, record_date' 
+AND `filter`='country_currency_desc:in:(Canada-Dollar,Mexico-Peso),record_date:gte:2020-01-01'
+LIMIT 100
+```
+
+### Debt to Penny
+In this example we are nested sorting, first by year then by month on the Debt to Penny dataset.
+
+```sql
+SELECT * 
+FROM `myfiscaldataapi`.`Debt to the Penny` 
+WHERE `fields`='record_calendar_year,record_calendar_month'
+AND `sort`='-record_calendar_year,-record_calendar_month'
+LIMIT 1000
+```
+
+### State Programs
+From the Treasury Offset Program dataset, return data with 50 records per page, and return the 10th page of data.
+
+```sql
+SELECT * 
+FROM `myfiscaldataapi`.`Treasury Offset Program`
+WHERE `page[number]`='10'
+AND `page[size]`='50'
+LIMIT 1000
 ```
 
 [image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
@@ -178,6 +265,7 @@ WHERE `column`='value'
 [image-5]: ../../img/api/fiscaldata/fiscaldata-nav-tree-light.png "Fiscal Data endpoints in query page nav tree sidebar"
 [image-6]: ../../img/api/fiscaldata/fiscaldata-nav-tree-dark.png "Fiscal Data endoitns in query page nav tree sidebar"
 
+[link-0]: https://fiscaldata.treasury.gov/ "Fiscal Data home page" 
 [link-1]: https://fiscaldata.treasury.gov/datasets/delinquent-debt-referral-compliance/120-day-delinquent-debt-referral-compliance-report "120 Day Delinquent Debt Referral Compliance Report" 
 [link-2]: https://fiscaldata.treasury.gov/datasets/redemption-tables/redemption-tables "Accrual Savings Bonds Redemption Tables"
 [link-3]: https://fiscaldata.treasury.gov/datasets/ssa-title-xii-advance-activities/advances-to-state-unemployment-funds-social-security-act-title-xii "Asvances to State Unemployment Funds"
