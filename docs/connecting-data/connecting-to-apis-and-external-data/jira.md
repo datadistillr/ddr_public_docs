@@ -76,84 +76,85 @@ Enter any name that will help you recognize this data source from within your qu
 ### Domain
 An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-!!! example "Steps for getting your domain"
+Steps for getting your domain
 
-    === "1. Home page"
+=== "1. Home page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-        ![JIRA Home Page][image-10]
+    ![JIRA Home Page][image-10]
 
-    === "2. Accout settings"
+=== "2. Accout settings"
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-        ![Account Pop Up][image-11]
+    ![Account Pop Up][image-11]
 
-    === "3. Find Domain"
+=== "3. Find Domain"
 
-        In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
+    In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
 
-        ![Find Domain][image-12]
+    ![Find Domain][image-12]
 
 ### User
 This is the email that is tied to your Atlassian account.
 
-!!! example "Steps for getting your email"
+Steps for getting your email
 
-    === "1. Home page"
+=== "1. Home page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-        ![JIRA Home Page][image-10]
+    ![JIRA Home Page][image-10]
 
-    === "2. Accout settings"
+=== "2. Account settings"
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-        ![Account Pop Up][image-11]
+    ![Account Pop Up][image-11]
 
-    === "3. Find email"
+=== "3. Find email"
 
-        In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
+    In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
 
-        ![Find Domain][image-4]
+    ![Find Domain][image-4]
 
 
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
-!!! example "Steps for getting the API key"
+Steps for getting the API key
 
-    === "1. Home page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+=== "1. Home page"
 
-        ![JIRA Home Page][image-10]
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-    === "2. Accout settings"
+    ![JIRA Home Page][image-10]
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+=== "2. Account settings"
 
-        ![Account Pop Up][image-11]    
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-    === "3. Go to security page"
+    ![Account Pop Up][image-11]    
 
-        In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
+=== "3. Go to security page"
 
-        ![Go to your API manager][image-5]
+    In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
 
-    === "4. Create new API key"
+    ![Go to your API manager][image-5]
 
-        Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
+=== "4. Create new API key"
 
-        ![Create a new API key][image-6]
+    Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
 
-    === "5. Label token"
+    ![Create a new API key][image-6]
 
-        Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
+=== "5. Label token"
 
-        ![Label token][image-9]
+    Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
+
+    ![Label token][image-9]
 
 
 ## Endpoints

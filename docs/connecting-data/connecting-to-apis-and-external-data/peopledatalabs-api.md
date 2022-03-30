@@ -71,19 +71,19 @@ Enter any name that will help you recognize this data source within your query w
 ### API Key
 The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the People Data Labs form under 'API Key'.
 
-!!! example "Steps for getting the API key"
+Steps for getting the API key
 
-    === "1. Home page"
-    
-        Click the **API Keys** button
+=== "1. Home page"
 
-        ![Home page][image-1]
+    Click the **API Keys** button
 
-    === "2. Account settings"
+    ![Home page][image-1]
 
-        This page contains the settings for your API token. You can modify the token's nickname and generate a new key with **Roll This Key**.
+=== "2. Account settings"
 
-        ![API keys][image-2]
+    This page contains the settings for your API token. You can modify the token's nickname and generate a new key with **Roll This Key**.
+
+    ![API keys][image-2]
 
 
 

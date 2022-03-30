@@ -75,40 +75,41 @@ Enter any name that will help you recognize this data source within your query w
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Monday form under 'API key'.
 
 #### As an Admin
+Steps for Getting API Key as Admin
 
-!!! example "Steps for Getting API Key as Admin"
+=== "1. Home Page"
 
-    === "Home Page"
-    
-        ![Home Page][image-7]
+    ![Home Page][image-7]
 
-    === "Account Settings"
-    
-        ![Account Settings][image-8]
+=== "2. Account Settings"
 
-    === "API Key"
-    
-        ![API Key][image-10]
+    ![Account Settings][image-8]
+
+=== "3. API Key"
+
+    ![API Key][image-10]
 
 #### As a Developer
 
-!!! example "Steps for Getting API Key as Dev"
+Steps for Getting API Key as a Dev
 
-    === "Home Page"
-    
-        ![Home Page][image-7]
 
-    === "Account Settings"
-    
-        ![Account Settings][image-9]
 
-    === "My Access Tokens"
+=== "1. Home Page"
     
-        ![My Access Tokens][image-11]
+    ![Home Page][image-7]
 
-    === "API Key"
+=== "2. Account Settings"
+
+    ![Account Settings][image-9]
+
+=== "3. My Access Tokens"
     
-        ![API Key][image-12]
+    ![My Access Tokens][image-11]
+
+=== "4. API Key"
+    
+    ![API Key][image-12]
         
     
 
