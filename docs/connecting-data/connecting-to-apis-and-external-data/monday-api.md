@@ -7,6 +7,13 @@ description: How to Connect DataDistillr to the Monday API
 ## Creating a Monday account
 Set up an account with [Monday][link-1]{target="_blank"}.
 
+The monday GraphQL API is part of the [monday apps framework][link-2]{target="_blank"} and allows developers to programmatically access and update data inside a monday.com account.
+
+!!! attention "Warning"
+
+    monday.com is different from other APIs in that it uses [GraphQL][link-3]{target="_blank"} to deliver responses to the request you make.
+
+
 ### Costs
 There are 4 pricing plans:
 
@@ -20,7 +27,10 @@ There are 4 pricing plans:
 : $16 seat / month. Total $48 per month.
 
 **Enterprise**
-: [Contact Sales][link-2]{target="_blank"}.
+: [Contact Sales][link-4]{target="_blank"}.
+
+
+For more information about Monday.com pricing please visit [https://monday.com/pricing/][link-5]{target="_blank"}
 
 ### Rate Limits
 The API uses a construct called complexity to define the cost of each query made.
@@ -28,7 +38,7 @@ The API uses a construct called complexity to define the cost of each query made
 monday.com API rate limits are based on the complexity of the queries an app makes in a given time period. There are two limits to keep in mind:
 
 - A single query is limited to 5,000,000 complexity points 
-- All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the Admin section or the Access Tokens section 
+- All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the [Admin](#steps-for-getting-the-api-key-as-an-admin) section or the [Access Tokens](#steps-for-getting-the-api-key-as-a-developer) section 
 
 ## How to Connect DataDistillr to Monday
 To set up a data source connect for Monday, you will need to have:
@@ -72,38 +82,68 @@ Enter any name that will help you recognize this data source within your query w
 
 
 ### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Monday form under 'API key'.
+You will need a valid authentication through an access token. Each user has their own API token, this grants API access to all the boards to which the user has access (i.e. they're subscribed to).
 
-#### Steps for getting the API key as an admin
+Currently, monday.com only offers V2 API tokens, which are all personal tokens. To access your API tokens, you can use one of two methods depending on your user level.
+
+!!! note "NOTE"
+
+    **Admin** users are able to utilize both methods to acquire their API tokens. **Member** users can access their API tokens from their Developer tabs.
+
+Admin users are able to utilize both methods to acquire their API tokens.
+
+
+##### Steps for getting the API key as an admin
+
+Log into your monday.com account.
 
 === "1. Home Page"
+
+    Click on your avatar in the bottom left corner of your screen
 
     ![Home Page][image-7]
 
 === "2. Account Settings"
+
+    Select **Admin** from the resulting menu (this requires you to have admin permissions).
 
     ![Account Settings][image-8]
 
 === "3. API Key"
 
+    Go to the **API** section. Your API token will be located here. If you haven't created an API token you will be ablel to 'Generate a "API v2 Token"'. If you already have an API token you can also create a new to replace your current token by clicking **Regenerate**.
+
     ![API Key][image-10]
 
+    !!! note "NOTE"
+    
+        You can always regenerate a new token, however doing so will cause the previous token to expire.
 
-#### Steps for getting the API key as a developer
+
+
+##### Steps for getting the API key as a developer
 
 === "1. Home Page"
+
+    Click on your avater (picture icon) in the bottom left corner of you screen.
     
     ![Home Page][image-7]
 
 === "2. Account Settings"
 
+    Select **Developer** from the resulting menu.
+
     ![Account Settings][image-9]
 
 === "3. My Access Tokens"
+
+    In the top menu, click on the **Developer** dropdown menu. Select the first option on the dropdown menu titled **My Access Tokens**.
     
     ![My Access Tokens][image-11]
 
 === "4. API Key"
+
+    Click on the blue **Show** button to expose your API token and copy it.
     
     ![API Key][image-12]
 
@@ -111,12 +151,23 @@ An API key is generated within your account page. The following steps will navig
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
 
-| Endpoint   | Required | Optional | Description |
-|------------|----------|----------|-------------|
-| `items`    |          |          |             |
-| `users`    |          |          |             |
-| `boards`   |          |          |             |
-| `updates`  |          |          |             |
+### How does GraphQL work?
+This API is build with GraphQL, a flexible query language that allows you to return as much or as little data as you need.
+
+Unlike REST APIs, the API of monday.com uses a single endpoint: `https://api.monday.com/v2`
+
+GraphQL relies on a type system, where each object is a type and contains fields that define it. These fields can be scalars (such as integers) or can be objects themselves. Some fields also take arguments, which can be used to limit, filter, or sort the data that is returned.
+
+For example, the Board type contains scalar fields like name, id and description. It also contains an items field, which defines the items on that specific board and contains its own fields (like name, id, state).
+
+We at DataDistillr return all the fields that define a type.
+
+| Endpoint   | Required | Optional | Description                                   |
+|------------|----------|----------|-----------------------------------------------|
+| `items`    |          |          | Returns the items where the user has access   |
+| `users`    |          |          | Returns the users where the user has access   |
+| `boards`   |          |          | Returns the boards where the user has access  |
+| `updates`  |          |          | Returns the updates where the user has access |
 
 
 ### Nav Tree
@@ -197,4 +248,8 @@ LIMIT 1000
 [image-12]: ../../img/api/monday/monday-dev-api-key.png "Developer API token settings"
 
 [link-1]: https://monday.com/ "Monday.com home page"
-[link-2]: https://monday.com/pricing/ "Monday.com pricing"
+[link-2]: https://apps.developer.monday.com/docs "Monday.com apps framework documentation" 
+[link-3]: https://graphql.org/learn/ "Introduction to GraphQL"
+[link-4]: https://monday.com/sales/contact-us?from=header&source=Website%20-%20Contact%20Sales "Contact Monday.com sales team"
+[link-5]: https://monday.com/pricing/ "Monday.com pricing"
+[link-6]: https://monday.com/developers/v2/try-it-yourself "Monday.com Developers Try it yourself" 

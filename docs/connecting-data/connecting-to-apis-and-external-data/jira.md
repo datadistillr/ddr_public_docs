@@ -76,7 +76,7 @@ Enter any name that will help you recognize this data source from within your qu
 ### Domain
 An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-#### Steps for getting your domain
+##### Steps for getting your domain
 
 === "1. Home Page"
 
@@ -99,7 +99,7 @@ An Organization is a management layer that gives admins the ability to view and 
 ### User
 This is the email that is tied to your Atlassian account.
 
-#### Steps for getting your email
+##### Steps for getting your email
 
 === "1. Home Page"
 
@@ -123,7 +123,7 @@ This is the email that is tied to your Atlassian account.
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
-#### Steps for getting the API key
+##### Steps for getting the API key
 
 === "1. Home Page"
 
