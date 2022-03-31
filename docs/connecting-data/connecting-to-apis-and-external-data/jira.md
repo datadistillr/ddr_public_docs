@@ -1,38 +1,163 @@
+---
+description: How to Connect DataDistillr to the JIRA API
+---
+
 # Connecting to JIRA
 
-## JIRA Data Source Form
+## Creating a JIRA account
+Set up an account with [JIRA][link-1]{target="_blank"}.
+
+Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.
+
+### Costs
+There are four plan tiers:
+
+**Free**
+: $0 Always free for 10 users
+
+**Standard**
+:	$7.50 per user (average) $75 a month
+
+**Premium**
+:	$14.50 per user (average) $145 a month
+
+**Enterprise**
+:	Billed annually. Contact their [sales team][link-2]{target="_blank"} to get a quote about a product or service.
+
+### Rate Limits
+The JIRA API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
+
+Also as a means of preventing room "spam", API methods that involve sending messages to rooms or individual people are limited to 30 requests per minute.
+
+
+## How to Connect DataDistillr to JIRA
 To set up a data source connection for JIRA, you will need to have:
 
-- A unique name for your data source connection to be used in queries
-- The domain of your Atlassian account
-- The email associated with your Atlassian account
-- The API token generated through your Atlassian account
+- A [unique name](#name) for your data source connection to be used in queries
+- The [domain](#domain) of your Atlassian account
+- The [email](#user) associated with your Atlassian account
+- The [API token](#api-key) generated through your Atlassian account
 
-### Form
+### Data Source Form
+To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-![JIRA Form][image-1]
+<figure markdown>
+  ![Data Source Wizard][image-0]{ width="100%" }
+</figure>
+
+
+
+On the API screen, select JIRA from the list of API forms.
+
+<figure markdown>
+  ![List of APIs][image-1]{ width="100%" }
+</figure>
+
+
+
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the JIRA API form.
+
+Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
+
+<figure markdown>
+  ![JIRA Form][image-3]{ width="100%" }
+</figure>
+
+
+### Name
+Enter any name that will help you recognize this data source from within your query window.
+
+!!! info "Acceptable Characters Include"
+
+    - lowercase alphanumeric characters
+    - underscores
 
 
 ### Domain
-You can access your Organization at [https://admin.atlassian.com/](https://admin.atlassian.com/) to find your domain.
+An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-![Finding your domain][image-3]
+##### Steps for getting your domain
 
+=== "1. Home Page"
+
+    In the JIRA app, click your profile icon in the top right corner of the page.
+
+    ![JIRA Home Page][image-7]
+
+=== "2. Account Settings"
+
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+
+    ![Account Pop Up][image-8]
+
+=== "3. Find Domain"
+
+    In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
+
+    ![Find Domain][image-9]
 
 ### User
+This is the email that is tied to your Atlassian account.
 
-![Finding your email][image-4]
+##### Steps for getting your email
+
+=== "1. Home Page"
+
+    In the JIRA app, click your profile icon in the top right corner of the page.
+
+    ![JIRA Home Page][image-7]
+
+=== "2. Account Settings"
+
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+
+    ![Account Pop Up][image-8]
+
+=== "3. Find Email"
+
+    In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
+
+    ![Find Domain][image-10]
+
 
 ### API Key
+An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
-![Go to your api manager][image-5]
-![Create a new api key][image-6]
+##### Steps for getting the API key
+
+=== "1. Home Page"
+
+    In the JIRA app, click your profile icon in the top right corner of the page.
+
+    ![JIRA Home Page][image-7]
+
+=== "2. Account Settings"
+
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+
+    ![Account Pop Up][image-8]    
+
+=== "3. Go to Security Page"
+
+    In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
+
+    ![Go to your API manager][image-11]
+
+=== "4. Create New API Key"
+
+    Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
+
+    ![Create a new API key][image-12]
+
+=== "5. Label Token"
+
+    Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
+
+    ![Label token][image-13]
 
 
 ## Endpoints
-
-
-### Table
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint                   | Required | Optional                                                                                                                                                                      | Description                                               |
 |----------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
@@ -44,15 +169,27 @@ You can access your Organization at [https://admin.atlassian.com/](https://admin
 
 
 
-### Query Page Sidebar
+### Nav Tree
+The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
-![JIRA Endpoints][image-2]
+<figure markdown>
+  ![JIRA Endpoints][image-5]{ width="100%" }
+</figure>
+
 
 ## Sample Queries
+The following queries are intended to help you get started, and make life simpler querying within your API.
 
-Suppose that my JIRA API data source was called `myjiraapi`
+For the following examples, suppose that my JIRA API data source was called `myjiraapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name:
 
-### Get Board Endpoint
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `myjiraapi`.`<ENDPOINT>`
+    ```
+
+### Get Board 
+This board will only be returned if the user has permission to view it.
 
 ```sql
 SELECT *
@@ -61,7 +198,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get All Boards Endpoint
+### Get All Boards 
+This only includes boards that the user has permission to view.
 
 ```sql
 SELECT *
@@ -69,7 +207,8 @@ FROM `myjiraapi`.`/board`
 LIMIT 100
 ```
 
-### Get Epics Endpoint
+### Get Epics 
+This only includes epics that the user has permission to view. Note, if the user does not have permission to view the board, no epics will be returned at all.
 
 ```sql
 SELECT *
@@ -78,7 +217,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get Issues Endpoint
+### Get Issues 
+This only includes issues that the user has permission to view. An issue belongs to the board if its status is mapped to the board's column. Epic issues do not belong to the scrum boards. Note, if the user does not have permission to view the board, no issues will be returned at all. Issues returned from this resource include Agile fields, like sprint, closedSprints, flagged, and epic. By default, the returned issues are ordered by rank.
 
 ```sql
 SELECT *
@@ -87,7 +227,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get Projects Endpoint
+### Get Projects 
+If the user does not have permission to view the board, no projects will be returned at all. Returned projects are ordered by the name.
 
 ```sql
 SELECT *
@@ -97,9 +238,20 @@ LIMIT 100
 ```
 
 
-[image-6]: ../../img/api/jira/jira-create-new-api-token.png
-[image-5]: ../../img/api/jira/jira-manage-api-tokens.png
-[image-4]: ../../img/api/jira/jira-find-email.png
-[image-3]: ../../img/api/jira/jira-atlassian-organization.png
-[image-1]: ../../img/api/jira/jira-form-dark.png
-[image-2]: ../../img/api/jira/jira-query-page-sidebar-dark.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/jira/jira-choose-jira-form-light.png "API Data Source selection"
+[image-2]: ../../img/api/jira/jira-choose-jira-form-dark.png "API Data Source selection"
+[image-3]: ../../img/api/jira/jira-form-light.png "JIRA form"
+[image-4]: ../../img/api/jira/jira-form-dark.png "JIRA form"
+[image-5]: ../../img/api/jira/jira-nav-tree-light.png "JIRA endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/jira/jira-nav-tree-dark.png "JIRA endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/jira/jira-home-page.png "JIRA project page"
+[image-8]: ../../img/api/jira/jira-account-pop-up.png "JIRA settings pop up"
+[image-9]: ../../img/api/jira/jira-domain.png "Atlassian account products settings"
+[image-10]: ../../img/api/jira/jira-find-email.png "Atlassian account email settings"
+[image-11]: ../../img/api/jira/jira-manage-api-tokens.png "Atlassian account security settings"
+[image-12]: ../../img/api/jira/jira-create-new-api-token.png "Atlassian account security page API token settings"
+[image-13]: ../../img/api/jira/jira-create-api-token.png "Labeling a newly created API token"
+
+[link-1]: https://www.atlassian.com/software/opsgenie/try "Atlassian sign up"
+[link-2]: https://www.atlassian.com/enterprise/contact?formType=pricing-quotes "Atlassian pricing quotes"
