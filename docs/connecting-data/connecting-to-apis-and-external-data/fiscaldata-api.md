@@ -194,7 +194,7 @@ For the following examples, suppose that my Fiscal Data API data source was call
     ```
 
 ### Treasury Reporting Rates of Exchange
-From the Treasury Reporting Rates of Exchange dataset, we are we have selected the following options:
+From the Treasury Reporting Rates of Exchange dataset, we have selected the following options:
 
 - only return specific fields (country_currency_desc, exchange_rate, record_date), 
 - only return data on the Canadian Dollar and Mexican Peso, and 
