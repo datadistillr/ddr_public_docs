@@ -183,7 +183,7 @@ The endpoints above will display as follows in the nav tree once your API has su
 </figure>
 
 ## Sample Queries
-The following queries are intended to help you get started, and make like simpler querying within your API. These are just 5 out of the 80 endpoints available.
+The following queries are intended to help you get started, and make life simpler querying within your API. These are just 3 out of the 80 endpoints available.
 
 For the following examples, suppose that my Fiscal Data API data source was called `myfiscaldataapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Fiscal Data data source name:
 
@@ -194,7 +194,7 @@ For the following examples, suppose that my Fiscal Data API data source was call
     ```
 
 ### Treasury Reporting Rates of Exchange
-From the Treasury Reporting Rates of Exchange dataset, we are 
+From the Treasury Reporting Rates of Exchange dataset, we are we have selected the following options:
 
 - only return specific fields (country_currency_desc, exchange_rate, record_date), 
 - only return data on the Canadian Dollar and Mexican Peso, and 
@@ -209,7 +209,7 @@ LIMIT 100
 ```
 
 ### Debt to Penny
-In this example we are nested sorting, first by year then by month on the Debt to Penny dataset.
+In this example we are performing nested sorting, first by year then by month on the Debt to Penny dataset.
 
 ```sql
 SELECT * 
