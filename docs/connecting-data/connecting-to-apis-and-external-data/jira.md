@@ -76,15 +76,15 @@ Enter any name that will help you recognize this data source from within your qu
 ### Domain
 An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-#### Steps for getting your domain
+##### Steps for getting your domain
 
-=== "1. Home page"
+=== "1. Home Page"
 
     In the JIRA app, click your profile icon in the top right corner of the page.
 
     ![JIRA Home Page][image-7]
 
-=== "2. Account settings"
+=== "2. Account Settings"
 
     In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
@@ -99,21 +99,21 @@ An Organization is a management layer that gives admins the ability to view and 
 ### User
 This is the email that is tied to your Atlassian account.
 
-#### Steps for getting your email
+##### Steps for getting your email
 
-=== "1. Home page"
+=== "1. Home Page"
 
     In the JIRA app, click your profile icon in the top right corner of the page.
 
     ![JIRA Home Page][image-7]
 
-=== "2. Account settings"
+=== "2. Account Settings"
 
     In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
     ![Account Pop Up][image-8]
 
-=== "3. Find email"
+=== "3. Find Email"
 
     In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
 
@@ -123,33 +123,33 @@ This is the email that is tied to your Atlassian account.
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
-#### Steps for getting the API key
+##### Steps for getting the API key
 
-=== "1. Home page"
+=== "1. Home Page"
 
     In the JIRA app, click your profile icon in the top right corner of the page.
 
     ![JIRA Home Page][image-7]
 
-=== "2. Account settings"
+=== "2. Account Settings"
 
     In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
     ![Account Pop Up][image-8]    
 
-=== "3. Go to security page"
+=== "3. Go to Security Page"
 
     In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
 
     ![Go to your API manager][image-11]
 
-=== "4. Create new API key"
+=== "4. Create New API Key"
 
     Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
 
     ![Create a new API key][image-12]
 
-=== "5. Label token"
+=== "5. Label Token"
 
     Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
 
