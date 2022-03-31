@@ -4,6 +4,18 @@ description: How to Connect DataDistillr to the DonorSearch API
 
 # Connecting to DonorSearch
 
+## Creating a DonorSearch Account
+Reach out to [DonorSearch](https://www.donorsearch.net/get-demo/){target=_blank} for information on how to get an account.
+
+???+ cost
+
+    Reach out to [DonorSearch](https://www.donorsearch.net/get-demo/){target=_blank} for cost information.
+
+
+???+ rlimit "Rate Limits"
+
+    Reach out to [DonorSearch](https://www.donorsearch.net/get-demo/){target=_blank} for rate limit information.
+
 ## How to Connect DataDistillr to DonorSearch
 To set up a data source connection for DonorSearch, you will need to have:
 
@@ -44,15 +56,15 @@ Enter any name that will help you recognize this data source from within your qu
     - lowercase alphanumeric characters
     - underscores
 
+### API Key
+You can find your unique DonorSearch API Key your [DonorSearch](https://www.donorsearch.net/api-integrations/){target=_blank} account profile when you log in. Go to Account Settings, then navigate to API Key view/edit.
 
 ## Endpoints
 The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint       | Required                           | Optional                                                                               | Description |
 |----------------|------------------------------------|----------------------------------------------------------------------------------------|-------------|
-| `donor_search` | firstName<br>lastName<br>homeState | middleName<br>homeStreetAddress<br>homeCity<br>homeZip<br>Employer<br>Age<br>Telephone |             |
-| `accountStats` |                                    |                                                                                        |             |
-
+| `donor_search` | firstName<br>lastName<br>homeState | middleName<br>homeStreetAddress<br>homeCity<br>homeZip<br>Employer<br>Age<br>Telephone |Obtain information about donors|
 
 ### Nav Tree
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
@@ -63,9 +75,9 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 
 ## Sample Queries
-The following queries are intended to help you get started, and make life simpler querying within your API.
+The following query is intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my DonorSearch API data source was called `mydonorsearchapi` and I want to query an endpoint. The endpoint goes after the DonorSearch data source name:
+For the following example, suppose that my DonorSearch API data source was called `mydonorsearchapi` and I want to query an endpoint. The endpoint goes after the DonorSearch data source name:
 
 !!! example "FROM Clause"
 
@@ -73,14 +85,15 @@ For the following examples, suppose that my DonorSearch API data source was call
     FROM `mydonorsearchapi`.`<ENDPOINT>`
     ```
 
-### donor_search 
+### Get Donor Info
+After filling in `sampleFirstName`, `sampleLastName`, `sampleState`, and replacing `1234567890` with a valid telephone number, this sample query will return information on donors.
 
 ```sql 
 SELECT * FROM donor_search.ds
-WHERE firstName = 'Monty' and
-lastName = 'Rahman' and
-homeState = 'Maryland'and
-Telephone = '4435389571'
+WHERE firstName = 'sampleFirstName' and
+lastName = 'sampleLastName' and
+homeState = 'sampleState' and
+Telephone = '1234567890'
 LIMIT 1000
 ```
 
