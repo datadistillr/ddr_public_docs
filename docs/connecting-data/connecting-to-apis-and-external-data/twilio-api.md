@@ -58,9 +58,6 @@ Enter any name that will help you recognize this data source from within your qu
 
 
 ### Account SID and Auth Token
-An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
-
-#### "Steps for getting your domain"
 
 === "1. Home page"
 
