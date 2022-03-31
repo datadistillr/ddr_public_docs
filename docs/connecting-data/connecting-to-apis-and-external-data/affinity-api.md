@@ -9,7 +9,7 @@ description: How to Connect DataDistillr to the Affinity API
 You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and to create an account.
 
 
-???cost "Cost"
+??? cost "Cost"
 
     You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and pricing.
 
