@@ -23,7 +23,7 @@ Set up an account with [Veriphone][link-1]{target="_blank"}.
     API has no information about rate limits.
     
 ## How to Connect DataDistillr to Veriphone
-To set up a data source connect for Veriphone, you will need to have:
+To set up a data source connection for Veriphone, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
 - An [API token](#api-key) generated through your Veriphone account
@@ -96,14 +96,14 @@ The endpoints above will display as follows in the nav tree once your API has su
 </figure>
 
 ## Sample Queries
-The following queries are intended to help you get started, and make like simpler querying within your API.
+The following queries are intended to help you get started, and make life simpler querying within your API.
 
 For the following examples, suppose that my Veriphone API data source was called `myveriphoneapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Veriphone data source name.
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `myapi`.`<ENDPOINT>`
+    FROM `myveriphoneapi`.`<ENDPOINT>`
     ```
 
 ### Verify
