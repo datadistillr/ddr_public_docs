@@ -7,24 +7,26 @@ description: How to Connect DataDistillr to the Airtable API
 ## Creating an Airtable account
 Set up an account with [Airtable](https://www.airtable.com/).
 
-### Costs  
-There are several different types of accounts. 
+??? cost "Costs" 
 
-**Free**
-: $0 Free for up to 5 users
+    There are several different types of accounts. 
+    
+    **Free**
+    : $0 Free for up to 5 users
+    
+    **Plus**
+    : $10 per seat/month
+    
+    **Pro**
+    : $20
+    
+    **Enterprise**
+    You can check [HERE](https://airtable.com/pricing) for details and comparison.
 
-**Plus**
-: $10 per seat/month
 
-**Pro**
-: $20
+??? rlimit "Rate Limits"  
 
-**Enterprise**
-You can check [HERE](https://www.airtable.com/pricing) for details and comparison.
-
-
-__Rate Limits__  
-The Airtable API is limited to 5 requests per second per base. If you exceed this rate, you will receive a 429 status code and will need to wait 30 seconds before subsequent requests will succeed.
+    The Airtable API is limited to 5 requests per second per base. If you exceed this rate, you will receive a 429 status code and will need to wait 30 seconds before subsequent requests will succeed.
 
 ## How to Connect DataDistillr to Airtable
 To set up a data source connection for Airtable, you will need to have:
