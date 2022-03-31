@@ -3,13 +3,14 @@
 ## Creating a ServiceNow account
 Set up an account with [ServiceNow](https://www.servicenow.com/){target="_blank"}.
 
-### Costs
+??? cost "Costs"
 
-Get a custom quote from [ServiceNow](https://www.servicenow.com/lpgp/pricing-itsm.html?campid=29573&cid=p:all:dg:b:prsp:core_brand_prsp:ams:all&s_kwcid=AL!11692!3!529674030705!e!!g!!servicenow%20cost&ds_c=GOOG_AMS_All_EN_DEMANDGEN_ALBU_PRSP_Brand_EXA_&cmcid=71700000065217230&ds_ag=ServiceNow+Cost_EXA&cmpid=58700005783664262&ds_kids=p52805252935&gclid=Cj0KCQjw3IqSBhCoARIsAMBkTb36TvnRRoLA7mVtpVIDN9ZNZurDHz-EHtidmtp7af3b-A7PSShNmoUaAmDdEALw_wcB&gclsrc=aw.ds){target="_blank"}.
+    Get a custom quote from [ServiceNow](https://www.servicenow.com/lpgp/pricing-itsm.html){target="_blank"}.
 
-### Rate Limits
-To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
-You can create rules to limit requests for specific users, users with specific roles, or all users. You can learn more about that in the [ServiceNow](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
+??? rlimit "Rate Limits"
+
+    To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
+    You can create rules to limit requests for specific users, users with specific roles, or all users. You can learn more about that in the [ServiceNow](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
 
 ## How to Connect DataDistillr to ServiceNow
 To set up a data source connection for ServiceNow, you will need to have:
