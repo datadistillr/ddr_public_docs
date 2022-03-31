@@ -3,22 +3,23 @@
 ## Creating an Asana account
 Set up an account with [Asana](https://asana.com/create-account){target=_blank}.
 
-### **Costs**
-There are a few different types of accounts:
+???+ cost
+    There are several different types of accounts:
 
-- Free
-- $10.99 per user per month billed annually or $13.49 billed monthly
-- $24.99 per user per month billed annually or $30.49 billed monthly
+    - Free
+    - $10.99 per user per month billed annually or $13.49 billed monthly
+    - $24.99 per user per month billed annually or $30.49 billed monthly
 
-[Details and Comparison](https://asana.com/pricing){target=_blank}
+    [Details and Comparison](https://asana.com/pricing){target=_blank}
 
-### **Rate Limits**
-Limits are allocated per authorization token. Limits may vary from token to token.
+???+ rlimit "Rate Limits"
+    Limits are allocated per authorization token. Limits may vary from token to token.
 
-Free account limit: 150 requests per minute.
-Premium account limit: 1500 requests per minute.
-SearchAPI  are limited to 60 requests per minute.
-Duplication endpoints are limited to 5 concurrent jobs.
+    - Free account: 150 requests per minute.
+    - Premium account: 1500 requests per minute.
+    - SearchAPI: 60 requests per minute.
+
+    Duplication endpoints are limited to 5 concurrent jobs.
 
 ## How to Connect DataDisillr to Asana
 To set up a data source connection for Asana, you will need to have:
@@ -59,29 +60,16 @@ Enter any name that will help you recognize this data source from within your qu
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
 
-<<<<<<< HEAD
 === "1. Home page"
-=======
-!!! example "Steps for getting the API key"
-
-    === "1. Home page"
-
->>>>>>> parent of ec8fc98 (Continued fixing requested changes)
     In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
 
     ![Click on Asana Account Icon. Choose 'My Settings'.] [image-5]
 
-<<<<<<< HEAD
 === "2. Account Settings"  
-=======
-    === "2. Account Settings"
-
->>>>>>> parent of ec8fc98 (Continued fixing requested changes)
     In the **My Settings** window, click on the **Apps** tab.
 
     ![Click on the Apps Tab in the 'My Settings' window.] [image-6]
 
-<<<<<<< HEAD
 === "3. Apps"
     Click on **Manage Developer Apps** which opens a new tab in your browser.
 
@@ -99,28 +87,11 @@ An API key is generated within your account page. The following steps will navig
 
 === "6. Copy Token"
     Click **Copy** to copy the token to your clipboard.
-=======
-Click on **Manage Developer Apps** which opens a new tab in your browser.
-
-![Click on 'Manage Developer Apps'.] [image-7]
-
-In the **Personal access tokens** section, choose **Create new token**.
-
-![Click on 'Create new token'.] [image-8]
-
-Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
-
-![Enter name and check the checkbox. Click 'Create token'.] [image-9]
-
-Click **Cop** to copy the token to your clipboard.
-
-![Click 'Copy' to copy the token.] [image-10]
->>>>>>> parent of ec8fc98 (Continued fixing requested changes)
 
     ![Click 'Copy' to copy the token.] [image-10]
 
 ## Endpoints
-Please see [Asana's API Reference](https://developers.asana.com/docs/asana) for more on Asana's endpoints.
+Please see [Asana's API Reference](https://developers.asana.com/docs/asana){target=_blank} for more on Asana's endpoints.
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
@@ -146,9 +117,17 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-Suppose that my Asana API data source was called `asanaapi2000`
+For the following examples, suppose that my Asana API data source was called `asanaapi2000`, and I want to query an endpoint. The endpoint goes after the Asana data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `asanaapi2000`.`<ENDPOINT>`
+    ```
 
 ### Get Tasks Endpoint
+
+This query returns all tasks associated with the specified project.
 
 ```sql
 SELECT *
@@ -158,6 +137,8 @@ LIMIT 100
 ```
 
 ### Get Users Endpoint
+
+This query returns all users associated with the specified workspace, displaying 50 users per page.
 
 ```sql
 SELECT *
@@ -169,6 +150,8 @@ LIMIT 100
 
 ### Get Workspaces Endpoint
 
+This query returns all workspaces accessible to the current user.
+
 ```sql
 SELECT *
 FROM asanaapi2000.`/workspaces`
@@ -176,6 +159,8 @@ LIMIT 100
 ```
 
 ### Get Projects Endpoint
+
+This query returns all projects associated with the specified workspace, displaying 10 projects per page.
 
 ```sql
 SELECT *
@@ -187,6 +172,8 @@ LIMIT 100
 
 ### Get Tags Endpoint
 
+This query returns all tags associated with the specified workspace.
+
 ```sql
 SELECT *
 FROM asanaapi2000.`/tags`
@@ -195,6 +182,8 @@ LIMIT 100
 ```
 
 ### Get Teams Endpoint
+
+This query returns all teams associated with the specified workspace_gid, displaying 10 teams per page.
 
 ```sql
 SELECT *
