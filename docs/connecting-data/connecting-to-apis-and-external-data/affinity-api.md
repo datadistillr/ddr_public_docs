@@ -9,19 +9,19 @@ description: How to Connect DataDistillr to the Affinity API
 You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and to create an account.
 
 
-### Cost
+???cost "Cost"
 
-You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and pricing.
+    You can [contact](https://www.affinity.co/request-demo){target=_blank} Affinity for a free demo and pricing.
 
-### Rate Limits
+??? rlimit "Rate Limits"
 
-Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
+    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits by plan tier are:
 
-- Professional tier: 40,000 calls. 
-- Premium tier: 100,000 calls. 
-- Enterprise tier: unlimited calls.
+    - Professional tier: 40,000 calls. 
+    - Premium tier: 100,000 calls.
+    - Enterprise tier: unlimited calls.
 
-All API requests will be halted at 450K per user, per day. Your daily limit will reset the next day at 12AM (midnight) Pacific Time.
+    All API requests will be halted at 450K per user, per day. Your daily limit will reset the next day at 12AM (midnight) Pacific Time.
 
 ## How to Connect DataDistillr to Affinity
 To set up a data source connect for Affinity, you will need to have:
