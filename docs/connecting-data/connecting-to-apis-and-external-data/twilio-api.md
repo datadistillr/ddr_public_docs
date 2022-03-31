@@ -13,7 +13,7 @@ Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank
 
 ???+ rlimit "Rate Limits"
 
-    No rate limit as cost is connected to the product usage 
+    No rate limit, as cost is connected to the product usage 
 
 ## How to Connect DataDistillr to Twilio
 To set up a data source connection for Twilio, you will need to have:
@@ -103,8 +103,8 @@ For the following examples, suppose that my Twilio API data source was called `m
 
 
 
-### Get calls
-This board will only be returned if the user has permission to view it.
+### Get Calls
+This endpoint will retrieve calls associated with your account.
 
 ```sql
 SELECT *
@@ -113,8 +113,8 @@ WHERE `boardId`='1'
 LIMIT 100
 ```
 
-### Get All Boards
-This only includes boards that the user has permission to view.
+### Get Messages
+This endpoint will retrieve calls associated with your account.
 
 ```sql
 SELECT *
