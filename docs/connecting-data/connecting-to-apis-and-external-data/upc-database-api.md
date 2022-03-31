@@ -104,7 +104,7 @@ The endpoints above will display as follows in the nav tree once your API has su
 </figure>
 
 ## Sample Queries
-The following queries are intended to help you get started, and make like simpler querying within your API.
+The following queries are intended to help you get started, and make life simpler querying within your API.
 
 For the following examples, suppose that my UPC Database API data source was called `myupcdbapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the UPC Database data source name.
 
