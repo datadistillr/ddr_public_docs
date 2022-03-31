@@ -5,7 +5,7 @@ description: How to Connect DataDistillr to the Airtable API
 # Connecting to Airtable
 
 ## Creating an Airtable account
-Set up an account with [Airtable](https://www.airtable.com/).
+Set up an account with [Airtable](https://www.airtable.com/){target=_blank}.
 
 ??? cost "Costs" 
 
@@ -21,7 +21,7 @@ Set up an account with [Airtable](https://www.airtable.com/).
     : $20
     
     **Enterprise**
-    You can check [HERE](https://airtable.com/pricing) for details and comparison.
+    Checkout [Airtable's pricing](https://airtable.com/pricing){target=_blank} for details and comparison.
 
 
 ??? rlimit "Rate Limits"  
@@ -57,35 +57,40 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 
 Enter any name that will help you recognize this data source from within your query window. &#x20;
 
-Acceptable characters include:
+!!! info "Acceptable characters include"
 
-* lowercase alphanumeric characters
-* underscores
+    * lowercase alphanumeric characters
+    * underscores
+#### Steps for getting your Project Path (Base ID)
 
-### Project Path (Base ID)
-You can access your Base ID at [https://airtable.com/](https://airtable.com/). Navigate to Bases along the top panel and click on your workspace as shown in the image below.
+=== "1. Find your base"
 
-![Finding your base][image-2]
+    You can access your Base ID at [https://airtable.com/](https://airtable.com/){target=_blank}. Navigate to Bases along the top panel and click on your workspace as shown in the image below.
+    
+    ![Finding your base][image-2]
+    
+=== "2. Find your Project Path (Base ID)"
 
-You can find the Project Path (Base ID) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
+    You can find the Project Path (Base ID) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
+    
+    `https://airtable.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
 
-`https://airtable.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
+#### Steps for finding your API Key
 
-### API Key
+=== "1. Generate and copy API Key"
 
-To generate your API Key, navigate to your [Account overview](https://airtable.com/account) where you will have the option to generate an API Key as highlighted below. Copy this API Key and enter into the Airtable Form.
+    To generate your API Key, navigate to your [Account overview](https://airtable.com/account){target=_blank} where you will have the option to generate an API Key as highlighted below. Copy this API Key and enter into the Airtable Form.
 
-
-![Generate API Key][image-4]
+    ![Generate API Key][image-4]
 
 
 ## Endpoints
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | URL Params | Optional | Description |
-| -------- | ---------- | -------- | ----------  |
-| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and its cells
+| Endpoint | URL Params | Optional                                                                 | Description                     |
+|----------| ---------- |--------------------------------------------------------------------------|---------------------------------|
+| `tables`   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and its cells |
 
 
 ### Nav Tree
@@ -112,7 +117,7 @@ FROM myairtableapi.`tables` AS AT
 WHERE tableName='Form Responses 1'
 ```
 
-
+[image-1]: ../../img/api/airtable/airtable-form.png
 [image-2]: ../../img/api/airtable/airtable-base.png
 [image-3]: ../../img/api/airtable/airtable-endpoint.png
 [image-4]: ../../img/api/airtable/airtable-generate-api.png
