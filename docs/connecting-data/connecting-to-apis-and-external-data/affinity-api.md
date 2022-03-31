@@ -31,7 +31,7 @@ To set up a data source connect for Affinity, you will need to have:
 
 
 ### Data Source Form
-To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../connecting-to-apis-and-external-data/custom-apis). When you get to the window to choose the data source type, select API as shown below.
+To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
   ![Data Source Wizard][image-9]{ width="100%" }
@@ -66,7 +66,7 @@ Enter any name that will help you recognize this data source within your query w
 The API key is generated within your account's settings page. Head over to the [Affinity docs](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-API-Key){target=_blank} to learn how to generate your API Key. Once created, copy the key and enter it in the Affinity form.
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form.
 
 | Endpoint       | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
 |----------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
