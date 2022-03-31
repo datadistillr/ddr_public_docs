@@ -5,7 +5,7 @@ description: How to Connect DataDistillr to the JIRA API
 # Connecting to JIRA
 
 ## Creating a JIRA account
-Set up an account with [JIRA](https://www.atlassian.com/software/opsgenie/try).
+Set up an account with [JIRA][link-1]{target="_blank"}.
 
 Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.
 
@@ -22,7 +22,7 @@ There are four plan tiers:
 :	$14.50 per user (average) $145 a month
 
 **Enterprise**
-:	Billed annually. Contact their [sales team](https://www.atlassian.com/enterprise/contact?formType=pricing-quotes) to get a quote about a product or service.
+:	Billed annually. Contact their [sales team][link-2]{target="_blank"} to get a quote about a product or service.
 
 ### Rate Limits
 The JIRA API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
@@ -42,7 +42,7 @@ To set up a data source connection for JIRA, you will need to have:
 To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
-  ![Data Source Wizard][image-7]{ width="100%" }
+  ![Data Source Wizard][image-0]{ width="100%" }
 </figure>
 
 
@@ -50,7 +50,7 @@ To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistil
 On the API screen, select JIRA from the list of API forms.
 
 <figure markdown>
-  ![List of APIs][image-8]{ width="100%" }
+  ![List of APIs][image-1]{ width="100%" }
 </figure>
 
 
@@ -60,7 +60,7 @@ The following form will appear. Instructions can be found below on how to find t
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
 <figure markdown>
-  ![JIRA Form][image-1]{ width="100%" }
+  ![JIRA Form][image-3]{ width="100%" }
 </figure>
 
 
@@ -76,84 +76,84 @@ Enter any name that will help you recognize this data source from within your qu
 ### Domain
 An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
 
-!!! example "Steps for getting your domain"
+##### Steps for getting your domain
 
-    === "1. Home page"
+=== "1. Home Page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-        ![JIRA Home Page][image-10]
+    ![JIRA Home Page][image-7]
 
-    === "2. Accout settings"
+=== "2. Account Settings"
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-        ![Account Pop Up][image-11]
+    ![Account Pop Up][image-8]
 
-    === "3. Find Domain"
+=== "3. Find Domain"
 
-        In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
+    In the left-hand sidebar, click the **Products** link and your domain will be located in the "Jira settings" section.
 
-        ![Find Domain][image-12]
+    ![Find Domain][image-9]
 
 ### User
 This is the email that is tied to your Atlassian account.
 
-!!! example "Steps for getting your email"
+##### Steps for getting your email
 
-    === "1. Home page"
+=== "1. Home Page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-        ![JIRA Home Page][image-10]
+    ![JIRA Home Page][image-7]
 
-    === "2. Accout settings"
+=== "2. Account Settings"
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-        ![Account Pop Up][image-11]
+    ![Account Pop Up][image-8]
 
-    === "3. Find email"
+=== "3. Find Email"
 
-        In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
+    In the left-hand sidebar, click the **Email** link and your email will located in the "Current email" section.
 
-        ![Find Domain][image-4]
+    ![Find Domain][image-10]
 
 
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
 
-!!! example "Steps for getting the API key"
+##### Steps for getting the API key
 
-    === "1. Home page"
+=== "1. Home Page"
 
-        In the JIRA app, click your profile icon in the top right corner of the page.
+    In the JIRA app, click your profile icon in the top right corner of the page.
 
-        ![JIRA Home Page][image-10]
+    ![JIRA Home Page][image-7]
 
-    === "2. Accout settings"
+=== "2. Account Settings"
 
-        In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
+    In the section with your name, click the **Account settings** link, this will take you to another page that contains information about your Atlassian account.
 
-        ![Account Pop Up][image-11]    
+    ![Account Pop Up][image-8]    
 
-    === "3. Go to security page"
+=== "3. Go to Security Page"
 
-        In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
+    In the left-hand sidebar, click **Security**. Then click **Create and manage API tokens** under the "API token" section.
 
-        ![Go to your API manager][image-5]
+    ![Go to your API manager][image-11]
 
-    === "4. Create new API key"
+=== "4. Create New API Key"
 
-        Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
+    Click **API tokens** in the left-hand sidebar and this will display all the API tokens you've generated. To generate a new API key, click the blue **Create API token** button.
 
-        ![Create a new API key][image-6]
+    ![Create a new API key][image-12]
 
-    === "5. Label token"
+=== "5. Label Token"
 
-        Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
+    Give your new token a label. Be careful, as this is the only time you will be able to see the API token so make sure you copy it.
 
-        ![Label token][image-9]
+    ![Label token][image-13]
 
 
 ## Endpoints
@@ -173,7 +173,7 @@ The table below shows a list of endpoints available to connect within the DataDi
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
 <figure markdown>
-  ![JIRA Endpoints][image-2]{ width="100%" }
+  ![JIRA Endpoints][image-5]{ width="100%" }
 </figure>
 
 
@@ -187,8 +187,6 @@ For the following examples, suppose that my JIRA API data source was called `myj
     ```sql
     FROM `myjiraapi`.`<ENDPOINT>`
     ```
-
-
 
 ### Get Board 
 This board will only be returned if the user has permission to view it.
@@ -240,15 +238,20 @@ LIMIT 100
 ```
 
 
-[image-1]: ../../img/api/jira/jira-form-light.png
-[image-2]: ../../img/api/jira/jira-query-page-sidebar-light.png
-[image-3]: ../../img/api/jira/jira-atlassian-organization.png
-[image-4]: ../../img/api/jira/jira-find-email.png
-[image-5]: ../../img/api/jira/jira-manage-api-tokens.png
-[image-6]: ../../img/api/jira/jira-create-new-api-token.png
-[image-7]: ../../img/api/data-source-wizard-api-light.png
-[image-8]: ../../img/api/jira/jira-choose-jira-form-light.png
-[image-9]: ../../img/api/jira/jira-create-api-token.png
-[image-10]: ../../img/api/jira/jira-home-page.png
-[image-11]: ../../img/api/jira/jira-account-pop-up.png
-[image-12]: ../../img/api/jira/jira-domain.png
+[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+[image-1]: ../../img/api/jira/jira-choose-jira-form-light.png "API Data Source selection"
+[image-2]: ../../img/api/jira/jira-choose-jira-form-dark.png "API Data Source selection"
+[image-3]: ../../img/api/jira/jira-form-light.png "JIRA form"
+[image-4]: ../../img/api/jira/jira-form-dark.png "JIRA form"
+[image-5]: ../../img/api/jira/jira-nav-tree-light.png "JIRA endpoints in query page nav tree sidebar"
+[image-6]: ../../img/api/jira/jira-nav-tree-dark.png "JIRA endpoints in query page nav tree sidebar"
+[image-7]: ../../img/api/jira/jira-home-page.png "JIRA project page"
+[image-8]: ../../img/api/jira/jira-account-pop-up.png "JIRA settings pop up"
+[image-9]: ../../img/api/jira/jira-domain.png "Atlassian account products settings"
+[image-10]: ../../img/api/jira/jira-find-email.png "Atlassian account email settings"
+[image-11]: ../../img/api/jira/jira-manage-api-tokens.png "Atlassian account security settings"
+[image-12]: ../../img/api/jira/jira-create-new-api-token.png "Atlassian account security page API token settings"
+[image-13]: ../../img/api/jira/jira-create-api-token.png "Labeling a newly created API token"
+
+[link-1]: https://www.atlassian.com/software/opsgenie/try "Atlassian sign up"
+[link-2]: https://www.atlassian.com/enterprise/contact?formType=pricing-quotes "Atlassian pricing quotes"

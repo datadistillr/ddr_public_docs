@@ -7,24 +7,26 @@ description: How to Connect DataDistillr to the Airtable API
 ## Creating an Airtable account
 Set up an account with [Airtable](https://www.airtable.com/).
 
-### Costs  
-There are several different types of accounts. 
+??? cost "Costs" 
 
-**Free**
-: $0 Free for up to 5 users
+    There are several different types of accounts. 
+    
+    **Free**
+    : $0 Free for up to 5 users
+    
+    **Plus**
+    : $10 per seat/month
+    
+    **Pro**
+    : $20
+    
+    **Enterprise**
+    You can check [HERE](https://airtable.com/pricing) for details and comparison.
 
-**Plus**
-: $10 per seat/month
 
-**Pro**
-: $20
+??? rlimit "Rate Limits"  
 
-**Enterprise**
-You can check [HERE](https://www.airtable.com/pricing) for details and comparison.
-
-
-__Rate Limits__  
-The Airtable API is limited to 5 requests per second per base. If you exceed this rate, you will receive a 429 status code and will need to wait 30 seconds before subsequent requests will succeed.
+    The Airtable API is limited to 5 requests per second per base. If you exceed this rate, you will receive a 429 status code and will need to wait 30 seconds before subsequent requests will succeed.
 
 ## How to Connect DataDistillr to Airtable
 To set up a data source connection for Airtable, you will need to have:
@@ -81,9 +83,9 @@ To generate your API Key, navigate to your [Account overview](https://airtable.c
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | URL Params | Optional                                                                 | Description                      |
-|----------|------------|--------------------------------------------------------------------------|----------------------------------|
-| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and it's cells |
+| Endpoint | URL Params | Optional | Description |
+| -------- | ---------- | -------- | ----------  |
+| tables   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page|Returns the table and its cells
 
 
 ### Nav Tree
@@ -111,9 +113,8 @@ WHERE tableName='Form Responses 1'
 ```
 
 
-[image-1]: ../../img/api/airtable/airtable-form.png
 [image-2]: ../../img/api/airtable/airtable-base.png
 [image-3]: ../../img/api/airtable/airtable-endpoint.png
 [image-4]: ../../img/api/airtable/airtable-generate-api.png
-[image-5]: ../../img/api/select-api-form.png
+[image-5]: ../../img/api/data-source-wizard-api-light.png
 [image-6]: ../../img/api/airtable/select-Airtable-API.png
