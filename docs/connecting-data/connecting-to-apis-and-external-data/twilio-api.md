@@ -130,6 +130,6 @@ LIMIT 100
 [image-1]: ../../img/api/twilio/twilio-form.png
 [image-2]: ../../img/api/twilio/twilio-navtree.png
 [image-7]: ../../img/api/data-source-wizard-api-light.png
-[image-8]: ../../img/api/twilio/twilio-api-select.png
+[image-8]: ../../img/api/twilio/twilio-api-select.jpeg
 [image-10]: ../../img/api/twilio/twilio-console.png
 [image-11]: ../../img/api/twilio/twilio-creds.png
