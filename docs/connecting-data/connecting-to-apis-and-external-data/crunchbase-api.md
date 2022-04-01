@@ -11,7 +11,7 @@ Set up an account with [Crunchbase](https://www.crunchbase.com/register){target=
 ???+ cost
     This is a paid API. [Crunchbase Pricing](https://www.crunchbase.com/buy/select-product){target=_blank}
 
-???+ rl "Rate Limits"
+???+ rlimit "Rate Limits"
     Your account plan tier will limit the number of requests each API key can make per month.
 
 ## How to Connect DataDistillr to Crunchbase
