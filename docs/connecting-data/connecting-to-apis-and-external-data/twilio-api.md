@@ -9,7 +9,7 @@ Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank
 
 ???+ cost "Costs"
     
-    The [pricing](https://www.twilio.com/pricing){target=_blank} for your twilio account is Pay-As-You-Go. [Check out Twilio's pricing for details](https://www.twilio.com/pricing){target=_blank}
+    The [pricing](https://www.twilio.com/pricing){target=_blank} for your twilio account is Pay-As-You-Go. 
 
 ???+ rlimit "Rate Limits"
 
@@ -19,8 +19,8 @@ Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank
 To set up a data source connection for Twilio, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
-- The [Account SID](#api-key) generated through your Twilio account
-- The [Auth Token](#api-key) generated through your Twilio account
+- The [Account SID](#account-sid-and-auth-token) generated through your Twilio account
+- The [Auth Token](#account-sid-and-auth-token) generated through your Twilio account
 
 ### Data Source Form
 To locate the Twilio form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
@@ -128,7 +128,7 @@ LIMIT 100
 
 
 [image-1]: ../../img/api/twilio/twilio-form.png
-[image-2]: ../../img/api/twilio/twilio-navtree.png
+[image-2]: ../../img/api/twilio/twilio-endpoints.png
 [image-7]: ../../img/api/data-source-wizard-api-light.png
 [image-8]: ../../img/api/twilio/twilio-api-select.png
 [image-10]: ../../img/api/twilio/twilio-console.png
