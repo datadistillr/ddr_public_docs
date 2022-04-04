@@ -9,12 +9,12 @@ Set up an account with [Datadog](https://www.datadoghq.com/){target=_blank}.
 
 ???+ cost "Costs"
 
-    This is a paid API. [Checkout Datadog's](https://www.datadoghq.com/pricing/) pricing.
+    This is a paid API. [Checkout Datadog's](https://www.datadoghq.com/pricing/){target=_blank} pricing.
 
 
 ???+ rlimit "Rate Limits"
 
-    All of the API endpoints are [rate limited](https://docs.datadoghq.com/api/latest/rate-limits/). Once you exceed a certain number of requests in a specific period, Datadog returns an error.
+    All of the API endpoints are [rate limited](https://docs.datadoghq.com/api/latest/rate-limits/){target=_blank}. Once you exceed a certain number of requests in a specific period, Datadog returns an error.
 
 ## How to Connect DataDistillr to Datadog
 To set up a data source connection for Datadog, you will need to have:
@@ -49,36 +49,40 @@ Enter any name that will help you recognize this data source from within your qu
 
     * lowercase alphanumeric characters
     * underscores
-#### Steps for getting your API Key
-
-=== "1. Find your base"
-
-    You can access your Base ID at [https://Datadog.com/](https://Datadog.com/){target=_blank}. Navigate to Bases along the top panel and click on your workspace as shown in the image below.
-    
-    ![Finding your base][image-2]
-
-=== "2. Find your Project Path (Base ID)"
-
-    You can find the Project Path (Base ID) in the Highlighted section of the Base URL shown below, and enter this into the Datadog Data Source Form as the 'Project Path'.
-    
-    `https://Datadog.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
 
 #### Steps for getting your Application Key
 
-=== "1. Generate and copy API Key"
+=== "1. Find your Application Key"
 
-    To generate your API Key, navigate to your [Account overview](https://Datadog.com/account){target=_blank} where you will have the option to generate an API Key as highlighted below. Copy this API Key and enter into the Datadog Form.
+    You can access your A at your [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}.
+    
+    ![Copy Application Key][image-2]
+
+
+#### Steps for getting your API Key
+
+=== "1. Find your API Key"
+
+    You can access your API Key at your [Datadog API Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank} where you will click on the API Key which will open a modal as in step two.
 
     ![Generate API Key][image-4]
+
+=== "2. Copy your API Key"
+
+    In the open API Key modal copy the API Key
+
+    ![Copy API Key][image-7]
 
 
 ## Endpoints
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | URL Params | Optional                                                                 | Description                     |
-|----------| ---------- |--------------------------------------------------------------------------|---------------------------------|
-| `tables`   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and its cells |
+| Endpoint     | Required Params | Optional  Params             | Description                              |
+|--------------|-----------------|------------------------------|------------------------------------------|
+| `synthetics` | public_id       | from_ts<br>to_ts<br>probe_dc | Returns the list of all Synthetic tests. |
+| `metrics`    | from            | host<br>tag_filter           | Returns active Metrics list.             |
+| `events`     | start<br>end    |                              | This endpoint queries the event stream.  |
 
 
 ### Nav Tree
@@ -91,23 +95,49 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-### Get Tables Endpoint
+For the following examples, suppose that my Datadog data source was called `mydatadog` and I want to query an endpoint. The endpoint goes after the Datadog data source name:
 
-Suppose that my Datadog API data source was called `myDatadogapi` and you have a table called `Form Responses 1`. In the table there are several columns including ID and fields. In order to access the values in the fields column you have to query their keys specifically as so.
+!!! example "FROM Clause"
 
+    ```sql
+    FROM `mydatadog`.`<ENDPOINT>`
+    ```
+
+### Get Synthetics Endpoint
+
+Get the list of all Synthetic tests. This endpoint requires the Datadog `synthetics_read` authorization scope.
 
 ```sql
-SELECT AT.id AS ID,
-AT.fields['Timestamp'] AS Times,
-AT.fields['Name'] AS Name,
-AT.fields['Email Address'] AS Address
-FROM myDatadogapi.`tables` AS AT
-WHERE tableName='Form Responses 1'
+SELECT * FROM mydatadog.synthetics
+WHERE public_id = '<PUBLIC_ID>'
+LIMIT 1000
 ```
 
+### Get Metrics Endpoint
+
+Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
+
+```sql
+SELECT * FROM mydatadog.metrics
+WHERE from = '1643111571'
+LIMIT 1000
+```
+
+### Get Events Endpoint 
+
+The event stream can be queried and filtered by time, priority, sources and tags.
+
+```sql
+SELECT * FROM mydatadog.synthetics
+WHERE start=1641071432 AND end=1643521168
+LIMIT 1000
+```
+
+
 [image-1]: ../../img/api/datadog/datadog-form.png
-[image-2]: ../../img/api/Datadog/Datadog-base.png
-[image-3]: ../../img/api/Datadog/Datadog-endpoint.png
-[image-4]: ../../img/api/Datadog/Datadog-generate-api.png
+[image-2]: ../../img/api/datadog/datadog-application-key.png
+[image-3]: ../../img/api/datadog/datadog-endpoints.png
+[image-4]: ../../img/api/datadog/datadog-api.png
 [image-5]: ../../img/api/data-source-wizard-api-light.png
 [image-6]: ../../img/api/datadog/datadog-datasource.png
+[image-7]: ../../img/api/datadog/datadog-api-copy.png
