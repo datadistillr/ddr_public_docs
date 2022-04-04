@@ -13,7 +13,7 @@ Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank
 
 ???+ rlimit "Rate Limits"
 
-    No rate limit, as cost is connected to the product usage 
+    Almost all Twilio products have rate limits to ensure that all customers experience a high level of performance when using Twilio's platform. Please review the specific product [API documentation](https://www.twilio.com/docs/api) to find the rate limits.
 
 ## How to Connect DataDistillr to Twilio
 To set up a data source connection for Twilio, you will need to have:
@@ -67,7 +67,7 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "2. Account SID, Auth Token"
 
-    In the console find your Account SID and Auth Token in the circled section. Click the copy icon at their righthand side.
+    In the console find your Account SID and Auth Token in the Account Info section. Click the copy icon at their righthand side.
 
     ![Account Pop Up][image-11]
 
