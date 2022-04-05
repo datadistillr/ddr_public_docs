@@ -4,7 +4,7 @@
 Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
 
 ???+ cost
-    There are both free and paid options for this API. [ClickUp Pricing](https://clickup.com/pricing){target=_blank}
+    There are both free and [paid](https://clickup.com/pricing){target=_blank} options for this API. 
 
 ???+ rlimit "Rate Limits"
 
