@@ -13,7 +13,7 @@ Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank
 
 ???+ rlimit "Rate Limits"
 
-    Almost all Twilio products have rate limits to ensure that all customers experience a high level of performance when using Twilio's platform. Please review the specific product [API documentation](https://www.twilio.com/docs/api) to find the rate limits.
+    Almost all Twilio products have rate limits to ensure that all customers experience a high level of performance when using Twilio's platform. Please review the specific product [API documentation](https://www.twilio.com/docs/api){target=_blank} to find the rate limits.
 
 ## How to Connect DataDistillr to Twilio
 To set up a data source connection for Twilio, you will need to have:
