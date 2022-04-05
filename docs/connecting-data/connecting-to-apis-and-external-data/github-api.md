@@ -1,7 +1,120 @@
 ---
-description: How to Connect DataDistillr to the GitHub API
+description: How to Connect DataDistillr to the Github API
 ---
 
-# GitHub API
+# Connecting to GitHub
 
-Details coming soon!
+## First Steps with GitHub
+An account is not necessary for the GitHub API. If you'd like you can set up an account with [GitHub](https://github.com/signup){target=_blank}.
+
+???+ cost "Costs"
+
+    This is the free version of the GitHub API. 
+
+
+???+ rlimit "Rate Limits"
+
+    The GitHub API has [rate limits](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting){target=_blank}. Once you exceed a certain number of requests in a specific period, GitHub returns an error.
+
+## How to Connect DataDistillr to Github
+To set up a data source connection for Github, you will need to have:
+
+- A unique [name](#name) for your data source connection to be used in queries.
+
+
+
+### Data Source Form
+
+To locate the Github form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+
+![Select API from the available choices][image-5]
+
+On the API screen, select Github from list of API forms as shown in the image below.
+
+![Select Github API from available choices][image-6]
+
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Github API form.
+
+Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
+
+![Github Form][image-1]
+
+### Name
+
+Enter any name that will help you recognize this data source from within your query window. &#x20;
+
+!!! info "Acceptable characters include"
+
+    * lowercase alphanumeric characters
+    * underscores
+
+
+## Endpoints
+
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+
+| Endpoint | Description                                                                |
+|----------|----------------------------------------------------------------------------|
+| `users`  | Lists all users, in the order that they signed up on GitHub                |
+| `search` | The GitHub Search API lets you to search for the specific item efficiently |
+| `repos`  | Lists all public repositories in the order that they were created.         |
+| `org`    | Get info on an organization.                                               |
+
+
+### Nav Tree
+
+The endpoint above will display as follows in the nav tree once your API has successfully connected.
+
+![Github Endpoints][image-3]
+
+## Sample Queries
+
+The following queries are intended to help you get started, and make life simpler querying within your API.
+
+For the following examples, suppose that my Github data source was called `myGithub` and I want to query an endpoint. The endpoint goes after the Github data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `myGithub`.`<ENDPOINT>`
+    ```
+
+### Get Synthetics Endpoint
+
+Get the list of all Synthetic tests. This endpoint requires the Github `synthetics_read` authorization scope.
+
+```sql
+SELECT * FROM `myGithub`.`synthetics`
+WHERE public_id = '<PUBLIC_ID>'
+LIMIT 1000
+```
+
+### Get Metrics Endpoint
+
+Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
+
+```sql
+SELECT * FROM `myGithub`.`metrics`
+WHERE from = '1643111571'
+LIMIT 1000
+```
+
+### Get Events Endpoint
+
+The event stream can be queried and filtered by time, priority, sources and tags.
+
+```sql
+SELECT * FROM `myGithub`.`synthetics`
+WHERE start=1641071432 AND end=1643521168
+LIMIT 1000
+```
+
+
+[image-1]: ../../img/api/github/github-form.png
+[image-2]: ../../img/api/Github/Github-application-key.png
+[image-3]: ../../img/api/github/github-endpoints.png
+[image-4]: ../../img/api/Github/Github-api.png
+[image-5]: ../../img/api/add-api.png
+[image-6]: ../../img/api/github/github-select-api.png
+[image-7]: ../../img/api/Github/Github-api-copy.png
+[image-8]: ../../img/api/Github/Github-signin.png
