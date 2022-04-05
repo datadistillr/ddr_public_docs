@@ -59,12 +59,12 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "2. Find your API Key"
 
-    click on the API Key which will open a modal as in step two.
+    Click on the API Key which will open a modal as in step two.
     ![Generate API Key][image-4]
 
 === "3. Copy your API Key"
 
-    In the open API Key modal copy the API Key
+    Click the blue 'Copy' key to copy your API, and paste into the form
 
     ![Copy API Key][image-7]
 
@@ -77,7 +77,7 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "2. Find your Application Key"
 
-    You can access your Application Key at your [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}.
+    You can access your Application Key at your [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Hover your mouse over the application key and click the copy icen on the right hand side.
     
     ![Copy Application Key][image-2]
 
@@ -116,7 +116,7 @@ For the following examples, suppose that my Datadog data source was called `myda
 Get the list of all Synthetic tests. This endpoint requires the Datadog `synthetics_read` authorization scope.
 
 ```sql
-SELECT * FROM mydatadog.synthetics
+SELECT * FROM `mydatadog`.`synthetics`
 WHERE public_id = '<PUBLIC_ID>'
 LIMIT 1000
 ```
@@ -126,7 +126,7 @@ LIMIT 1000
 Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
 
 ```sql
-SELECT * FROM mydatadog.metrics
+SELECT * FROM `mydatadog`.`metrics`
 WHERE from = '1643111571'
 LIMIT 1000
 ```
@@ -136,7 +136,7 @@ LIMIT 1000
 The event stream can be queried and filtered by time, priority, sources and tags.
 
 ```sql
-SELECT * FROM mydatadog.synthetics
+SELECT * FROM `mydatadog`.`synthetics`
 WHERE start=1641071432 AND end=1643521168
 LIMIT 1000
 ```
