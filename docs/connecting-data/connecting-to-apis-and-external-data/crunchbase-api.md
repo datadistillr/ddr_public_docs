@@ -9,10 +9,10 @@ description: How to Connect DataDistillr to the Crunchbase API
 Set up an account with [Crunchbase](https://www.crunchbase.com/register){target=_blank}.
 
 ???+ cost
-    This is a paid API. [Crunchbase Pricing](https://www.crunchbase.com/buy/select-product){target=_blank}
+    This is a [paid](https://www.crunchbase.com/buy/select-product){target=_blank} API.
 
 ???+ rlimit "Rate Limits"
-    Your account plan tier will limit the number of requests each API key can make per month.
+    There is a [limit](https://data.crunchbase.com/docs/using-the-api#collections){target=_blank} to the number of requests each API key can make per minute.
 
 ## How to Connect DataDistillr to Crunchbase
 
@@ -20,7 +20,6 @@ To set up a data source connection for Crunchbase, you will need to have:
 
 - A [unique name](/connecting-data/connecting-to-apis-and-external-data/crunchbase-api/#name) for your data source connection to be used in queries.
 - An [API key](/connecting-data/connecting-to-apis-and-external-data/crunchbase-api/#api-key)
-In order to access the Crunchbase API, one must pay for an [Enterprise](https://about.crunchbase.com/products/crunchbase-enterprise/?utm_source=cb&utm_medium=banner_ad&utm_campaign=data_crunchbase_ad&utm_content=enterprise&utm_term=click_here#enterprise-form){target=_blank} or [Applications](https://about.crunchbase.com/products/data-licensing/?utm_source=cb&utm_medium=banner_ad&utm_campaign=data_crunchbase_ad&utm_content=applications&utm_term=click_here#applications-form){target=_blank} license. A user key is emailed to the user following registration. [Contact](https://about.crunchbase.com/about-us/contact-us/){target=_blank} Crunchbase for more details.
 
 ### Data Source Form
 
@@ -53,7 +52,10 @@ Enter any name that will help you recognize this data source from within your qu
     - underscores
 
 ### API Key
-This is the user key which is emailed to you following registration. See [Crunchbase API Authentication](https://data.crunchbase.com/docs/using-the-api#authentication){target=_blank} for more information.
+This is the user key which is emailed to you following registration.
+
+In order to access the Crunchbase API, you must pay for an [Enterprise](https://about.crunchbase.com/products/crunchbase-enterprise/?utm_source=cb&utm_medium=banner_ad&utm_campaign=data_crunchbase_ad&utm_content=enterprise&utm_term=click_here#enterprise-form){target=_blank} or [Applications](https://about.crunchbase.com/products/data-licensing/?utm_source=cb&utm_medium=banner_ad&utm_campaign=data_crunchbase_ad&utm_content=applications&utm_term=click_here#applications-form){target=_blank} license.
+See [Crunchbase API Authentication](https://data.crunchbase.com/docs/using-the-api#authentication){target=_blank} for more information.
 
 If you lose your key, contact [api@crunchbase.com](mailto:api@crunchbase.com)
 
