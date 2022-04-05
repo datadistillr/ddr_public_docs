@@ -4,7 +4,7 @@
 Set up an account with [Asana](https://asana.com/create-account){target=_blank}.
 
 ???+ cost
-    There are both free and paid options for this API. [Asana Pricing](https://asana.com/pricing){target=_blank}
+    There are both free and [paid](https://asana.com/pricing){target=_blank} options for this API. 
 
 ???+ rlimit "Rate Limits"
     Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are available in Asana's [documentation](https://developers.asana.com/docs/rate-limits){target=_blank}.
@@ -184,7 +184,7 @@ LIMIT 100
 
 [image-1]: ../../img/api/asana/asana-form-light.png
 [image-2]: ../../img/api/asana/asana-nav-tree.png
-[image-3]: ../../img/api/data-source-wizard-api-light.png
+[image-3]: ../../img/api/add-api.png
 [image-4]:../../img/api/asana/api-types-asana.jpeg
 [image-5]:../../img/api/asana/asana-account-icon-settings.png
 [image-6]:../../img/api/asana/asana-settings-apps.png
