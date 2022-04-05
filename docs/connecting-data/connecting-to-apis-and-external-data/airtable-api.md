@@ -4,10 +4,10 @@ description: How to Connect DataDistillr to the Airtable API
 
 # Connecting to Airtable
 
-## Getting Started with Airtable
+## First Steps with Airtable
 Set up an account with [Airtable](https://www.airtable.com/){target=_blank}.
 
-???+ cost "Costs" 
+???+ cost "Cost" 
 
     There are both free and [paid](https://airtable.com/pricing){target=_blank} options for this API.
 
@@ -60,7 +60,7 @@ Enter any name that will help you recognize this data source from within your qu
     
 === "2. Find your Base ID (Project Path)"
 
-    OYou can find the Base ID (Called Project Path in our form) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
+    You can find the Base ID (Called Project Path in our form) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
     
     `https://airtable.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
 
