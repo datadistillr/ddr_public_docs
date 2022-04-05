@@ -65,7 +65,6 @@ Enter any name that will help you recognize this data source from within your qu
 === "3. Copy your API Key"
 
     Click the blue 'Copy' key to copy your API, and paste into the form
-
     ![Copy API Key][image-7]
 
 ### Application Key
