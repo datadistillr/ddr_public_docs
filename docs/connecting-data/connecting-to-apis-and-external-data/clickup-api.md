@@ -1,28 +1,14 @@
 # Connecting to ClickUp
 
-## Creating a ClickUp Account
+## First Steps with ClickUp
 Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
 
 ???+ cost
-    There are several different types of accounts:
-
-    - Free
-    - Unlimited - $9 per member per month
-    - Business - $19 per member per month
-    - Business Plus - $29 per member per month
-    - Enterprise
-
-    [Details and Comparison](https://clickup.com/pricing){target=_blank}
+    There are both free and [paid](https://clickup.com/pricing){target=_blank} options for this API. 
 
 ???+ rlimit "Rate Limits"
 
-    The ClickUp API is limited per OAuth and personal token.
-
-    - Free, Unlimited, and Business Plan - 100 requests per minute per token
-    - Business Plus Plan - 1,000 requests per minute per token
-    - Enterprise Plan - 10,000 requests per minute per token
-
-    If you exceed this rate, you will receive a 429 status code.
+    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are available in ClickUp's [documentation](https://clickup.com/api){target=_blank}.
 
 ## How to Connect DataDistillr to ClickUp
 
@@ -178,7 +164,7 @@ LIMIT 10
 ```
 
 [image-1]: ../../img/api/data-source-wizard-api-light.png
-[image-2]: ../../img/api/clickup/clickup-api-types.png
+[image-2]: ../../img/api/clickup/clickup-api-types.jpeg
 [image-3]: ../../img/api/clickup/clickup-form.png
 [image-4]: ../../img/api/clickup/clickup-api-key-user-account.png
 [image-5]: ../../img/api/clickup/clickup-api-key-apps.png
