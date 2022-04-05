@@ -2,7 +2,9 @@
 description: How to Connect DataDistillr to the Fiscal Data API
 ---
 
-## Connecting to Fiscal Data
+# Connecting to Fiscal Data
+
+## First Steps with Fiscal Data
 No account is necessary for this API. Here is the website [https://fiscaldata.treasury.gov/][link-0]{target="_blank"}
 
 ???+ cost

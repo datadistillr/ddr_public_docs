@@ -1,4 +1,8 @@
-# Connecting to the Asana API
+---
+description: How to Connect DataDistillr to the Asana API
+---
+
+# Connecting to Asana
 
 ## First steps with Asana
 Set up an account with [Asana](https://asana.com/create-account){target=_blank}.

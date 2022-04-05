@@ -2,7 +2,7 @@
 description: How to Connect DataDistillr to the Crunchbase API
 ---
 
-# Crunchbase API
+# Connecting to Crunchbase
 
 ## First Steps with Crunchbase
 
