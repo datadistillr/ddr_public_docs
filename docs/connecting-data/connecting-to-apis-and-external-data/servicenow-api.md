@@ -1,6 +1,11 @@
+---
+description: How to Connect DataDistillr to the ServiceNow API
+---
+
 # Connecting to ServiceNow
 
-## Creating a ServiceNow account
+## First Steps with ServiceNow
+
 Set up an account with [ServiceNow](https://www.servicenow.com/){target="_blank"}.
 
 ??? cost "Costs"

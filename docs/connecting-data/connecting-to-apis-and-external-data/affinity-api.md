@@ -2,7 +2,7 @@
 description: How to Connect DataDistillr to the Affinity API
 ---
 
-# Affinity API
+# Connecting to Affinity
 
 ## First Steps with Affinity
 

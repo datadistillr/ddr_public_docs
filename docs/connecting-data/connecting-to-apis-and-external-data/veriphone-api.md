@@ -4,7 +4,7 @@ description: How to Connect DataDistillr to the Veriphone API
 
 # Connecting to Veriphone
 
-## Creating a Veriphone account
+## First Steps with Veriphone
 Set up an account with [Veriphone][link-1]{target="_blank"}.
 
 ???+ cost
