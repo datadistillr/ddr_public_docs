@@ -4,16 +4,16 @@ description: How to Connect DataDistillr to the Twilio API
 
 # Connecting to Twilio
 
-## First steps with Twilio
+## First Steps with Twilio
 Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank}.
 
 ???+ cost "Costs"
     
-    The [pricing](https://www.twilio.com/pricing){target=_blank} for your twilio account is Pay-As-You-Go. 
+    The [pricing](https://www.twilio.com/pricing){target=_blank} for your Twilio account is Pay-As-You-Go. 
 
 ???+ rlimit "Rate Limits"
 
-    Almost all Twilio products have rate limits to ensure that all customers experience a high level of performance when using Twilio's platform. Please review the specific product [API documentation](https://www.twilio.com/docs/api){target=_blank} to find the rate limits.
+    Many Twilio products have rate limits to ensure that all customers experience a high level of performance when using Twilio's platform. Please review the specific product [API documentation](https://www.twilio.com/docs/api){target=_blank} to find rate limits that may apply to your API.
 
 ## How to Connect DataDistillr to Twilio
 To set up a data source connection for Twilio, you will need to have:
@@ -39,7 +39,7 @@ On the API screen, select Twilio from the list of API forms.
 
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Twilio API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the Twilio API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
