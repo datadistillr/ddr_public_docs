@@ -4,12 +4,12 @@ description: How to Connect DataDistillr to the Datadog API
 
 # Connecting to Datadog
 
-## First Steps with Affinity
+## First Steps with Datadog
 Set up an account with [Datadog](https://www.datadoghq.com/){target=_blank}.
 
 ???+ cost "Costs"
 
-    This is a paid API. [Checkout Datadog's](https://www.datadoghq.com/pricing/){target=_blank} pricing.
+    This is a [paid](https://www.datadoghq.com/pricing/){target=_blank} API. 
 
 
 ???+ rlimit "Rate Limits"
@@ -147,6 +147,6 @@ LIMIT 1000
 [image-3]: ../../img/api/datadog/datadog-endpoints.png
 [image-4]: ../../img/api/datadog/datadog-api.png
 [image-5]: ../../img/api/add-api.png
-[image-6]: ../../img/api/datadog/datadog-datasource.png
+[image-6]: ../../img/api/datadog/datadog-datasource.jpeg
 [image-7]: ../../img/api/datadog/datadog-api-copy.png
 [image-8]: ../../img/api/datadog/datadog-signin.png
