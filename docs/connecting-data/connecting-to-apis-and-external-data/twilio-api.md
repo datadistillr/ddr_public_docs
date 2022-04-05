@@ -132,4 +132,4 @@ LIMIT 100
 [image-7]: ../../img/api/data-source-wizard-api-light.png
 [image-8]: ../../img/api/twilio/twilio-api-select.jpeg
 [image-10]: ../../img/api/twilio/twilio-console.png
-[image-11]: ../../img/api/twilio/twilio-creds.png
+[image-11]: ../../img/api/twilio/twilio-creds.jpeg
