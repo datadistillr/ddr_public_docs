@@ -2,9 +2,9 @@
 description: How to Connect DataDistillr to the Monday API
 ---
 
-# Monday API
+# Connecting to Monday
 
-## Creating a Monday account
+## First Steps with Monday
 Set up an account with [Monday][link-1]{target="_blank"}.
 
 ???+ cost

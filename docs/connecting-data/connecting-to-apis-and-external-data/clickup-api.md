@@ -1,3 +1,7 @@
+---
+description: How to Connect DataDistillr to the ClickUp API
+---
+
 # Connecting to ClickUp
 
 ## First Steps with ClickUp

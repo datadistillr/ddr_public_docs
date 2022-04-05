@@ -4,7 +4,7 @@ description: How to Connect DataDistillr to the JIRA API
 
 # Connecting to JIRA
 
-## Creating a JIRA account
+## First Steps with JIRA
 Set up an account with [JIRA][link-1]{target="_blank"}.
 
 Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.

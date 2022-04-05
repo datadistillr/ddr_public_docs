@@ -4,7 +4,7 @@ description: How to Connect DataDistillr to the UPC Database API
 
 # Connecting to UPC Database
 
-## Creating a UPC Database account
+## First Steps with UPC Database
 Set up an account with [UPC Database][link-1]{target="_blank"}.
 
 ???+ cost
