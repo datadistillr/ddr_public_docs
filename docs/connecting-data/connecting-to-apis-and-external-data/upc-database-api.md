@@ -9,18 +9,11 @@ Set up an account with [UPC Database][link-1]{target="_blank"}.
 
 ???+ cost
 
-    There are four pricing plans:
-    
-    - **Free:** $0 per month.
-    - **Hobbyist:** $2.50 per month.
-    - **Standard:** $10 per month.
-    - **Professional:** $50 per month.
-
-    For more information about UPC Database pricing, please visit [https://upcdatabase.org/api-pricing][link-2]{target="_blank"}
+    There are both free and [paid][link-2]{target="_blank"} options for this API.
 
 ???+ rlimit "Rate Limits"
 
-    API does not have information about rate limits.
+    There are no known [rate limits][link-2]{target="_blank"} for this API.
 
 ## How to Connect DataDistillr to UPC Database
 To set up a data source connect for UPC Database, you will need to have:
@@ -31,9 +24,7 @@ To set up a data source connect for UPC Database, you will need to have:
 ### Data Source Form
 To locate the UPC Database form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-<figure markdown>
-  ![Data Source Wizard][image-0]{ width="100%" }
-</figure>
+  ![Data Source Wizard][image-0]
 
 On the API screen, select UPC Database from the list of API forms.
 
@@ -43,7 +34,7 @@ On the API screen, select UPC Database from the list of API forms.
 </figure>
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each on the UPC Database API form.
+The following form will appear. Instructions are below on how to find the information required to fill each on the UPC Database API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -62,8 +53,6 @@ Enter any name that will help you recognize this data source within your query w
 
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the UPC Database form under 'API key'.
-
-##### Steps for getting the API key
 
 === "1. Home Page"
 
@@ -165,8 +154,8 @@ FROM `myupcdbapi`.`/currency/symbols`
 LIMIT 1000
 ```
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
-[image-1]: ../../img/api/upcdb/choose-form-upc-light.png "API Data Source selection"
+[image-0]: ../../img/api/add-api.png "Data Source Menu"
+[image-1]: ../../img/api/upcdb/choose-form-upc-light.jpeg "API Data Source selection"
 [image-2]: ../../img/api/upcdb/choose-form-upc-dark.png "API Data Source selection"
 [image-3]: ../../img/api/upcdb/upc-form-light.png "UPC Database form"
 [image-4]: ../../img/api/upcdb/upc-form-dark.png "UPC Database form"

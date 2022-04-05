@@ -9,26 +9,15 @@ Set up an account with [JIRA][link-1]{target="_blank"}.
 
 Your Atlassian account is your online Atlassian identity that exists independently of the Atlassian products you use. The account includes attributes like your email address and display name.
 
-### Costs
-There are four plan tiers:
+???+ Cost
 
-**Free**
-: $0 Always free for 10 users
+    There are both free and [paid](https://www.atlassian.com/software/jira/pricing){target="_blank"} options for this API. 
 
-**Standard**
-:	$7.50 per user (average) $75 a month
+    Contact JIRA's [sales team][link-2]{target="_blank"} to get a quote about a product or service.
 
-**Premium**
-:	$14.50 per user (average) $145 a month
+???+ rlimit "Rate Limits"
 
-**Enterprise**
-:	Billed annually. Contact their [sales team][link-2]{target="_blank"} to get a quote about a product or service.
-
-### Rate Limits
-The JIRA API is limited to 500 API requests per 5 minutes. Once you exceed this limit, calls will return HTTP status `429` and a message telling you that you've been limited.
-
-Also as a means of preventing room "spam", API methods that involve sending messages to rooms or individual people are limited to 30 requests per minute.
-
+    Rate Limits apply to this API and will limit the number of requests per minute. JIRA's [documentation](https://developer.atlassian.com/cloud/jira/platform/rate-limiting/){target="_blank"} contains specific details.
 
 ## How to Connect DataDistillr to JIRA
 To set up a data source connection for JIRA, you will need to have:
@@ -36,26 +25,18 @@ To set up a data source connection for JIRA, you will need to have:
 - A [unique name](#name) for your data source connection to be used in queries
 - The [domain](#domain) of your Atlassian account
 - The [email](#user) associated with your Atlassian account
-- The [API token](#api-key) generated through your Atlassian account
+- The [API Key](#api-key) generated through your Atlassian account
 
 ### Data Source Form
 To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-<figure markdown>
-  ![Data Source Wizard][image-0]{ width="100%" }
-</figure>
-
-
+  ![Data Source Selection][image-0]
 
 On the API screen, select JIRA from the list of API forms.
 
-<figure markdown>
-  ![List of APIs][image-1]{ width="100%" }
-</figure>
+  ![List of APIs][image-1]
 
-
-
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the JIRA API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the JIRA API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -74,9 +55,7 @@ Enter any name that will help you recognize this data source from within your qu
 
 
 ### Domain
-An Organization is a management layer that gives admins the ability to view and apply controls to all Atlassian accounts using an email address belonging to their company.
-
-##### Steps for getting your domain
+Domain refers to the URL associated with your JIRA instance.
 
 === "1. Home Page"
 
@@ -99,8 +78,6 @@ An Organization is a management layer that gives admins the ability to view and 
 ### User
 This is the email that is tied to your Atlassian account.
 
-##### Steps for getting your email
-
 === "1. Home Page"
 
     In the JIRA app, click your profile icon in the top right corner of the page.
@@ -122,8 +99,6 @@ This is the email that is tied to your Atlassian account.
 
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the JIRA form under 'API Key'.
-
-##### Steps for getting the API key
 
 === "1. Home Page"
 
@@ -238,8 +213,8 @@ LIMIT 100
 ```
 
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
-[image-1]: ../../img/api/jira/jira-choose-jira-form-light.png "API Data Source selection"
+[image-0]: ../../img/api/add-api.png "Select API from Data Source menu"
+[image-1]: ../../img/api/jira/jira-choose-jira-form-light.jpeg "API Data Source selection"
 [image-2]: ../../img/api/jira/jira-choose-jira-form-dark.png "API Data Source selection"
 [image-3]: ../../img/api/jira/jira-form-light.png "JIRA form"
 [image-4]: ../../img/api/jira/jira-form-dark.png "JIRA form"

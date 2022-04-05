@@ -37,7 +37,7 @@ nav:
       - Placer: connecting-data/connecting-to-apis-and-external-data/placer-api.md
       - Quickbooks: connecting-data/connecting-to-apis-and-external-data/quickbooks-api.md
       - Salesforce: connecting-data/connecting-to-apis-and-external-data/salesforce-api.md
-      - Servicenow: connecting-data/connecting-to-apis-and-external-data/servicenow-api.md
+      - ServiceNow: connecting-data/connecting-to-apis-and-external-data/servicenow-api.md
       - Stripe: connecting-data/connecting-to-apis-and-external-data/stripe-api.md
       - Twilio: connecting-data/connecting-to-apis-and-external-data/twilio-api.md
       - UPC Database: connecting-data/connecting-to-apis-and-external-data/upc-database-api.md

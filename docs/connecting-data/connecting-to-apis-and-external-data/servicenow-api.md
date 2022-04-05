@@ -8,11 +8,11 @@ description: How to Connect DataDistillr to the ServiceNow API
 
 Set up an account with [ServiceNow](https://www.servicenow.com/){target="_blank"}.
 
-??? cost "Costs"
+???+ cost "Cost"
 
     Get a custom quote from [ServiceNow](https://www.servicenow.com/lpgp/pricing-itsm.html){target="_blank"}.
 
-??? rlimit "Rate Limits"
+???+ rlimit "Rate Limits"
 
     To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
     You can create rules to limit requests for specific users, users with specific roles, or all users. You can learn more about that in the [ServiceNow](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
@@ -42,7 +42,7 @@ On the API screen, select ServiceNow from the list of API forms.
 
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the ServiceNow API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the ServiceNow API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -163,8 +163,8 @@ LIMIT 100
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
 [image-2]: ../../img/api/servicenow/servicenow-navtree.png
-[image-7]: ../../img/api/data-source-wizard-api-light.png
-[image-8]: ../../img/api/servicenow/select-servicenow-api.png
+[image-7]: ../../img/api/add-api.png
+[image-8]: ../../img/api/servicenow/select-servicenow-api.jpeg
 [image-10]: ../../img/api/servicenow/servicenow-homepage.png
 [image-11]: ../../img/api/servicenow/servicenow-get-creds.png
 [image-12]: ../../img/api/servicenow/servicenow-creds.png

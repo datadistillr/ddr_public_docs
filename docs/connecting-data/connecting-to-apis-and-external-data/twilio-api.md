@@ -7,7 +7,7 @@ description: How to Connect DataDistillr to the Twilio API
 ## First Steps with Twilio
 Set up an account with [Twilio](https://www.twilio.com/try-twilio){target=_blank}.
 
-???+ cost "Costs"
+???+ cost "Cost"
     
     The [pricing](https://www.twilio.com/pricing){target=_blank} for your Twilio account is Pay-As-You-Go. 
 

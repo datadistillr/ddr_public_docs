@@ -7,12 +7,12 @@ description: How to Connect DataDistillr to the Fiscal Data API
 ## First Steps with Fiscal Data
 No account is necessary for this API. Here is the website [https://fiscaldata.treasury.gov/][link-0]{target="_blank"}
 
-???+ cost
+???+ Cost
 
     This API is free.
 
 
-???+ rlimit "Rate limits"
+???+ rlimit "Rate Limits"
 
     The API does not have any information about rate limits.
 

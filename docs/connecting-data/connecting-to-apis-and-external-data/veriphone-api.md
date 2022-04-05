@@ -9,18 +9,11 @@ Set up an account with [Veriphone][link-1]{target="_blank"}.
 
 ???+ cost
 
-    There are four pricing plans:
-    
-    - **STARTER:** $6.99 per month.
-    - **PROFESSIONAL:** $29 per month.
-    - **BUSINESS:** $79 per month.
-    - **ENTERPRISE:** $199 per month.
-
-    For more information about Veriphone's pricing, please visit [https://veriphone.io/pricing][link-2]{target="_blank"}
+    This is a [paid][link-2]{target="_blank"} API.
 
 ???+ rlimit "Rate Limits"
     
-    API has no information about rate limits.
+    This API does not have known [rate limits][link-3]{target="_blank"}, but credits will be deducted from your account for API use.
     
 ## How to Connect DataDistillr to Veriphone
 To set up a data source connection for Veriphone, you will need to have:
@@ -44,7 +37,7 @@ On the API screen, select Veriphone from the list of API forms.
 
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each on the Veriphone API form.
+The following form will appear. Instructions are below on how to find the information required to fill each on the Veriphone API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -63,8 +56,6 @@ Enter any name that will help you recognize this data source within your query w
 
 ### API Key
 An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Veriphone form under 'API key'.
-
-##### Steps for Getting the API Key
 
 === "1. Dashboard"
 
@@ -131,8 +122,8 @@ LIMIT 1000
 ```
 
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
-[image-1]: ../../img/api/veriphone/choose-form-veriphone-light.png "API Data Source selection"
+[image-0]: ../../img/api/add-api.png "Data Source Menu"
+[image-1]: ../../img/api/veriphone/choose-form-veriphone-light.jpeg "API Data Source selection"
 [image-2]: ../../img/api/veriphone/choose-form-veriphone-dark.png "API Data Source selection"
 [image-3]: ../../img/api/veriphone/veriphone-form-light.png "Veriphone form"
 [image-4]: ../../img/api/veriphone/veriphone-form-dark.png "Veriphone form"
@@ -143,3 +134,4 @@ LIMIT 1000
 
 [link-1]: https://veriphone.io/#page-top "Veriphone home page" 
 [link-2]: https://veriphone.io/pricing "Veriphone pricing" 
+[link-3]: https://veriphone.io/docs/v2 "Rate Limit info"
