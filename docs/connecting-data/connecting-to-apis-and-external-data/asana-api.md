@@ -1,25 +1,13 @@
 # Connecting to the Asana API
 
-## Creating an Asana account
+## First steps with Asana
 Set up an account with [Asana](https://asana.com/create-account){target=_blank}.
 
 ???+ cost
-    There are several different types of accounts:
-
-    - Free
-    - $10.99 per user per month billed annually or $13.49 billed monthly
-    - $24.99 per user per month billed annually or $30.49 billed monthly
-
-    [Details and Comparison](https://asana.com/pricing){target=_blank}
+    There are both free and [paid](https://asana.com/pricing){target=_blank} options for this API. 
 
 ???+ rlimit "Rate Limits"
-    Limits are allocated per authorization token. Limits may vary from token to token.
-
-    - Free account: 150 requests per minute.
-    - Premium account: 1500 requests per minute.
-    - SearchAPI: 60 requests per minute.
-
-    Duplication endpoints are limited to 5 concurrent jobs.
+    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are available in Asana's [documentation](https://developers.asana.com/docs/rate-limits){target=_blank}.
 
 ## How to Connect DataDisillr to Asana
 To set up a data source connection for Asana, you will need to have:
@@ -32,7 +20,7 @@ To set up a data source connection for Asana, you will need to have:
 To locate the Asana form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
 <figure markdown>
-![Select API from the available choices] [image-3]{width=500}
+![Select API from the available choices] [image-3]
 </figure>
 
 On the API screen, select Asana from the list of API types as shown in the image below.
@@ -197,7 +185,7 @@ LIMIT 100
 [image-1]: ../../img/api/asana/asana-form-light.png
 [image-2]: ../../img/api/asana/asana-nav-tree.png
 [image-3]: ../../img/api/add-api.png
-[image-4]:../../img/api/asana/api-types-asana.png
+[image-4]:../../img/api/asana/api-types-asana.jpeg
 [image-5]:../../img/api/asana/asana-account-icon-settings.png
 [image-6]:../../img/api/asana/asana-settings-apps.png
 [image-7]:../../img/api/asana/asana-manage-dev-apps.png
