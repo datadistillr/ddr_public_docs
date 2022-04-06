@@ -14,7 +14,8 @@ An account is not necessary for the GitHub API. If you'd like you can set up an 
 
 ???+ rlimit "Rate Limits"
 
-    The GitHub API has [rate limits](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting){target=_blank}. Once you exceed a certain number of requests in a specific period, GitHub returns an error.
+    The GitHub API has [rate limits](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting){target=_blank}. 
+    Once you exceed a certain number of requests in a specific period, GitHub returns an error.
 
 ## How to Connect DataDistillr to Github
 To set up a data source connection for Github, you will need to have:
@@ -53,12 +54,12 @@ Enter any name that will help you recognize this data source from within your qu
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | Description                                                                |
-|----------|----------------------------------------------------------------------------|
-| `users`  | Lists all users, in the order that they signed up on GitHub                |
-| `search` | The GitHub Search API lets you to search for the specific item efficiently |
-| `repos`  | Lists all public repositories in the order that they were created.         |
-| `org`    | Get info on an organization.                                               |
+| Endpoint | URL Params  | Required Params | Description                                                                |
+|----------|-------------|-----------------|----------------------------------------------------------------------------|
+| `users`  |             |                 | Lists all users, in the order that they signed up on GitHub                |
+| `search` | searchGroup | 'q'             | The GitHub Search API lets you to search for the specific item efficiently |
+| `repos`  |             |                 | Lists all public repositories in the order that they were created.         |
+| `org`    | org         |                 | Get info on an organization.                                               |
 
 
 ### Nav Tree
@@ -71,41 +72,59 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Github data source was called `myGithub` and I want to query an endpoint. The endpoint goes after the Github data source name:
+For the following examples, suppose that my Github data source was called `mygithubapi` and I want to query an endpoint. The endpoint goes after the Github data source name:
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `myGithub`.`<ENDPOINT>`
+    FROM `mygithubapi`.`<ENDPOINT>`
     ```
 
-### Get Synthetics Endpoint
+### Get Users Endpoint
 
-Get the list of all Synthetic tests. This endpoint requires the Github `synthetics_read` authorization scope.
+Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
 
 ```sql
-SELECT * FROM `myGithub`.`synthetics`
-WHERE public_id = '<PUBLIC_ID>'
+SELECT * FROM `mygithubapi`.`users`
 LIMIT 1000
 ```
 
-### Get Metrics Endpoint
+### Search Endpoint
 
-Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
+The Search API helps you search for the specific item you want to find. For example, you can find a user or a specific file in a repository.
+
+!!! info 
+    
+    This endpoint is different than the other endpoints. The `q` param is used to create a search query. 
+    Check out GitHub's [Search API Docs](https://docs.github.com/en/rest/reference/search){target=_blank} for more info.  
+    <span style="color:red">Warning, this endpoint has pagination and can use up your rate limits very quickly</span>
+
+For example, if you're looking for a list of popular users, you might try the following query. This query searches for users with the name tom. The results are restricted to users with more than 42 repositories and over 1,000 followers.
 
 ```sql
-SELECT * FROM `myGithub`.`metrics`
-WHERE from = '1643111571'
+SELECT * FROM `mygithubapi`.`search`
+WHERE searchGroup = 'users' 
+AND q = 'tom+repos:%3E42+followers:%3E1000'
 LIMIT 1000
 ```
 
-### Get Events Endpoint
+### Get Repos Endpoint
+
+Lists all public repositories in the order that they were created.
+
+```sql
+SELECT * FROM `mygithubapi`.`repos`
+LIMIT 1000
+```
+
+
+### Get Org Endpoint
 
 The event stream can be queried and filtered by time, priority, sources and tags.
 
 ```sql
-SELECT * FROM `myGithub`.`synthetics`
-WHERE start=1641071432 AND end=1643521168
+SELECT * FROM `mygithubapi`.`org`
+WHERE org = '<ORGANIZATION NAME>'
 LIMIT 1000
 ```
 
