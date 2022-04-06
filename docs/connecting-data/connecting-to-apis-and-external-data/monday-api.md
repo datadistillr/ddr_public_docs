@@ -2,30 +2,18 @@
 description: How to Connect DataDistillr to the Monday API
 ---
 
-# Monday API
+# Connecting to Monday
 
-## Creating a Monday account
+## First Steps with Monday
 Set up an account with [Monday][link-1]{target="_blank"}.
 
 ???+ cost
 
-    There are 4 pricing plans:
-
-    - **Student:** $0 seat / month.
-    - **Standard:** $10 seat / month. Total $30 per month.
-    - **Pro:** $16 seat / month. Total $48 per month.
-    - **Enterprise:** [Contact Sales][link-4]{target="_blank"}.
-
-    For more information about Monday.com pricing please visit [https://monday.com/pricing/][link-5]{target="_blank"}
+    There are both free and [paid][link-5]{target="_blank"} options for this API.
 
 ???+ rlimit "Rate Limits"
 
-    The API uses a construct called complexity to define the cost of each query made.
-
-    Monday.com API rate limits are based on the complexity of the queries an app makes in a given time period. There are two limits to keep in mind:
-
-    - A single query is limited to 5,000,000 complexity points
-    - All queries made must not exceed 10,000,000 points per minute (1M for trial and free accounts) using your API token generated from the [Admin](#steps-for-getting-the-api-key-as-an-admin) section or the [Access Tokens](#steps-for-getting-the-api-key-as-a-developer) section
+    This API uses a construct called complexity points to determine rate limits. Monday's [documentation][link-7]{target="_blank"} explains the implications of these complexity points.
 
 ## How to Connect DataDistillr to Monday
 To set up a data source connect for Monday, you will need to have:
@@ -36,10 +24,7 @@ To set up a data source connect for Monday, you will need to have:
 ### Data Source Form
 To locate the JIRA form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-
-<figure markdown>
-  ![Data Source Wizard][image-0]{ width="100%" }
-</figure>
+  ![Data Source Wizard][image-0]
 
 
 On the API screen, select Monday from the list of API forms.
@@ -50,7 +35,7 @@ On the API screen, select Monday from the list of API forms.
 </figure>
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each on the Monday API form.
+The following form will appear. Instructions are below on how to find the information required to fill each on the Monday API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -79,14 +64,11 @@ Currently, monday.com only offers V2 API tokens, which are all personal tokens. 
 
 Admin users are able to utilize both methods to acquire their API tokens.
 
-
-##### Steps for getting the API key as an admin
-
-Log into your monday.com account.
+Admin only Method:
 
 === "1. Home Page"
 
-    Click on your avatar (picture icon) in the bottom left corner of your screen
+    Log into your monday.com account. Click on your avatar (picture icon) in the bottom left corner of your screen
 
     ![Home Page][image-7]
 
@@ -96,7 +78,7 @@ Log into your monday.com account.
 
     ![Account Settings][image-8]
 
-=== "3. API Key"
+=== "3. API Key (Admin)"
 
     Go to the **API** section. Your API token will be located here. If you haven't created an API token you will be able to 'Generate a "API v2 Token"'. If you already have an API token you can also create a new one to replace your current token by clicking **Regenerate**.
 
@@ -106,9 +88,7 @@ Log into your monday.com account.
     
         You can always regenerate a new token, however doing so will cause the previous token to expire.
 
-
-
-##### Steps for getting the API key as a developer
+Developer Method:
 
 === "1. Home Page"
 
@@ -128,7 +108,7 @@ Log into your monday.com account.
     
     ![My Access Tokens][image-11]
 
-=== "4. API Key"
+=== "4. API Key (Developer)"
 
     Click on the blue **Show** button to expose your API token and copy it.
     
@@ -221,8 +201,8 @@ FROM `mymondayapi`.`updates`
 LIMIT 1000
 ```
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
-[image-1]: ../../img/api/monday/choose-form-monday-light.png "API Data Source selection"
+[image-0]: ../../img/api/add-api.png "Data Source Menu"
+[image-1]: ../../img/api/monday/choose-form-monday-light.jpeg "API Data Source selection"
 [image-2]: ../../img/api/monday/choose-form-monday-dark.png "API Data Source selection"
 [image-3]: ../../img/api/monday/monday-form-light.png "Monday.com form"
 [image-4]: ../../img/api/monday/monday-form-dark.png "Monday.com form"
@@ -241,3 +221,4 @@ LIMIT 1000
 [link-4]: https://monday.com/sales/contact-us?from=header&source=Website%20-%20Contact%20Sales "Contact Monday.com sales team"
 [link-5]: https://monday.com/pricing/ "Monday.com pricing"
 [link-6]: https://monday.com/developers/v2/try-it-yourself "Monday.com Developers Try it yourself" 
+[link-7]: https://api.developer.monday.com/docs/rate-limits#:~:text=There%20are%20two%20limits%20to,or%20the%20Access%20Tokens%20section "Rate Limit info"

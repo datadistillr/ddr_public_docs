@@ -4,7 +4,7 @@ description: How to Connect DataDistillr to the DonorSearch API
 
 # Connecting to DonorSearch
 
-## Creating a DonorSearch Account
+## First Steps with DonorSearch
 Reach out to [DonorSearch](https://www.donorsearch.net/get-demo/){target=_blank} for information on how to get an account.
 
 ???+ cost

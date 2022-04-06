@@ -4,30 +4,14 @@ description: How to Connect DataDistillr to the People Data Labs API
 
 # Connecting to People Data Labs
 
-## Creating a People Data Labs account
+## First Steps with People Data Labs
 Set up an account with [People Data Labs][link-1]{target="_blank"}.
 
-### Costs
-This API has three pricing plans:
+???+ cost
+    There are both free and [paid][link-3]{target="_blank"} options for this API.
 
-**Startup:** FREE TRIAL
-: $0.
-
-**Traction:** MONTHLY API PACKAGES
-: Tiered.
-
-**Scale:** ENTERPRISE
-: Custom. For enterprises building platforms with people data at scale. [Speak to a data consultant][link-2]{target="_blank"}
-
-For more information about People Data Labs pricing visit [https://www.peopledatalabs.com/pricing][link-3]{target="_blank"}
-
-### Rate Limits
-
-The default limit for free customers is 100/min. The default limit for paying customers is 1000/min.
-
-#### The API Dashboard
-
-All accounts are given access to a [dashboard][link-4]{target="_blank"}, which will allows you to manage your API keys, view usage and test new endpoints (when they are available).
+???+ rlimit "Rate Limits"
+    Your account plan tier will limit the number of requests each API key can make per minute. People Data Lab's [documentation][link-5]{target="_blank"} contains information on these limits.
 
 ## How to Connect DataDistillr to People Data Labs
 To set up a data source connection for People Data Labs, you will need to have:
@@ -39,9 +23,7 @@ To set up a data source connection for People Data Labs, you will need to have:
 ### Data Source Form
 To locate the People Data Labs form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
 
-<figure markdown>
-  ![Data Source Wizard][image-0]{ width="100%" }
-</figure>
+  ![Data Source Wizard][image-0]
 
 On the API screen, select People Data Labs from the list of API forms.
 
@@ -49,7 +31,7 @@ On the API screen, select People Data Labs from the list of API forms.
   ![List of APIs][image-1]{ width="100%" }
 </figure>
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the People Data Labs API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the People Data Labs API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -70,8 +52,6 @@ Enter any name that will help you recognize this data source within your query w
 
 ### API Key
 The API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the People Data Labs form under 'API Key'.
-
-##### Steps for getting the API key
 
 === "1. Home Page"
 
@@ -166,8 +146,8 @@ AND `phone`='555-123-4567'
 LIMIT 100
 ```
 
-[image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
-[image-1]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-light.png "API Data Source selection"
+[image-0]: ../../img/api/add-api.png "Data Source Menu"
+[image-1]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-light.jpeg "API Data Source selection"
 [image-2]: ../../img/api/peopledatalabs/choose-form-peopledatalabs-dark.png "API Data Source selection"
 [image-3]: ../../img/api/peopledatalabs/peopledatalabs-form-light.png "People Data Labs form"
 [image-4]: ../../img/api/peopledatalabs/peopledatalabs-form-dark.png "People Data Labs form"
@@ -180,3 +160,4 @@ LIMIT 100
 [link-2]: https://www.peopledatalabs.com/talk-to-sales "People Data Labs customer support"
 [link-3]: https://www.peopledatalabs.com/pricing "People Data Labs pricing"
 [link-4]: https://www.peopledatalabs.com/main "People Data Labs account dashboard"
+[link-5]: https://docs.peopledatalabs.com/docs/rate-limiting "Rate Limits info"
