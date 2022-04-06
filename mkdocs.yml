@@ -42,6 +42,7 @@ nav:
       - Twilio: connecting-data/connecting-to-apis-and-external-data/twilio-api.md
       - UPC Database: connecting-data/connecting-to-apis-and-external-data/upc-database-api.md
       - Veriphone: connecting-data/connecting-to-apis-and-external-data/veriphone-api.md
+      - VirusTotal: connecting-data/connecting-to-apis-and-external-data/virustotal-api.md
 
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
   - Getting Help: getting-help.md
