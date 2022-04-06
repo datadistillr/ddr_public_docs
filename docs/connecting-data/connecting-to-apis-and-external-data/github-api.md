@@ -130,10 +130,6 @@ LIMIT 1000
 
 
 [image-1]: ../../img/api/github/github-form.png
-[image-2]: ../../img/api/Github/Github-application-key.png
 [image-3]: ../../img/api/github/github-endpoints.png
-[image-4]: ../../img/api/Github/Github-api.png
 [image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/github/github-select-api.png
-[image-7]: ../../img/api/Github/Github-api-copy.png
-[image-8]: ../../img/api/Github/Github-signin.png
