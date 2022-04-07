@@ -14,9 +14,9 @@ Set up an account with [Placer.ai](https://analytics.placer.ai/#!/auth/signup){t
 
 ???+ rlimit "Rate Limits"
 
-    [Each Placer account has its own usage plan, 
+    Each Placer account has its [own usage](https://docs.placer.ai/reference/getting-started#step-2---get-an-access-key){target=_blank} plan, 
     including the costs of issuing API calls, and the maximum weekly quota. 
-    In case you exceed the API call rate, or a given quota, you will get a rate limit response.](https://docs.placer.ai/reference/getting-started#step-2---get-an-access-key){target=_blank}
+    In case you exceed the API call rate, or a given quota, you will get a rate limit response.
 
 ## How to Connect DataDistillr to Placer.ai
 To set up a data source connection for Placer.ai, you will need to have:
@@ -75,7 +75,7 @@ The table below shows a list of endpoints available to connect to within the Dat
 
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
-![Placer Endpoints][image-3]
+![Placer.ai Endpoints][image-3]
 
 ## Sample Queries
 
