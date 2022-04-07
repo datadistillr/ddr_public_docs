@@ -48,7 +48,7 @@ DataDistillr currently supports:
 * [JIRA](jira.md)
 * [Monday](monday-api.md)
 * [People Data Labs](peopledatalabs-api.md)
-* [Placer](placer-api.md)
+* [Placer.ai](placer-api.md)
 * [Quickbooks](quickbooks-api.md)
 * [Salesforce](salesforce-api.md)
 * [ServiceNow](servicenow-api.md)
