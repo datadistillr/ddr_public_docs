@@ -1,5 +1,5 @@
 ---
-description: How to Connect DataDistillr to the Github API
+description: How to Connect DataDistillr to the GitHub API
 ---
 
 # Connecting to GitHub
@@ -17,8 +17,8 @@ An account is not necessary for the GitHub API. If you'd like you can set up an 
     The GitHub API has [rate limits](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting){target=_blank}. 
     Once you exceed a certain number of requests in a specific period, GitHub returns an error.
 
-## How to Connect DataDistillr to Github
-To set up a data source connection for Github, you will need to have:
+## How to Connect DataDistillr to GitHub
+To set up a data source connection for GitHub, you will need to have:
 
 - A unique [name](#name) for your data source connection to be used in queries.
 
@@ -26,19 +26,19 @@ To set up a data source connection for Github, you will need to have:
 
 ### Data Source Form
 
-To locate the Github form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+To locate the GitHub form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices][image-5]
 
-On the API screen, select Github from list of API forms as shown in the image below.
+On the API screen, select GitHub from list of API forms as shown in the image below.
 
-![Select Github API from available choices][image-6]
+![Select GitHub API from available choices][image-6]
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Github API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the GitHub API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
-![Github Form][image-1]
+![GitHub Form][image-1]
 
 ### Name
 
@@ -66,13 +66,13 @@ The table below shows a list of endpoints available to connect to within the Dat
 
 The endpoint above will display as follows in the nav tree once your API has successfully connected.
 
-![Github Endpoints][image-3]
+![GitHub Endpoints][image-3]
 
 ## Sample Queries
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Github data source was called `mygithubapi` and I want to query an endpoint. The endpoint goes after the Github data source name:
+For the following examples, suppose that my GitHub data source was called `mygithubapi` and I want to query an endpoint. The endpoint goes after the GitHub data source name:
 
 !!! example "FROM Clause"
 
