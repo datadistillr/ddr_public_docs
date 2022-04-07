@@ -145,7 +145,7 @@ LIMIT 1000
 
 [image-1]: ../../img/api/stripe/stripe-form.png
 [image-2]: ../../img/api/datadog/datadog-application-key.png
-[image-3]: ../../img/api/datadog/datadog-endpoints.png
+[image-3]: ../../img/api/stripe/stripe-endpoints.png
 [image-4]: ../../img/api/stripe/stripe-api-copy.png
 [image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/stripe/stripe-select.png
