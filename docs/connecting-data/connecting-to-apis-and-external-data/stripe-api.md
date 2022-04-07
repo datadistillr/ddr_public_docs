@@ -15,7 +15,7 @@ Set up an account with [Stripe](https://dashboard.stripe.com/register){target=_b
 ???+ rlimit "Rate Limits"
 
     The Stripe API employs a number of [safeguards](https://stripe.com/docs/rate-limits){target=_blank} against bursts of incoming traffic to help maximize its stability. 
-    sUsers who send many requests in quick succession may see error responses that show up as status code 429.
+    Users who send many requests in quick succession may see error responses that show up as status code 429.
 
 ## How to Connect DataDistillr to Stripe
 To set up a data source connection for Stripe, you will need to have:
@@ -33,13 +33,13 @@ To locate the Stripe form, follow the steps in [Connecting Your Data to DataDist
 
 On the API screen, select Stripe from list of API forms as shown in the image below.
 
-![Select Datadog API from available choices][image-6]
+![Select Stripe API from available choices][image-6]
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Datadog API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Stripe API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
-![Datadog Form][image-1]
+![Stripe Form][image-1]
 
 ### Name
 
@@ -50,46 +50,31 @@ Enter any name that will help you recognize this data source from within your qu
     * lowercase alphanumeric characters
     * underscores
 
-### API Key
+### Secret Key
 
 === "1. Sign In"
 
-    You can access your API Key at your [Datadog API Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Sign in.
+    You can access your Secret Key at your [Stripe API Keys Page](https://dashboard.stripe.com/apikeys){target=_blank}. Sign in if necessary. Click "Reveal Key"
     ![Sign in][image-8]
 
 === "2. Find your API Key"
 
-    Click on the API Key.
-    ![Generate API Key][image-4]
-
-=== "3. Copy your API Key"
-
-    Click the blue 'Copy' key to copy your API, and paste into the form.
-    ![Copy API Key][image-7]
-
-### Application Key
-
-=== "1. Sign In"
-
-    You can access your Application Key at your [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Sign in.
-    ![Sign in][image-8]
-
-=== "2. Find your Application Key"
-
-    Hover your mouse over the Application Key and click the copy icon on the right hand side. Paste this Application Key into the form.
-    
-    ![Copy Application Key][image-2]
+    Click on the API Key to copy.
+    ![Copy API Key][image-4]
 
 
 ## Endpoints
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint     | Required Params | Optional  Params             | Description                              |
-|--------------|-----------------|------------------------------|------------------------------------------|
-| `synthetics` | public_id       | from_ts<br>to_ts<br>probe_dc | Returns the list of all Synthetic tests. |
-| `metrics`    | from            | host<br>tag_filter           | Returns active Metrics list.             |
-| `events`     | start<br>end    |                              | This endpoint queries the event stream.  |
+| Endpoint                | Optional  Params                                                                                    | Description                                 |
+|-------------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------|
+| `/balance_transactions` | payout<br>type<br>created<br>currency<br>ending_before<br>limit<br>source<br>starting_after         | Returns a list of all balance transactions. |
+| `/charges`              | customer<br>created<br>ending_before<br>limit<br>payment_intent<br>starting_after<br>transfer_group | Returns a list of all charges.              |
+| `/customers`            | email<br>currency<br>ending_before<br>limit<br>starting_after                                       | Returns a list of all customers.            |
+| `/disputes`             | charge<br>payment_intent<br>created<br>ending_before<br>limit<br>starting_after                     | Returns a list of all disputes.             |
+| `/payouts`              | status<br>arrival_date<br>created<br>destination<br>ending_before<br>limit<br>starting_after        | Returns a list of all payouts               |
+| `/refunds`              | charge<br>payment_intent<br>created<br>ending_before<br>limit<br>starting_after                     | Returns a list of all refunds               |
 
 
 ### Nav Tree
@@ -102,50 +87,67 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Datadog data source was called `mydatadog` and I want to query an endpoint. The endpoint goes after the Datadog data source name:
+For the following examples, suppose that my Stripe data source was called `mystripeapi` and I want to query an endpoint. The endpoint goes after the Stripe data source name:
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `mydatadog`.`<ENDPOINT>`
+    FROM `mystripeapi`.`<ENDPOINT>`
     ```
 
-### Get Synthetics Endpoint
+### Get Balance Transactions Endpoint
 
-Get the list of all Synthetic tests. This endpoint requires the Datadog `synthetics_read` authorization scope.
+Get the list of all your Balance Transactions.
 
 ```sql
-SELECT * FROM `mydatadog`.`synthetics`
-WHERE public_id = '<PUBLIC_ID>'
+SELECT * FROM `mystripeapi`.`/balance_transactions`
 LIMIT 1000
 ```
 
-### Get Metrics Endpoint
+### Get Charges Endpoint
 
-Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
+Get the list of your charges.
 
 ```sql
-SELECT * FROM `mydatadog`.`metrics`
-WHERE from = '1643111571'
+SELECT * FROM `mystripeapi`.`/charges`
 LIMIT 1000
 ```
 
-### Get Events Endpoint
+### Get Customers Endpoint
 
-The event stream can be queried and filtered by time, priority, sources and tags.
+Get the list of all your customers
 
 ```sql
-SELECT * FROM `mydatadog`.`synthetics`
-WHERE start=1641071432 AND end=1643521168
+SELECT * FROM `mystripeapi`.`/customers`
 LIMIT 1000
 ```
 
+### Get Disputes Endpoint
 
-[image-1]: ../../img/api/datadog/datadog-form.png
+```sql
+SELECT * FROM `mystripeapi`.`/disputes`
+LIMIT 1000
+```
+
+### Get Payouts Endpoint
+
+```sql
+SELECT * FROM `mystripeapi`.`/payouts`
+LIMIT 1000
+```
+
+### Get Refunds Endpoint
+
+```sql
+SELECT * FROM `mystripeapi`.`/refunds`
+LIMIT 1000
+```
+
+[image-1]: ../../img/api/stripe/stripe-form.png
 [image-2]: ../../img/api/datadog/datadog-application-key.png
 [image-3]: ../../img/api/datadog/datadog-endpoints.png
-[image-4]: ../../img/api/datadog/datadog-api.png
+[image-4]: ../../img/api/stripe/stripe-api-copy.png
 [image-5]: ../../img/api/add-api.png
-[image-6]: ../../img/api/datadog/datadog-datasource.jpeg
+[image-6]: ../../img/api/stripe/stripe-select.png
 [image-7]: ../../img/api/datadog/datadog-api-copy.png
-[image-8]: ../../img/api/datadog/datadog-signin.png
+[image-8]: ../../img/api/stripe/stripe-api.png
