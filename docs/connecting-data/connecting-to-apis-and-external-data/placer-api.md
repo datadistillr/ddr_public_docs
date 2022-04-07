@@ -14,9 +14,9 @@ Set up an account with [Placer.ai](https://analytics.placer.ai/#!/auth/signup){t
 
 ???+ rlimit "Rate Limits"
 
-    Use the API wisely! Each Placer account has its own usage plan, 
+    [Each Placer account has its own usage plan, 
     including the costs of issuing API calls, and the maximum weekly quota. 
-    In case you exceed the API call rate, or a given quota, you will get a rate limit response.
+    In case you exceed the API call rate, or a given quota, you will get a rate limit response.](https://docs.placer.ai/reference/getting-started#step-2---get-an-access-key){target=_blank}
 
 ## How to Connect DataDistillr to Placer.ai
 To set up a data source connection for Placer.ai, you will need to have:
@@ -81,7 +81,7 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Datadog data source was called `myplacerapi` and I want to query an endpoint. The endpoint goes after the Placer.ai data source name:
+For the following examples, suppose that my Placer.ai data source was called `myplacerapi` and I want to query an endpoint. The endpoint goes after the Placer.ai data source name:
 
 !!! example "FROM Clause"
 
@@ -91,7 +91,12 @@ For the following examples, suppose that my Datadog data source was called `mypl
 
 ### Get Placer Entities 
 
-This service returns a list of Placer managed entities in a particular area. You can search based on any combination of the following filter parameters: entities within a specific location radius, entities associated with a specific group category/category/sub category, entity name or type.
+This service returns a list of Placer managed entities in a particular area. You can search based on any combination of the following filter parameters: 
+
+- entities within a specific location radius 
+- entities associated with a specific group category/category/sub category 
+- entity name 
+- type.
 
 ```sql
 SELECT * FROM `myplacerapi`.`/poi`
