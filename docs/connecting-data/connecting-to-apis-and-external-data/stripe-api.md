@@ -81,7 +81,7 @@ The table below shows a list of endpoints available to connect to within the Dat
 
 The endpoint above will display as follows in the nav tree once your API has successfully connected.
 
-![Datadog Endpoints][image-3]
+![Stripe Endpoints][image-3]
 
 ## Sample Queries
 
