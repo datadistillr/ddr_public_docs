@@ -9,7 +9,7 @@ An account is not necessary for the GitHub API. If you'd like you can set up an 
 
 ???+ cost "Costs"
 
-    This is the free version of the GitHub API. 
+    DataDistillr's GitHub form is specifically configured for the free version of the GitHub API. To connect to paid versions try to use the [Custom API](custom-apis.md) form, or [contact us](/../../../getting-help) for assistance. 
 
 
 ???+ rlimit "Rate Limits"
@@ -91,15 +91,15 @@ LIMIT 1000
 
 ### Search Endpoint
 
-The Search API helps you search for the specific item you want to find. For example, you can find a user or a specific file in a repository.
+The Search API helps you search for the specific item you want to find, such as finding a user or specific file in a repository.
 
 !!! info 
     
     This endpoint is different than the other endpoints. The `q` param is used to create a search query. 
     Check out GitHub's [Search API Docs](https://docs.github.com/en/rest/reference/search){target=_blank} for more info.  
-    <span style="color:red">Warning, this endpoint has pagination and can use up your rate limits very quickly</span>
+    <span style="color:red">Warning: This endpoint has pagination and can cause you to hit your rate limits very quickly.</span>
 
-For example, if you're looking for a list of popular users, you might try the following query. This query searches for users with the name tom. The results are restricted to users with more than 42 repositories and over 1,000 followers.
+For example, if you're looking for a list of popular users, you might try the following query. This query searches for users with the name Tom. The results are restricted to users with more than 42 repositories and over 1,000 followers.
 
 ```sql
 SELECT * FROM `mygithubapi`.`search`
