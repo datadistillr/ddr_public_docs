@@ -56,5 +56,6 @@ DataDistillr currently supports:
 * [Twilio](twilio-api.md)
 * [UPC Database](upc-database-api.md)
 * [Veriphone](veriphone-api.md)
+* [VirusTotal](virustotal-api.md)
 
 Happy Distilling!
