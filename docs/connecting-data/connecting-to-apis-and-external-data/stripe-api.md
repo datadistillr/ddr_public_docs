@@ -115,7 +115,7 @@ LIMIT 1000
 
 ### Get Customers Endpoint
 
-Get the list of all your customers
+Get the list of all your customers.
 
 ```sql
 SELECT * FROM `mystripeapi`.`/customers`
@@ -124,12 +124,16 @@ LIMIT 1000
 
 ### Get Disputes Endpoint
 
+Get the list of all your disputes.
+
 ```sql
 SELECT * FROM `mystripeapi`.`/disputes`
 LIMIT 1000
 ```
 
 ### Get Payouts Endpoint
+
+Get the list of all your payouts.
 
 ```sql
 SELECT * FROM `mystripeapi`.`/payouts`
@@ -138,6 +142,7 @@ LIMIT 1000
 
 ### Get Refunds Endpoint
 
+Get the list of all your refunds.
 ```sql
 SELECT * FROM `mystripeapi`.`/refunds`
 LIMIT 1000
