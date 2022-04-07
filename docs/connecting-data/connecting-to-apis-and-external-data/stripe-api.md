@@ -27,11 +27,11 @@ To set up a data source connection for Stripe, you will need to have:
 
 ### Data Source Form
 
-To locate the Datadog form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+To locate the Stripe form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices][image-5]
 
-On the API screen, select Datadog from list of API forms as shown in the image below.
+On the API screen, select Stripe from list of API forms as shown in the image below.
 
 ![Select Datadog API from available choices][image-6]
 
