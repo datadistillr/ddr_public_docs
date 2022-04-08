@@ -53,7 +53,7 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Find your API Key"
 
-    From your VirusTotal home page open the menu in the to right hand corner and click on "API Keys" tab in the menu
+    From your VirusTotal home page, open the menu in the to right hand corner and click on "API Keys" tab in the menu
     ![Sign in][image-8]
 
 === "2. Copy your API Key"
@@ -66,9 +66,9 @@ Enter any name that will help you recognize this data source from within your qu
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint      | URL Params             | Optional  Params   | Description                              |
-|---------------|------------------------|--------------------|------------------------------------------|
-| `collections` | collection<br>objectId | relationships      |                                          |
+| Endpoint      | URL Params             | Optional  Params   | Description                     |
+|---------------|------------------------|--------------------|---------------------------------|
+| `collections` | collection<br>objectId | relationships      | Get an object from a collection |
 
 
 ### Nav Tree
@@ -81,17 +81,17 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Datadog data source was called `mydatadog` and I want to query an endpoint. The endpoint goes after the Datadog data source name:
+For the following examples, suppose that my VirusTotal data source was called `myvirustotalapi` and I want to query an endpoint. The endpoint goes after the VirusTotal data source name:
 
 !!! example "FROM Clause"
 
     ```sql
-    FROM `mydatadog`.`<ENDPOINT>`
+    FROM `myvirustotalapi`.`<ENDPOINT>`
     ```
 
-### Get Synthetics Endpoint
+### Get Collection Endpoint
 
-Get the list of all Synthetic tests. This endpoint requires the Datadog `synthetics_read` authorization scope.
+Get an object from a collection. 
 
 ```sql
 SELECT * FROM `myvirustotalapi`.`collections`
@@ -102,9 +102,7 @@ LIMIT 1000
 
 
 [image-1]: ../../img/api/virustotal/virustotal-form.png
-[image-2]: ../../img/api/datadog/datadog-application-key.png
 [image-3]: ../../img/api/virustotal/virustotal-endpoints.png
-[image-4]: ../../img/api/datadog/datadog-api.png
 [image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/virustotal/virustotal-select.png
 [image-7]: ../../img/api/virustotal/virustotal-api.png
