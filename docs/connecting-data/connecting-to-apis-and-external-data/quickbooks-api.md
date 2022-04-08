@@ -38,14 +38,62 @@ On the API screen, select Quickbooks from the list of API types as shown in the 
 </figure>
 
 The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Quickbooks API form.
+This API uses OAuth.
+
+Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
+
+<figure markdown>
+![Quickbooks form][image-3]{width=500}
+</figure>
 
 ### Name
+Enter any name that will help you recognize this data source from within your query window.
+
+!!! info "Acceptable Characters Include"
+
+    - lowercase alphanumeric characters
+    - underscores
 
 ### Client ID
 
+=== "1. Create app"
+    On the Intuit Developer dashboard, click **Create an app** to create your app. Then, click on the name of your app.
+
+    ![Create app. Click on name of app.][image-4]
+
+=== "2. Keys & credentials"
+    On the sidebar in **Development Settings**, choose **Keys & credentials**.
+
+    ![In 'Development Settings', choose 'Keys & credentials'][image-5]{width=200}
+
+=== "3. Copy Client ID"
+    In the **Keys** section, click on the copy icon to copy the Client ID.
+
+    ![Click on the copy icon to copy the Client ID.][image-6]   
+
 ### Client secret
+
+=== "1. Create app"
+    On the Intuit Developer dashboard, click **Create an app** to create your app. Then, click on the name of your app.
+
+    ![Create app. Click on name of app.][image-4]
+
+=== "2. Keys & credentials"
+    On the sidebar in **Development Settings**, choose **Keys & credentials**.
+
+    ![In 'Development Settings', choose 'Keys & credentials'][image-5]{width=200}
+
+=== "3. Copy Client secret"
+    In the **Keys** section, click on the copy icon to copy the Client Secret.
+
+    ![Click on the copy icon to copy the Client Secret.][image-7]  
 
 ### Realm ID
 
 [image-1]: ../../img/api/data-source-wizard-api-light.png
 [image-2]: ../../img/api/quickbooks/quickbooks-api-types.jpeg
+[image-3]: ../../img/api/quickbooks/quickbooks-form.png
+[image-4]: ../../img/api/quickbooks/create-app.png
+[image-5]: ../../img/api/quickbooks/quickbooks-keys-and-credentials.jpeg
+[image-6]: ../../img/api/quickbooks/quickbooks-client-id.jpeg
+[image-7]: ../../img/api/quickbooks/quickbooks-client-secret.jpeg
