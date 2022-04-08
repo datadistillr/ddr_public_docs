@@ -54,7 +54,8 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Sign In"
 
-    You can access your Secret Key at your [Stripe API Keys Page](https://dashboard.stripe.com/apikeys){target=_blank}. Sign in if necessary. Click "Reveal Key"
+    You can access your Secret Key at your [Stripe API Keys Page](https://dashboard.stripe.com/apikeys){target=_blank}. 
+    Sign in if necessary. Click "Reveal test key" or "Real live key token" (Depending on your account)
     ![Sign in][image-8]
 
 === "2. Find your API Key"
