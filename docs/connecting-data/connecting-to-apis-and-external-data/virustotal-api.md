@@ -66,18 +66,16 @@ Enter any name that will help you recognize this data source from within your qu
 
 The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint      | Required Params | Optional  Params   | Description                              |
-|---------------|-----------------|--------------------|------------------------------------------|
-| `collections` |                 | relationships      |  |
-| `metrics`     | from            | host<br>tag_filter | Returns active Metrics list.             |
-| `events`      | start<br>end    |                    | This endpoint queries the event stream.  |
+| Endpoint      | URL Params             | Optional  Params   | Description                              |
+|---------------|------------------------|--------------------|------------------------------------------|
+| `collections` | collection<br>objectId | relationships      |                                          |
 
 
 ### Nav Tree
 
 The endpoint above will display as follows in the nav tree once your API has successfully connected.
 
-![Datadog Endpoints][image-3]
+![VirusTotal Endpoints][image-3]
 
 ## Sample Queries
 
@@ -96,35 +94,16 @@ For the following examples, suppose that my Datadog data source was called `myda
 Get the list of all Synthetic tests. This endpoint requires the Datadog `synthetics_read` authorization scope.
 
 ```sql
-SELECT * FROM `mydatadog`.`synthetics`
-WHERE public_id = '<PUBLIC_ID>'
-LIMIT 1000
-```
-
-### Get Metrics Endpoint
-
-Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
-
-```sql
-SELECT * FROM `mydatadog`.`metrics`
-WHERE from = '1643111571'
-LIMIT 1000
-```
-
-### Get Events Endpoint
-
-The event stream can be queried and filtered by time, priority, sources and tags.
-
-```sql
-SELECT * FROM `mydatadog`.`synthetics`
-WHERE start=1641071432 AND end=1643521168
+SELECT * FROM `myvirustotalapi`.`collections`
+WHERE collection = '<COLLECTION_NAME>'
+AND objectId = '<OBJECT_ID>'
 LIMIT 1000
 ```
 
 
 [image-1]: ../../img/api/virustotal/virustotal-form.png
 [image-2]: ../../img/api/datadog/datadog-application-key.png
-[image-3]: ../../img/api/datadog/datadog-endpoints.png
+[image-3]: ../../img/api/virustotal/virustotal-endpoints.png
 [image-4]: ../../img/api/datadog/datadog-api.png
 [image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/virustotal/virustotal-select.png
