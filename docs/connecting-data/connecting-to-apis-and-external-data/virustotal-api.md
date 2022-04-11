@@ -105,5 +105,7 @@ LIMIT 1000
 [image-3]: ../../img/api/virustotal/virustotal-endpoints.png
 [image-5]: ../../img/api/add-api.png
 [image-6]: ../../img/api/virustotal/virustotal-select.png
-[image-7]: ../../img/api/virustotal/virustotal-api.png
-[image-8]: ../../img/api/virustotal/virustotal-api-nav.png
+[image-10]: ../../img/api/virustotal/virustotal-api.png
+[image-7]: ../../img/api/virustotal/virustotal-api-seven.png
+[image-9]: ../../img/api/virustotal/virustotal-api-nav.png
+[image-8]: ../../img/api/virustotal/virustotal-api-nav-two.png
