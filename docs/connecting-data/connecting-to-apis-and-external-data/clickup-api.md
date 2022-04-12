@@ -35,11 +35,11 @@ On the API screen, select ClickUp from the list of API types as shown in the ima
 ![Select ClickUp API from available choices][image-2]{width=500}
 </figure>
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the ClickUp API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the ClickUp API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
-<figure markdown>
+<figure markdown>__
 ![ClickUp form][image-3]{width=500}
 </figure>
 
