@@ -5,7 +5,7 @@ description: How to Connect DataDistillr to the Salesforce API
 # Connecting to Salesforce
 
 ## First Steps with Salesforce
-Set up an account with [Salesforce](https://www.salesforce.com/form/signup/elf-v2-login-fp/?d=70130000000Enus){target=_blank}.
+Set up an account with [Salesforce](https://www.salesforce.com/form/signup/freetrial-elf-v2/?d=70130000000EqoP){target=_blank}.
 
 ???+ cost
     [Prices](https://www.salesforce.com/editions-pricing/overview/){target=_blank} vary depending on which Salesforce Product you are working with.
@@ -38,7 +38,7 @@ The following form will appear. Instructions are below on how to find the inform
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
-![Salesforce form][image-2]
+![Salesforce form][image-2]{#salesforce-form}
 
 ### Salesforce set-up
 
@@ -85,7 +85,7 @@ Before you can connect your Salesforce data to DataDistillr, you need to do some
     Scroll down to the section titled "API (Enable OAuth Settings)".
 
     - Check the box next to **Enable OAuth Settings**
-    - For **Callback URL**, copy and paste the Callback URL found in the [DataDistillr API Form](#data-source-form)
+    - For **Callback URL**, copy and paste the Callback URL found in the [DataDistillr API Form](#salesforce-form)
     - For **Selected OAuth Scopes**, select "Full Access (full)" and "Perform requests at any time (refresh_token, offline_access)" and Add them to the list of Selected OAuth Scopes
 
     ![Configure API info][image-9]
@@ -121,9 +121,48 @@ Follow steps 1-4 in [Salesforce set-up](#salesforce-set-up) to Navigate to the A
 
 
 ### Subdomain
-The subdomain can be found in the original email, referenced above, or in the URL. The subdomain is the part found at the beginning of the URL between https:// and .my.salesforce.com.
+The subdomain can be found in the original email, referenced above, or in the URL. The subdomain is the part found at the beginning of the URL between https:// and .my.salesforce.com. In the example below, the subdomain is `datadistillr3`.
 
 ![Salesforce subdomain][image-13]
+
+## Endpoints
+Please see the [Salesforce API Reference](https://developer.salesforce.com/docs#browse){target=_blank} that corresponds to your Salesforce product of interest for more on Salesforce's endpoints.
+
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](custom-apis.md) Form.
+
+| Endpoint | Required | Optional | Description |
+|  ----------- | ----------- | ----------- | ----------- |
+| `/chatter/users` | |  | Returns information about all users in an organization. |
+| `/chatter/users/:user_id` |user_id |  | Returns information about a specific user. |
+
+### Nav Tree
+
+The endpoints above will display as follows in the nav tree once your API has successfully connected.
+
+![Salesforce Nav Tree][image-14]
+
+## Sample Queries
+
+The following queries are intended to help you get started, and make life simpler querying within your API.
+
+For the following examples, suppose that my Salesforce API data source was called `salesforceapi`, and I want to query an endpoint. The endpoint goes after the Salesforce data source name:
+
+!!! example "FROM Clause"
+
+    ```sql
+    FROM `salesforceapi`.`<ENDPOINT>`
+    ```
+
+### Get Users Endpoint
+
+This query returns chatter user info for a specific user ID.
+
+```sql
+SELECT *
+FROM `salesforceapi`.`/chatter/users/:user_id`
+WHERE `user_id`='1234a12345A1BCDEF2'
+LIMIT 1000
+```
 
 
 [image-0]: ../../img/api/add-api.png
@@ -140,3 +179,4 @@ The subdomain can be found in the original email, referenced above, or in the UR
 [image-11]: ../../img/api/salesforce/salesforce-view-app-manager.png
 [image-12]: ../../img/api/salesforce/salesforce-consumerkey-secret.png
 [image-13]: ../../img/api/salesforce/salesforce-subdomain.png
+[image-14]: ../../img/api/salesforce/salesforce-nav-tree.png
