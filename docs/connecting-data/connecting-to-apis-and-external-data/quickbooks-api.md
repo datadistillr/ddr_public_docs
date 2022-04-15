@@ -90,6 +90,18 @@ Enter any name that will help you recognize this data source from within your qu
 
 ### Realm ID
 
+__Get your Realm ID__ 
+
+Navigate to the developer [sandbox](https://developer.intuit.com/app/developer/sandbox){target=_blank}. If necessary sign in.
+![Realm ID][image-8])
+
+
+## Endpoints 
+
+| Endpoint            | Required Params | Optional  Params | Description                      |
+|---------------------|-----------------|------------------|----------------------------------|
+| `Read company info` |                 | minorversion     | Returns the 'companyinfo' object |
+
 [image-1]: ../../img/api/data-source-wizard-api-light.png
 [image-2]: ../../img/api/quickbooks/quickbooks-api-types.jpeg
 [image-3]: ../../img/api/quickbooks/quickbooks-form.png
@@ -97,3 +109,4 @@ Enter any name that will help you recognize this data source from within your qu
 [image-5]: ../../img/api/quickbooks/quickbooks-keys-and-credentials.jpeg
 [image-6]: ../../img/api/quickbooks/quickbooks-client-id.jpeg
 [image-7]: ../../img/api/quickbooks/quickbooks-client-secret.jpeg
+[image-8]: ../../img/api/quickbooks/quickbooks-realmid.png
