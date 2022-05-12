@@ -1,17 +1,23 @@
-# SQL Reference
+# What Can SQL do?
 
-This tutorial will give you a basic introduction to SQL, a standard language for accessing different data sources within DataDistillr. Knowing SQL syntax will allow you full access to your data, run a dataset analysis, and present results faster.
+This tutorial will give you a basic introduction to SQL, the standard language for accessing different data sources within DataDistillr. 
 
-### What Can SQL do?
+Using SQL syntax will provide you with the ability to fully access your data, run analysis on your datasets, and quickly present desired results. SQL can execute, retrieve, insert, update, delete, and create records in a data source.
 
-- SQL can execute, retrieve, insert, update, delete, create records from a data source
+## SQL Standard
+
+SQL is an ANSI standard, but different versions of the SQL language exist. There are basic operators that must stay the same (SELECT, UPDATE, DELETE, INSERT, WHERE), but there are some slight differences that can trip up even the most talented analyst.
+
+The SQL you will use to write queries in DataDistillr supports the ANSI standard, but includes special operators and functions that enable users to drill into nested data formats. It is specifically formulated to query against complex data: data made up of various types of records and fields, rather than discrete rows and columns.
+
+This makes our version very powerful, but
 
 ## SQL Syntax
 
  SQL is not case sensitive except inside of a string. It is a standard practice to capitalize clauses for clarity.
 
 <aside>
-💡 The order of clauses matter in SQL.The following order of precedence: FROM, SELECT, LIMIT.
+💡 The order of clauses matters in SQL. The following order of precedence exists: SELECT, FROM, WHERE, LIMIT. *Note* Not all of these clauses are required, details will be provided below.
 
 </aside>
 
@@ -26,9 +32,14 @@ The **semicolon (;)** is not part of a query. The database server uses it to sep
 
 ## **Querying Data**
 
-The `SELECT` **-** Extracts data from a data source. A data source can be an excel, CSV, json, api.
+`SELECT` **-** Extracts data from a data source. A data source can be an uploaded file (xls, csv, json, etc.), or an externally connected source such as a database, cloud storage, or an API.
 
-When we are asking for data, we use a select statement. If we want to return the whole table, we use a *; if we wish to use specific columns from a table, you give the name of those columns. You can also do simple calculations within the select clause.
+When we are asking for data, we use a select statement. 
+
+- To return the whole table, use a `*`
+- To return specific columns from a table, use the name(s) of those columns 
+  
+You can also do simple calculations within the select clause.
 
 ```sql
 --Display all available fields in the dataset
@@ -36,7 +47,7 @@ SELECT *
 FROM `demo_project`.`/Dummy-Customers-1.xlsx`
 ```
 
-![Screen Shot 2022-04-15 at 1.23.51 PM.png](SQL%20Refere%205fc6a/Screen_Shot_2022-04-15_at_1.23.51_PM.png)
+![SELECT Statement Example][image-1]
 
 <aside>
 💡 The **LIMIT** clause constrains the number of rows returned by a SELECT statement.
@@ -279,3 +290,5 @@ The `SUM()`function returns the total sum of a numeric column only. This can be
 SELECT SUM(column_name)
 FROM demo_project_data.`/Dummy-Customers-1.xlsx` 
 ```
+
+[image-1]: ../../img/SQL_Reference/select-statement.png
