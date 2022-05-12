@@ -21,7 +21,7 @@ description: How to Connect DataDistillr to the Affinity API
 To set up a data source connect for Affinity, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
-- An [API token](#api-key) generated through your Affinity account
+- An [API key](#api-key) generated through your Affinity account
 
 
 ### Data Source Form
@@ -37,7 +37,7 @@ On the API screen, select Affinity from the list of API forms.
   ![List of APIs][image-3]{ width="100%" }
 </figure>
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Affinity API form.
+The following form will appear. Instructions are below on how to find the information required for each field on the Affinity API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -60,15 +60,15 @@ Enter any name that will help you recognize this data source within your query w
 The API key is generated within your account's settings page. Head over to the [Affinity docs](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-API-Key){target=_blank} to learn how to generate your API Key. Once created, copy the key and enter it in the Affinity form.
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form or [Contact Us](../../getting-help.md) for assistance.
 
-| Endpoint       | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
-|----------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| `lists`        |                          |           |                                                                 | Returns a collection of all the lists visible to you                                                                |
-| `list`         | list_id                  | person_id |                                                                 | Gets the details for a specific list given the existing list id                                                     |
-| `list_entry`   | list_id<br>list_entry_id |           |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
-| `fields`       |                          |           | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
-| `field_values` |                          |           | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| Endpoint         | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
+|------------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| `lists`          |                          |           |                                                                 | Returns a collection of all the lists visible to you                                                                |
+| `list`           | list_id                  | person_id |                                                                 | Gets the details for a specific list given the existing list id                                                     |
+| `list_entry`     | list_id<br>list_entry_id |           |                                                                 | Find the best selection of profiles associated with a particular set of attributes for a person or related persons. |
+| `fields`         |                          |           | list_id<br>value_type<br>with_modified_names                    | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
+| `field_values`   |                          |           | person_id<br>organization_id<br>opportunity_id<br>list_entry_id | Find all the profiles for any number of persons that satisfy some search criteria.                                  |
 
 
 ### Nav Tree
