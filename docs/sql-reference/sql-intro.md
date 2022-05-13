@@ -36,7 +36,6 @@ Start off by downloading the following files then
     [Dummy Customers-2.xlsx](/img/Dummy Customers-2.xlsx)
 
 
-
 ### **Querying Data**
 
 `SELECT`
@@ -88,6 +87,7 @@ ORDER BY last_name
 ### **Filtering Data**
 
 `SELECT DISTINCT`
+
 This clause filters out duplicate from the selected column or whole dataset and returns only unique records.
 
 ```sql
@@ -99,10 +99,11 @@ FROM demo_project_data.`/Dummy-Customers-1.xlsx`
 ![Result of SELECT DISTINCT statement](../img/../img/sql-reference/SELECT_DISTINCT_example.png)
 
 `WHERE`
+
 This clause filters columns to extract only records that fulfill the specified condition.
 
 ```sql
--- Only select the customers from the Kare company.
+-- Only select the customers from the Kare company
 SELECT first_name,last_name, company_name
 FROM demo_project_data.`/Dummy-Customers-1.xlsx`
 WHERE company_name = 'Kare'
@@ -215,8 +216,8 @@ There are different types of joins in SQL:
 
 `AS`
 
-This clause allows you to give a temporary name to a table or column through aliases. In the following table join
-examples, we will demonstrate the following reasons why the `AS` clause comes in handy:
+This clause allows you to give a temporary name to a table or column through aliases. In the table join
+examples below, we will demonstrate the following reasons why the `AS` clause comes in handy:
 
 - Write clear column names for readability
 - If you don't want to rewrite full column names every time you reference a column, you can rename columns to an acronym
