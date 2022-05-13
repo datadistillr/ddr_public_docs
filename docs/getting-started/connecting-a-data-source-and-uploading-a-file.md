@@ -6,6 +6,12 @@ description: Describes how to connect data sources to your project and upload a 
 
 The next step in using DataDistillr is to connect data to your project. This tutorial is only a brief overview of DataDistillr's data connection capabilities. For complete documentation see the section on [_Connecting Data Sources to DataDistillr_](../connecting-data/README.md)&#x20;
 
+In this tutorial we will be using the following files as an example.
+
+!!! attachment "Dummy Data"
+[Dummy Customers-1.xlsx](/img/Dummy Customers-1.xlsx)  
+[Dummy Customers-2.xlsx](/img/Dummy Customers-2.xlsx)
+
 ### __Creating a File Upload Data Source__
 
 After creating the project you will be taken to the _Data Sources_ screen in your new project. Click on the green _Add Data Source_ button as shown in the image below.&#x20;
@@ -34,9 +40,6 @@ If you added a file by accident, use the _X_ to the right of the file name to de
   ![File Upload screen](<../img/Screen Shot 2021-11-15 at 10.13.12 PM.png>){justify-content="center"}
 </figure>
 
-!!! attachment "Dummy Data"
-    [Dummy Customers-1.xlsx](/img/Dummy Customers-1.xlsx)  
-    [Dummy Customers-2.xlsx](/img/Dummy Customers-2.xlsx)
 
 
 Congrats! You are now ready to start querying your data!
