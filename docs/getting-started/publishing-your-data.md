@@ -1,47 +1,59 @@
-# 📰 Publishing Your Data
+---
+description: How to publish data and manage APIs in DataDistillr.
+---
 
-In this final installment of the quick start tutorial, you will learn how to take any dataset you've created, and publish it so that you can access it programmatically. &#x20;
+# 📰 Publish Your Data
+
+In this final installment of the quick start tutorial, you will learn how to take any dataset you've created,
+and publish it so that you can access it programmatically.
 
 !!! info "Why Publish Data?"
-    
 
-    DataDistillr is a great tool for exploring data, but sometimes there will be situations in which DataDistillr cannot do everything you need, such as machine learning. In this case, we have made it easy for you to do your data exploration in DataDistillr, then publish your dataset and easily move it into a Pandas, PySpark or R dataframe for machine learning.
+    DataDistillr is a great tool for data exploration, but sometimes there are cases where you'll need outside tools.
+    By publishing your dataset, you can easily move it into a Pandas, PySpark or R dataframe for machine learning.
 
+### **Publishing Data**
 
-### __Publishing Data__
-
-After you've run a query, in the top bar, you will see a button labeled _Manage API Access._ Click on that button as shown below.
+After you've run a query, in the top bar, you can click the _Manage API Access_ button as shown below.
 
 ![Manage API Access Button](<../img/Screen Shot 2021-11-23 at 11.46.54 PM.png>)
 
-### __API Management Screen__
+### **Manage API Access**
 
-The API Management Screen is where you can control access to the various datasets you have created.
+The Manage API Access page is where you can control access to the various datasets you have created.
 
 !!! warning
-    When you publish a dataset, anyone with the access information can view the data. Exercise caution in exposing data, and make sure you protect the access tokens to prevent unauthorized access.
+    When you publish a dataset, anyone with the access information can view the data. Exercise caution,
+    and protect the access tokens to prevent unauthorized access.
 
 
-### __Create an API Access Client__
+#### **Create an API Access Client**
 
-Since this is your first project, you will have to create an API Access Client. Enter a name and enable the API app.&#x20;
+Since this is your first project, you will have to create an API Access Client. Enter a name and enable the API app.
 
 ![Create an API client](<../img/Screen Shot 2021-11-24 at 12.10.39 AM.png>)
 
-#### __Understanding API Permissions__
+#### **Manage API Permissions**
 
-When you create an API Access Client, all of your projects and queries within those projects will be visible. You can set permissions for each of these to allow or disallow API access to your datasets. Allow, and deny are self-explanatory. When the permission is set to _inherit_, the dataset will inherit the permission from the project.
+When you create an API Access Client, all of your projects and queries within those projects will be visible. You can
+set permissions for each of these to _allow_, _deny_, or _inherit_ API access to your datasets. _Inherit_ means the dataset
+will inherit the permission from the project.
 
 !!! info
-    Users will have to have an access token in order to access the data. Publishing a data set does not automatically make the data visible to the world.&#x20;
+    Users must have an access token to access the data. Publishing a dataset does not automatically make it accessible to the public.
 
-You can expand a project tab and see all the queries in a project. From there, you can set the access permissions for every dataset resulting from a query, as well as view API usage statistics.
+You can expand a project tab and see all the queries in a project. From there, you can set the access permissions for
+every dataset resulting from a query and view API usage statistics.
 
 ![API Access Management](<../img/Screen Shot 2021-11-23 at 11.52.23 PM.png>)
 
-### __Accessing Published Data__
+### **Access Published Data**
 
-Once you've published your data, you can access this data programmatically. To retrieve the access tokens, as well as code snippets, click on the <code>&lt;/&gt;</code> icon next to the permissions. DataDistillr will generate code snippets similar to the examples below, prepopulated with your API key and data set ids, so all you will have to do is copy and paste this code into your Python or R scripts.
+Once you've published your data, you can access this data programmatically. To retrieve the access tokens and code
+snippets, click on the <code>&lt;/&gt;</code> icon next to the permissions. DataDistillr will generate code snippets,
+pre-populated with your API key and data set ids. All you have to do is copy and paste this code into your Python or R scripts.
+
+For example:
 
 === "Python"
 
@@ -82,5 +94,4 @@ Once you've published your data, you can access this data programmatically. To r
     data <- data.frame(rbindlist(content$results))
     colnames(data) <- content$summary$columnNames
     ```
-
 That's it!

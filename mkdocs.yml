@@ -43,6 +43,7 @@ nav:
       - UPC Database: connecting-data/connecting-to-apis-and-external-data/upc-database-api.md
       - Veriphone: connecting-data/connecting-to-apis-and-external-data/veriphone-api.md
       - VirusTotal: connecting-data/connecting-to-apis-and-external-data/virustotal-api.md
+    - Python SDK: connecting-data/python-sdk.md
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
   - SQL Reference Guide: sql-reference/sql-intro.md
   - Getting Help: getting-help.md
