@@ -5,18 +5,20 @@ description: How to Connect DataDistillr to the Harmonic.ai API
 # Connecting to Harmonic
 
 ## First Steps with Harmonic
+
 Set up an account with [Harmonic](https://console.harmonic.ai/signup){target=_blank}.
 
 ???+ cost "Cost"
 
     [Request access](https://www.harmonic.ai/request-access){target=_blank} to find out more about Harmonic. 
 
-
 ???+ rlimit "Rate Limits"
 
-    No rate limits on currently supported endpoints. [Log into](https://console.harmonic.ai/login){target=_blank} your existing Harmonic account for further details.
+    No rate limits on currently supported endpoints. [Log into](https://console.harmonic.ai/login){target=_blank} your
+    existing Harmonic account for further details.
 
 ## How to Connect DataDistillr to Harmonic
+
 To set up a data source connection for Harmonic, you will need to have:
 
 - A unique [name](#name) for your data source connection to be used in queries.
@@ -24,7 +26,8 @@ To set up a data source connection for Harmonic, you will need to have:
 
 ### Data Source Form
 
-To locate the Harmonic form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+To locate the Harmonic form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices][image-5]
 
@@ -32,7 +35,8 @@ On the API screen, select Harmonic from list of API forms as shown in the image 
 
 ![Select Harmonic.ai API from available choices][image-6]
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Harmonic API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each
+field on the Harmonic API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -51,16 +55,14 @@ Enter any name that will help you recognize this data source from within your qu
 
 [Log into](https://console.harmonic.ai/login){target=_blank} your Harmonic account to retrieve your API Key.
 
-
-
 ## Endpoints
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to
+connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint     | Required Params | Optional  Params | Description                              |
 |--------------|-----------------|------------------|------------------------------------------|
 | `/companies` | website_domain  |                  | Returns the list of all Synthetic tests. |
-
 
 ### Nav Tree
 
@@ -72,7 +74,8 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Harmonic.ai data source was called `myharmonicapi` and I want to query an endpoint. The endpoint goes after the Harmonic data source name:
+For the following examples, suppose that my Harmonic.ai data source was called `myharmonicapi` and I want to query an
+endpoint. The endpoint goes after the Harmonic data source name:
 
 !!! example "FROM Clause"
 
@@ -85,13 +88,15 @@ For the following examples, suppose that my Harmonic.ai data source was called `
 Get the list of all Synthetic tests. You will need the Website Domain to query the `/comapnies` endpoint.
 
 ```sql
-SELECT * FROM `myharmonicapi`.`/companies`
-WHERE website_domain = '<WEBSITE_DOMAIN>'
-LIMIT 1000
+SELECT *
+FROM `myharmonicapi`.`/companies`
+WHERE website_domain = '<WEBSITE_DOMAIN>' LIMIT 1000
 ```
 
-
 [image-1]: ../../img/api/harmonic/harmonic-form.png
+
 [image-3]: ../../img/api/harmonic/harmonic-endpoints.png
+
 [image-5]: ../../img/api/add-api.png
+
 [image-6]: ../../img/api/harmonic/harmonic-select.png

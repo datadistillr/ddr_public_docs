@@ -98,7 +98,6 @@ LIMIT 1000
 ```
 
 
-
 [image-1]: ../../img/api/donorsearch/donorsearch-form.png
 [image-2]: ../../img/api/donorsearch/donorsearch-endpoints.png
 [image-7]: ../../img/api/select-api-form.png

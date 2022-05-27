@@ -5,25 +5,27 @@ description: How to Connect DataDistillr to the Fiscal Data API
 # Connecting to Fiscal Data
 
 ## First Steps with Fiscal Data
+
 No account is necessary for this API. Here is the website [https://fiscaldata.treasury.gov/][link-0]{target="_blank"}
 
 ???+ Cost
 
     This API is free.
 
-
 ???+ rlimit "Rate Limits"
 
     The API does not have any information about rate limits.
 
-
 ## How to Connect DataDistillr to Fiscal Data
+
 To set up a data source connect for Fiscal Data, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
 
 ### Data Source Form
-To locate the Fiscal Data form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+
+To locate the Fiscal Data form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.
 
 
 <figure markdown>
@@ -40,7 +42,8 @@ On the API screen, select Fiscal Data from the list of API forms.
 
 
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each on the Fiscal Data API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each on
+the Fiscal Data API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -49,6 +52,7 @@ Once you have filled out all the fields, press the green 'Save' button, and your
 </figure>
 
 ### Name
+
 Enter any name that will help you recognize this data source within your query window.
 
 !!! info "Acceptable Characters Include"
@@ -56,11 +60,13 @@ Enter any name that will help you recognize this data source within your query w
     - lowercase alphanumeric characters
     - underscores
 
-
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-There are a total of 80 endpoints. Many datasets are associated with only one data table, and thus, one API endpoint. There are some datasets comprised of more than one data table, and therefore have more than one endpoint.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to
+connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+
+There are a total of 80 endpoints. Many datasets are associated with only one data table, and thus, one API endpoint.
+There are some datasets comprised of more than one data table, and therefore have more than one endpoint.
 
 Note that every API URL begins with the base URL:
 
@@ -68,7 +74,7 @@ Note that every API URL begins with the base URL:
 https://api.fiscaldata.treasury.gov/services/api/fiscal_service
 ```
 
-Thus, the full API request URL would be the Base URL + Endpoint. 
+Thus, the full API request URL would be the Base URL + Endpoint.
 
 !!! example "Full API request example"
 
@@ -77,7 +83,10 @@ Thus, the full API request URL would be the Base URL + Endpoint.
     ```
 
 ### Parameters
-Parameters can be included in an API request by modifying the URL. This will specify the criteria to determine which records will be returned, as well as the ordering and format of the data returned. More information about each parameter can be found below.
+
+Parameters can be included in an API request by modifying the URL. This will specify the criteria to determine which
+records will be returned, as well as the ordering and format of the data returned. More information about each parameter
+can be found below.
 
 Available parameters include (every endpoint has these as optional parameters):
 
@@ -88,8 +97,6 @@ Available parameters include (every endpoint has these as optional parameters):
 - Pagination
     - page[size]
     - page[number]
-
-
 
 The table below lists the available endpoints by dataset and data table.
 
@@ -176,18 +183,22 @@ The table below lists the available endpoints by dataset and data table.
 | `/v2/accounting/od/gold_reserve`                      | U.S. Treasury-Owned Gold                                                        | [U.S. Treasury-Owned Gold][link-30]{target="_blank"}                                                   |
 | `/v2/accounting/od/utf_qtr_yields`                    | Unemployment Trust Fund: Quarterly Yields                                       | [Unemployment Trust Fund: Quarterly Yields][link-31]{target="_blank"}                                  |
 
-
 ### Nav Tree
-The endpoints above will display as follows in the nav tree once your API has successfully connected. Note: the endpoints displayed in the previous picture are only the first nine endpoints.
+
+The endpoints above will display as follows in the nav tree once your API has successfully connected. Note: the
+endpoints displayed in the previous picture are only the first nine endpoints.
 
 <figure markdown>
   ![Fiscal Data Endpoints][image-5]{ width="100%" }
 </figure>
 
 ## Sample Queries
-The following queries are intended to help you get started, and make life simpler querying within your API. These are just 3 out of the 80 endpoints available.
 
-For the following examples, suppose that my Fiscal Data API data source was called `myfiscaldataapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Fiscal Data data source name:
+The following queries are intended to help you get started, and make life simpler querying within your API. These are
+just 3 out of the 80 endpoints available.
+
+For the following examples, suppose that my Fiscal Data API data source was called `myfiscaldataapi` and I want to query
+an endpoint. In the `FROM` clause, the endpoint goes after the Fiscal Data data source name:
 
 !!! example "FROM Clause"
 
@@ -196,79 +207,116 @@ For the following examples, suppose that my Fiscal Data API data source was call
     ```
 
 ### Treasury Reporting Rates of Exchange
+
 From the Treasury Reporting Rates of Exchange dataset, we have selected the following options:
 
-- only return specific fields (country_currency_desc, exchange_rate, record_date), 
-- only return data on the Canadian Dollar and Mexican Peso, and 
+- only return specific fields (country_currency_desc, exchange_rate, record_date),
+- only return data on the Canadian Dollar and Mexican Peso, and
 - only return data that falls between January 1, 2020, and the present.
 
 ```sql
-SELECT * 
+SELECT *
 FROM `myfiscaldataapi`.`Treasury Reporting Rates of Exchange`
-WHERE `fields`='country_currency_desc, exchange_rate, record_date' 
-AND `filter`='country_currency_desc:in:(Canada-Dollar,Mexico-Peso),record_date:gte:2020-01-01'
-LIMIT 100
+WHERE `fields` = 'country_currency_desc, exchange_rate, record_date'
+  AND `filter` = 'country_currency_desc:in:(Canada-Dollar,Mexico-Peso),record_date:gte:2020-01-01' LIMIT 100
 ```
 
 ### Debt to Penny
+
 In this example we are performing nested sorting, first by year then by month on the Debt to Penny dataset.
 
 ```sql
-SELECT * 
-FROM `myfiscaldataapi`.`Debt to the Penny` 
-WHERE `fields`='record_calendar_year,record_calendar_month'
-AND `sort`='-record_calendar_year,-record_calendar_month'
-LIMIT 1000
+SELECT *
+FROM `myfiscaldataapi`.`Debt to the Penny`
+WHERE `fields` = 'record_calendar_year,record_calendar_month'
+  AND `sort` = '-record_calendar_year,-record_calendar_month' LIMIT 1000
 ```
 
 ### State Programs
+
 From the Treasury Offset Program dataset, return data with 50 records per page, and return the 10th page of data.
 
 ```sql
-SELECT * 
+SELECT *
 FROM `myfiscaldataapi`.`Treasury Offset Program`
-WHERE `page[number]`='10'
-AND `page[size]`='50'
-LIMIT 1000
+WHERE `page[number]` = '10'
+  AND `page[size]` = '50' LIMIT 1000
 ```
 
 [image-0]: ../../img/api/data-source-wizard-api-light.png "Data Source Wizard"
+
 [image-1]: ../../img/api/fiscaldata/choose-form-fiscaldata-light.png "API Data Source selection"
+
 [image-2]: ../../img/api/fiscaldata/choose-form-fiscaldata-dark.png "API Data Source selection"
+
 [image-3]: ../../img/api/fiscaldata/fiscaldata-form-light.png "Fiscal Data form"
+
 [image-4]: ../../img/api/fiscaldata/fiscaldata-form-dark.png "Fiscal Data form"
+
 [image-5]: ../../img/api/fiscaldata/fiscaldata-nav-tree-light.png "Fiscal Data endpoints in query page nav tree sidebar"
+
 [image-6]: ../../img/api/fiscaldata/fiscaldata-nav-tree-dark.png "Fiscal Data endoitns in query page nav tree sidebar"
 
-[link-0]: https://fiscaldata.treasury.gov/ "Fiscal Data home page" 
-[link-1]: https://fiscaldata.treasury.gov/datasets/delinquent-debt-referral-compliance/120-day-delinquent-debt-referral-compliance-report "120 Day Delinquent Debt Referral Compliance Report" 
+[link-0]: https://fiscaldata.treasury.gov/ "Fiscal Data home page"
+
+[link-1]: https://fiscaldata.treasury.gov/datasets/delinquent-debt-referral-compliance/120-day-delinquent-debt-referral-compliance-report "120 Day Delinquent Debt Referral Compliance Report"
+
 [link-2]: https://fiscaldata.treasury.gov/datasets/redemption-tables/redemption-tables "Accrual Savings Bonds Redemption Tables"
+
 [link-3]: https://fiscaldata.treasury.gov/datasets/ssa-title-xii-advance-activities/advances-to-state-unemployment-funds-social-security-act-title-xii "Asvances to State Unemployment Funds"
+
 [link-4]: https://fiscaldata.treasury.gov/datasets/average-interest-rates-treasury-securities/average-interest-rates-on-u-s-treasury-securities "Average Interest Rates on U.S. Treasury Securities"
+
 [link-5]: https://fiscaldata.treasury.gov/datasets/daily-treasury-statement/operating-cash-balance "Daily Treasury Statement"
+
 [link-6]: https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny "Debt to the Penny"
+
 [link-7]: https://fiscaldata.treasury.gov/datasets/fbp-interest-on-uninvested-funds/federal-borrowings-program-interest-on-uninvested-funds "Federal Borrowings Program: Interest on Uninvested Funds"
+
 [link-8]: https://fiscaldata.treasury.gov/datasets/fip-interest-cost-by-fund/federal-investments-program-interest-cost-by-fund "Federal Investments Program: Interest Cost by Fund"
+
 [link-9]: https://fiscaldata.treasury.gov/datasets/u-s-government-financial-report/statements-of-net-cost "Financial Report of the U.S. Government"
+
 [link-10]: https://fiscaldata.treasury.gov/datasets/gift-contributions-reduce-debt-held-by-public/gift-contributions-to-reduce-the-public-debt "Gift Contributions to Reduce the Public Debt"
+
 [link-11]: https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/historical-debt-outstanding "Historical Debt Outstanding"
+
 [link-12]: https://fiscaldata.treasury.gov/datasets/qtcb-historical-interest-rates/historical-qualified-tax-credit-bond-interest-rates "Historical Qualified Tax Credit Bond Interest Rates"
+
 [link-13]: https://fiscaldata.treasury.gov/datasets/interest-expense-debt-outstanding/interest-expense-on-the-public-debt-outstanding "Interest Expense on the Public Debt Outstanding"
+
 [link-14]: https://fiscaldata.treasury.gov/datasets/judgment-fund-report-to-congress/judgment-fund-annual-report-to-congress "Judgment Fund: Annual Report to Congress"
+
 [link-15]: https://fiscaldata.treasury.gov/datasets/slgs-securities-program-stats/monthly-state-and-local-government-series-slgs-securities-program "Monthly State and Local Government Series Securities Program"
+
 [link-16]: https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/summary-of-receipts-outlays-and-the-deficit-surplus-of-the-u-s-government "Monthly Treasury Statement"
+
 [link-17]: https://fiscaldata.treasury.gov/datasets/record-setting-auction-data/record-setting-auction "Record-Setting Treasury Securities Auction Data"
+
 [link-18]: https://fiscaldata.treasury.gov/datasets/savings-bonds-securities/savings-bonds-securities "Savings Bonds Securities Solds"
+
 [link-19]: https://fiscaldata.treasury.gov/datasets/savings-bond-value-files/savings-bonds-value-files "Savings Bonds Value Files"
+
 [link-20]: https://fiscaldata.treasury.gov/datasets/schedules-federal-debt/schedules-of-federal-debt-by-month "Schedules of Federal Debt"
+
 [link-21]: https://fiscaldata.treasury.gov/datasets/schedules-federal-debt-daily/daily-activity "Schedules of Federal Deby by Day"
+
 [link-22]: https://fiscaldata.treasury.gov/datasets/securities-issued-in-treasurydirect/sales "Securities Issued In Treasury Direct"
+
 [link-23]: https://fiscaldata.treasury.gov/datasets/slgs-securities/state-and-local-government-series-securities-non-marketable "State and Local Government Series Securities (Non-Marketable)"
+
 [link-24]: https://fiscaldata.treasury.gov/datasets/treasury-offset-program/federal-collections "Treasury Offset Program"
+
 [link-25]: https://fiscaldata.treasury.gov/datasets/treasury-report-on-receivables/treasury-report-on-receivables-full-data "Treasury Report on Receivables (TROR)"
+
 [link-26]: https://fiscaldata.treasury.gov/datasets/treasury-reporting-rates-exchange/treasury-reporting-rates-of-exchange "Treasury Reporting Rates of Exchange"
+
 [link-27]: https://fiscaldata.treasury.gov/datasets/revenue-collections-management/u-s-government-revenue-collections "U.S. Government Revenue Collections"
+
 [link-28]: https://fiscaldata.treasury.gov/datasets/monthly-statement-public-debt/summary-of-treasury-securities-outstanding "U.S. Treasury Monthly Statement of the Public Debt (MSPD)"
+
 [link-29]: https://fiscaldata.treasury.gov/datasets/savings-bonds-issues-redemptions-maturities-by-series/paper-savings-bonds-issues-redemptions-and-maturities-by-series "U.S. Treasury Savings Bonds: Issues, Redemptions, and Maturities by Series"
+
 [link-30]: https://fiscaldata.treasury.gov/datasets/status-report-government-gold-reserve/u-s-treasury-owned-gold "U.S. Treasury-Owned Gold"
+
 [link-31]: https://fiscaldata.treasury.gov/datasets/unemployment-trust-fund-yields/unemployment-trust-fund-quarterly-yields "Unemployment Trust Fund: Quarterly Yields"

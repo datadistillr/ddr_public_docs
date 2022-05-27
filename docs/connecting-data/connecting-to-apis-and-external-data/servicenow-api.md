@@ -14,10 +14,12 @@ Set up an account with [ServiceNow](https://www.servicenow.com/){target="_blank"
 
 ???+ rlimit "Rate Limits"
 
-    To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests processed per hour. 
-    You can create rules to limit requests for specific users, users with specific roles, or all users. You can learn more about that in the [ServiceNow](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
+    To prevent excessive inbound REST API requests, set rules that limit the number of inbound REST API requests
+    processed per hour. You can create rules to limit requests for specific users, users with specific roles, or all
+    users. Learn more on the [ServiceNow documentation](https://docs.servicenow.com/bundle/sandiego-application-development/page/integrate/inbound-rest/concept/inbound-REST-API-rate-limiting.html){target=_blank} docs.
 
 ## How to Connect DataDistillr to ServiceNow
+
 To set up a data source connection for ServiceNow, you will need to have:
 
 - A [unique name](#name) for your data source connection to be used in queries
@@ -26,7 +28,9 @@ To set up a data source connection for ServiceNow, you will need to have:
 - The [Password](#instance-id-username-and-password) associated with your ServiceNow Instance
 
 ### Data Source Form
-To locate the ServiceNow form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+
+To locate the ServiceNow form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.
 
 <figure markdown>
   ![Data Source Wizard][image-7]{ width="100%" }
@@ -42,7 +46,8 @@ On the API screen, select ServiceNow from the list of API forms.
 
 
 
-The following form will appear. Instructions are below on how to find the information required to fill each field on the ServiceNow API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on the
+ServiceNow API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -50,8 +55,8 @@ Once you have filled out all the fields, press the green 'Save' button, and your
   ![ServiceNow Form][image-1]{ width="100%" }
 </figure>
 
-
 ### Name
+
 Enter any name that will help you recognize this data source from within your query window.
 
 !!! info "Acceptable Characters Include"
@@ -74,15 +79,17 @@ Enter any name that will help you recognize this data source from within your qu
     
     ![Find Instance creds][image-11]
 
-=== "3. Instance Credentials" 
+=== "3. Instance Credentials"
 
-    Here you will find your credentials necessary (Instance name, Username and Password) to connect your ServiceNow instance to DataDistillr.
+    Here you will find your credentials necessary (Instance name, Username and Password) to connect your ServiceNow
+    instance to DataDistillr.
 
     ![Instance creds][image-12]
 
-
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
+
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to
+connect to an endpoint not listed below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint   | URL Params  | Description                                      |
 |------------|-------------|--------------------------------------------------|
@@ -92,20 +99,20 @@ The table below shows a list of endpoints available to connect within the DataDi
 | `consumer` |             | Returns set of (CSM) consumer records.           |
 | `contact`  |             | Returns set of (CSM) consumer contacts.          |
 
-
-
 ### Nav Tree
+
 The endpoints above will display as follows in the nav tree once your API has successfully connected.
 
 <figure markdown>
   ![ServiceNow Endpoints][image-2]{ width="100%" }
 </figure>
 
-
 ## Sample Queries
+
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my ServiceNow API data source was called `myservicenowapi` and I want to query an endpoint. The endpoint goes after the JIRA data source name:
+For the following examples, suppose that my ServiceNow API data source was called `myservicenowapi` and I want to query
+an endpoint. The endpoint goes after the JIRA data source name:
 
 !!! example "FROM Clause"
 
@@ -127,6 +134,7 @@ LIMIT 100
 ### Get Case
 
 Retrieves a specified set of Customer Service Management (CSM) cases.
+
 ```sql title="Get Case endpoint"
 SELECT *
 FROM `myServiceNowapi`.`case`
@@ -136,6 +144,7 @@ LIMIT 100
 ### Get User
 
 Retrieves a specified set of Customer Service Management (CSM) accounts
+
 ```sql title="Get User endpoint"
 SELECT *
 FROM `myServiceNowapi`.`user`
@@ -145,6 +154,7 @@ LIMIT 100
 ### Get Consumer
 
 Retrieves a specified set of Customer Service Management (CSM) accounts
+
 ```sql title="Get Consumer endpoint"
 SELECT *
 FROM `myServiceNowapi`.`consumer`
@@ -162,9 +172,15 @@ LIMIT 100
 ```
 
 [image-1]: ../../img/api/servicenow/servicenow-form.png
+
 [image-2]: ../../img/api/servicenow/servicenow-navtree.png
+
 [image-7]: ../../img/api/add-api.png
+
 [image-8]: ../../img/api/servicenow/select-servicenow-api.jpeg
+
 [image-10]: ../../img/api/servicenow/servicenow-homepage.png
+
 [image-11]: ../../img/api/servicenow/servicenow-get-creds.png
+
 [image-12]: ../../img/api/servicenow/servicenow-creds.png

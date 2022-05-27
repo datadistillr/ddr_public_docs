@@ -14,7 +14,7 @@ all the pieces that go into creating value from data. Within a project you can:
 - Generate data visualizations
 - Chat with your team in real-time
 
-... and much more.
+... and more!
 
 To create your first project, click on the _Create Project_ button at the top right of the screen.
 

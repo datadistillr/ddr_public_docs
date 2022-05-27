@@ -12,18 +12,22 @@ Set up an account with [ClickUp](https://app.clickup.com/signup){target=_blank}.
 
 ???+ rlimit "Rate Limits"
 
-    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are available in ClickUp's [documentation](https://clickup.com/api){target=_blank}.
+    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are
+    available in ClickUp's [documentation](https://clickup.com/api){target=_blank}.
 
 ## How to Connect DataDistillr to ClickUp
 
 To set up a data source connection for ClickUp, you will need to have:
 
-- A [unique name](/connecting-data/connecting-to-apis-and-external-data/clickup-api/#name) for your data source connection to be used in queries.
-- An [API key](/connecting-data/connecting-to-apis-and-external-data/clickup-api/#api-key) generated through your ClickUp account
+- A [unique name](/connecting-data/connecting-to-apis-and-external-data/clickup-api/#name) for your data source
+connection to be used in queries.
+- An [API key](/connecting-data/connecting-to-apis-and-external-data/clickup-api/#api-key) generated through your
+ClickUp account
 
 ### Data Source Form
 
-To locate the ClickUp form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+To locate the ClickUp form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.
 
 <figure markdown>
 ![Select API from the available choices][image-1]{width=600}
@@ -35,7 +39,8 @@ On the API screen, select ClickUp from the list of API types as shown in the ima
 ![Select ClickUp API from available choices][image-2]{width=500}
 </figure>
 
-The following form will appear. Instructions are below on how to find the information required to fill each field on the ClickUp API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on
+the ClickUp API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -52,7 +57,8 @@ Enter any name that will help you recognize this data source from within your qu
     - underscores
 
 ### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the ClickUp form under 'API key'.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created,
+copy the key and enter it in the ClickUp form under 'API key'.
 
 === "1. Home page"
     In the ClickUp app, click your profile icon in the bottom left corner of the page.
@@ -65,23 +71,25 @@ An API key is generated within your account page. The following steps will navig
     ![Choose 'Apps'.][image-5]
 
 === "3. API Token"
-    In the API Token section, click **Copy** (or **Regenerate** to get a new API token and then **Copy**) to save the API token to your clipboard.
+    In the API Token section, click **Copy** (or **Regenerate** to get a new API token and then **Copy**) to save the
+    API token to your clipboard.
 
     ![Click 'Copy' to save API token to clipboard.][image-6]
 
 ## Endpoints
 Please see [ClickUp's API Reference](https://clickup.com/api){target=_blank} for more on ClickUp's endpoints.
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to
+connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
-| Endpoint | Required | Optional | Description |
-|  ----------- | ----------- | ----------- | ----------- |
-| `/list/{list_id}/task` | | archived<br>page<br>order_by<br>reverse<br>subtasks<br>statuses<br>include_closed<br>assignees<br>due_date_gt<br>due_date_lt<br>due_created_gt<br>due_created_lt<br>due_updated_gt<br>due_updated_lt<br>custom_fields | Returns all of the tasks associated with the given list. |
-| `/team/{team_id}/space` | | archived | Returns all of the spaces associated with the given team. |
-| `/space/{space_id}/folder` | | archived | Returns all of the folders within the given space. |
-| `/folder/{folder_id}/list` | | archived | Returns all of the lists within the given folder. |
-| `/space/{space_id}/list` | | archived | Returns all of the lists within the given space. |
-| `/space/{space_id}/tag` | | archived | Returns all of the tags associated with the given space. |
+| Endpoint                   | Required   | Optional                                                                                                                                                                                                               | Description                                               |
+|----------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| `/list/{list_id}/task`     |            | archived <br>page<br>order_by<br>reverse<br>subtasks<br>statuses<br>include_closed<br>assignees<br>due_date_gt<br>due_date_lt<br>due_created_gt<br>due_created_lt<br>due_updated_gt<br>due_updated_lt<br>custom_fields | Returns all of the tasks associated with the given list.  |
+| `/team/{team_id}/space`    |            | archived                                                                                                                                                                                                               | Returns all of the spaces associated with the given team. |
+| `/space/{space_id}/folder` |            | archived                                                                                                                                                                                                               | Returns all of the folders within the given space.        |
+| `/folder/{folder_id}/list` |            | archived                                                                                                                                                                                                               | Returns all of the lists within the given folder.         |
+| `/space/{space_id}/list`   |            | archived                                                                                                                                                                                                               | Returns all of the lists within the given space.          |
+| `/space/{space_id}/tag`    |            | archived                                                                                                                                                                                                               | Returns all of the tags associated with the given space.  |
 
 ### Nav Tree
 
@@ -95,7 +103,8 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my ClickUp API data source was called `clickupapi2000`, and I want to query an endpoint. The endpoint goes after the ClickUp data source name:
+For the following examples, suppose that my ClickUp API data source was called `clickupapi2000`, and I want to query an
+endpoint. The endpoint goes after the ClickUp data source name:
 
 !!! example "FROM Clause"
 

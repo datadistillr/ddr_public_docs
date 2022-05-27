@@ -14,7 +14,9 @@ Set up an account with [Airtable](https://www.airtable.com/){target=_blank}.
 
 ???+ rlimit "Rate Limits"  
 
-    Airtable limits the number of requests each API key can make per second. Current rate limits are available in Airtable's [documentation](https://support.airtable.com/hc/en-us/articles/203313985-Public-REST-API#:~:text=Is%20there%20a%20rate%20limit,requests%20per%20second%2C%20per%20base.){target=_blank}.
+    Airtable limits the number of requests each API key can make per second. Current rate limits are available in
+    Airtable's 
+    [documentation](https://support.airtable.com/hc/en-us/articles/203313985-Public-REST-API#:~:text=Is%20there%20a%20rate%20limit,requests%20per%20second%2C%20per%20base.){target=_blank}.
 
 ## How to Connect DataDistillr to Airtable
 To set up a data source connection for Airtable, you will need to have:
@@ -27,7 +29,8 @@ To set up a data source connection for Airtable, you will need to have:
 
 ### Data Source Form
 
-To locate the Airtable form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+To locate the Airtable form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices][image-5]
 
@@ -35,7 +38,8 @@ On the API screen, select Airtable from list of API forms as shown in the image 
 
 ![Select Airtable API from available choices][image-6]
 
-The following form will appear. Instructions are below on how to find the information required to fill each field on the Airtable API form.
+The following form will appear. Instructions are below on how to find the information required to fill each field on 
+the Airtable API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -54,13 +58,15 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Find your base"
 
-    After [logging in](https://airtable.com/){target=_blank}, you can access your Base ID by navigating to 'Bases' along the top panel and clicking on your workspace as shown in the image below.
+    After [logging in](https://airtable.com/){target=_blank}, you can access your Base ID by navigating to 'Bases'
+    along the top panel and clicking on your workspace as shown in the image below.
     
     ![Finding your base][image-2]
     
 === "2. Find your Base ID (Project Path)"
 
-    You can find the Base ID (Called Project Path in our form) in the Highlighted section of the Base URL shown below, and enter this into the Airtable Data Source Form as the 'Project Path'.
+    You can find the Base ID (Called Project Path in our form) in the Highlighted section of the Base URL shown below, 
+    and enter this into the Airtable Data Source Form as the 'Project Path'.
     
     `https://airtable.com/`<mark>YOUR_BASE_ID</mark>`/tblPI1Mclv7pqrqDq/viwCAMdqRwJpFOlxl?blocks=hide`
 
@@ -68,18 +74,21 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Generate and copy API Key"
 
-    To generate your API Key, navigate to your [Account overview](https://airtable.com/account){target=_blank} where you will have the option to generate an API Key as highlighted below. Copy this API Key and enter into the Airtable Form.
+    To generate your API Key, navigate to your [Account overview](https://airtable.com/account){target=_blank} where
+    you will have the option to generate an API Key as highlighted below. Copy this API Key and enter into the Airtable
+    Form.
 
     ![Generate API Key][image-4]
 
 
 ## Endpoints
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to 
+connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
-| Endpoint | URL Params | Optional                                                                 | Description                     |
-|----------| ---------- |--------------------------------------------------------------------------|---------------------------------|
-| `tables`   | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and its cells |
+| Endpoint  | URL Params | Optional                                                                 | Description                      |
+|-----------| ---------- |--------------------------------------------------------------------------|----------------------------------|
+| `tables`  | TableName  | priority<br>sources<br>tags<br>unaggregated<br>exclude_aggregate<br>page | Returns the table and its cells  |
 
 
 ### Nav Tree
@@ -92,7 +101,8 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Airtable API data source was called `myairtableapi`, and I want to query an endpoint. The endpoint goes after the ClickUp data source name:
+For the following examples, suppose that my Airtable API data source was called `myairtableapi`, and I want to query 
+an endpoint. The endpoint goes after the ClickUp data source name:
 
 !!! example "FROM Clause"
 
@@ -102,7 +112,8 @@ For the following examples, suppose that my Airtable API data source was called 
 
 ### Get Tables Endpoint
 
-Suppose you have a table called `Form Responses 1`. In the table there are several columns including `ID` and `fields`. In order to access the values in the fields column you have to query their keys specifically as so.
+Suppose you have a table called `Form Responses 1`. In the table there are several columns including `ID` and `fields`.
+In order to access the values in the fields column you have to query their keys specifically as so.
 
 
 ```sql
