@@ -14,4 +14,5 @@ checked.
 
 ![Linking a Data Source to Your Project](<../img/connecting-data/connect-checkbox.png>)
 
-That's it!  You are now ready to begin exploring and querying your data!
+That's it! You are now ready to begin exploring and querying your data. See the
+[SQL Reference Guide](../sql-reference/sql-intro.md) to learn about writing queries.

@@ -21,7 +21,8 @@ the section on [Uploading Directory Data Sources](../connecting-data/uploading-f
 
 ![Select Upload Directory](<../img/getting-started/upload-directory.png>)
 
-Next, create your file upload data source by completing the form below. Optionally, you can pick an icon and icon color for this data source.
+Next, create your file upload data source by completing the form below. Optionally, you can pick an icon and icon color
+for this data source.
 
 ![Add File Upload Data Source](<../img/getting-started/add-file.png>)
 
@@ -36,7 +37,7 @@ In this tutorial we will be using the following files as an example.
 [Dummy Customers-1.xlsx](/img/Dummy Customers-1.xlsx)  
 [Dummy Customers-2.xlsx](/img/Dummy Customers-2.xlsx)
 
-Click _next_ to see an area to upload your files. Drag in your files or _Click to Browse_ and select your local files. 
+Click _next_ to see an area to upload your files. Drag in your files or _Click to Browse_ and select your local files.
 
 ![File Upload screen](<../img/getting-started/file-upload.png>)
 
@@ -44,7 +45,5 @@ If you added a file by accident, use the _X_ to the right of the file name to re
 When your files are ready, press _Upload_ and you should see something like the screen below:
 
 ![File Upload screen](<../img/getting-started/after-upload.png>)
-
-
 
 Congratulations! Now you are ready to run a data query.

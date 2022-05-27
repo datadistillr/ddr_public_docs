@@ -46,7 +46,7 @@ from DataDistillr for use in machine learning.
 ## Getting your Endpoint URL and Authorization Token
 See the [documentation](https://docs.datadistillr.com/ddr/) for a complete explanation on how to obtain the URL and Auth Token.
 
-## Usage
+## Example Usage
 Using the SDK in Python code is quite simple.  See the Examples below:
 
 Importing SDK
@@ -60,7 +60,6 @@ url = <Your URL From DataDistillr>
 auth_token = <AUTH TOKEN>
 dataframe = ddr.Datadistillr.get_dataframe(url, auth_token)
 ```
-
 
 Logging in to a DataDistillr Account
 ```python
