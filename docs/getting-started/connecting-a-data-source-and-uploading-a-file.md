@@ -8,6 +8,7 @@ The next step in using DataDistillr is to connect data to your project. This tut
 DataDistillr's data connection capabilities. For complete documentation see the section on
 [Connecting Data Sources to DataDistillr](../connecting-data/README.md)
 
+
 ### **Create an Upload Data Source**
 
 After creating the project you will be taken to the _Data Sources_ screen in your new project. Click on the green
