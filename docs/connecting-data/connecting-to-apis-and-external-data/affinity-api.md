@@ -70,6 +70,7 @@ connect to any endpoints not listed in the table below, please use the
 [Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form or [Contact Us](../../getting-help.md) for
 assistance.
 
+
 | Endpoint         | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
 |------------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | `lists`          |                          |           |                                                                 | Returns a collection of all the lists visible to you                                                                |
