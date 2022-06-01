@@ -174,3 +174,20 @@ LIMIT 10
 [image-5]: ../../img/api/clickup/clickup-api-key-apps.png
 [image-6]: ../../img/api/clickup/clickup-api-key-copy.png
 [image-7]: ../../img/api/clickup/clickup-nav-tree.png
+
+### Acessing Nested ClickUP API Data
+
+1)specify the task_id for clickup task
+2) flatten the array with nested objects to retrieve individual objects
+3) access the individual object with where  name  = 'What are some example companies?' 
+4)  Specify what column is wanted for click up it is value 
+5) use split udf on value  delimiting on commas ( , ). This step also converts the data to an array
+6) Lastly flatten the split data to generate individual rows
+
+Final query should look like this:
+
+SELECT Flatten(split(t1.`cf`.`value`, ',')) as Desired Companies M
+  (SELECT flatten(`custom_fields`) as cf
+      FROM `mr_clickup`.`/task/:task_id`
+      where task_id = 'Enter Task ID Here') as t1
+where t1.cf.`name` = 'What are some example companies?'
