@@ -186,8 +186,10 @@ LIMIT 10
 
 Final query should look like this:
 
+``` 
 SELECT Flatten(split(t1.`cf`.`value`, ',')) as Desired Companies M
   (SELECT flatten(`custom_fields`) as cf
       FROM `mr_clickup`.`/task/:task_id`
       where task_id = 'Enter Task ID Here') as t1
 where t1.cf.`name` = 'What are some example companies?'
+```
