@@ -177,12 +177,12 @@ LIMIT 10
 
 ### Acessing Nested ClickUP API Data
 
-1)specify the task_id for clickup task
-2) flatten the array with nested objects to retrieve individual objects
-3) access the individual object with where  name  = 'What are some example companies?' 
-4)  Specify what column is wanted for click up it is value 
-5) use split udf on value  delimiting on commas ( , ). This step also converts the data to an array
-6) Lastly flatten the split data to generate individual rows
+1. Specify the task_id for clickup task
+2. Flatten the array with nested objects to retrieve individual objects
+3. Access the individual object with where  name  = 'What are some example companies?' 
+4. Specify what column is wanted for click up it is value 
+5. Use split udf on value  delimiting on commas ( , ). This step also converts the data to an array
+6. Lastly flatten the split data to generate individual rows
 
 Final query should look like this:
 
