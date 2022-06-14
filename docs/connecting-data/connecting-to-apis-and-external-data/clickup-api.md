@@ -231,11 +231,13 @@ name  = '<Enter name of Custom Field Here>'
 Final query should look like this:
 
 ```sql
-SELECT Flatten(split(t1.`cf`.`value`, ',')) as Desired Companies M
-  (SELECT flatten(`custom_fields`) as cf
-      FROM `clickupapi2000`.`Get Task Data from Tasks`
-      WHERE task_id = '<Enter Task ID Here>') as t1
-WHERE t1.cf.`name` = '<Enter name of Custom Field Here>'
+SELECT `Name`, Flatten(split(t1.`cf`.`value`, ',')) as `Desired Companies`, t1.`status`
+FROM
+  (SELECT `name` as `Name`, flatten(`custom_fields`) as cf, `status`['status'] as `status`
+      FROM `mr_clickup`.`/task/:task_id`
+      where task_id = 'Enter Task Id Here') as t1
+where t1.cf.`name` = 'What are some example companies?'
+ORDER BY `Desired Companies` DESC
 ```
 
 [image-1]: ../../img/api/data-source-wizard-api-light.png
