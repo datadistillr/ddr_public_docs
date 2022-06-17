@@ -200,44 +200,56 @@ LIMIT 10
 
 This query can be used to access nested ClickUp data found in custom fields within ClickUp tasks.
 
-Query Steps/Requirements:
+This query is a bit more complex, so let's walk through it step by step:
 
 1. Identify and Specify the task_id for ClickUp task of interest.
 ```sql
 task_id = '<Enter Task ID Here>'
 ```   
 
-2. Flatten the array with nested objects `('custom_fields')` to retrieve individual objects.
+2. Flatten the array with nested objects `('custom_fields')` to retrieve individual objects. Add any other parameters of interest (we've added the 'name' and 'status' columns from ClickUp).
 ```sql
-SELECT flatten(`custom_fields`) as cf
+SELECT `name` as `Name`, flatten(`custom_fields`) as cf, `status`['status'] as `status`
 ```   
 
 3. For this query, we will use the same data source referenced above and the `Get Task Data from Tasks` Endpoint, so piecing it all together so far we have:
 ```sql
-SELECT flatten(`custom_fields`) as cf
+SELECT `name` as `Name`, flatten(`custom_fields`) as cf, `status`['status'] as `status`
 FROM `clickupapi2000`.`Get Task Data from Tasks`
 WHERE task_id = '<Enter Task ID Here>'
 ```
 
-4. In the WHERE clause, we want to access the individual object. In this case, `name` refers to the name given to the custom field.
+4. We will alias this piece as `t1`.
 ```sql
-name  = '<Enter name of Custom Field Here>'
+(SELECT `name` as `Name`, flatten(`custom_fields`) as cf, `status`['status'] as `status`
+FROM `clickupapi2000`.`Get Task Data from Tasks`
+WHERE task_id = '<Enter Task ID Here>') as t1
+```   
+
+5. In the WHERE clause, we want to access the individual object. In this case, `name` refers to the name given to the custom field.
+```sql
+cf.`name`  = '<Enter name of Custom Field Here>'
 ```
 
-5. Specify what column we want to return data from. For ClickUp, we need to use `value`.
-6. Use split UDF on `value`, delimiting on commas `,`. This step also converts the data to an array.
-7. Lastly flatten the split data to generate individual rows
-
-Final query should look like this:
-
+6. Identify what column we want to return data from. For ClickUp, we need to use `value`.
+7. Use the split function on `value`, delimiting on commas `,` to separate the values in the nested field and create an array. 
 ```sql
-SELECT `Name`, Flatten(split(t1.`cf`.`value`, ',')) as `Desired Companies`, t1.`status`
+split(t1.`cf`.`value`, ',')
+```
+
+8. Lastly flatten the split data to generate individual rows. In our example we have aliased this as `Desired Data`.
+```sql
+flatten(split(t1.`cf`.`value`, ',')) as `Desired Data`
+```
+
+9. Putting everything together this gives us the final query shown below.
+```sql
+SELECT `Name`, flatten(split(t1.`cf`.`value`, ',')) as `Desired Data`, t1.`status`
 FROM
   (SELECT `name` as `Name`, flatten(`custom_fields`) as cf, `status`['status'] as `status`
-      FROM `mr_clickup`.`/task/:task_id`
-      where task_id = 'Enter Task Id Here') as t1
-where t1.cf.`name` = 'What are some example companies?'
-ORDER BY `Desired Companies` DESC
+      FROM `clickupapi2000`.`Get Task Data from Tasks`
+      WHERE task_id = 'Enter Task Id Here') as t1
+WHERE t1.cf.`name` = '<Enter name of Custom Field Here>'
 ```
 
 [image-1]: ../../img/api/data-source-wizard-api-light.png
