@@ -24,6 +24,9 @@
     * [Passing Parameters](connecting-data/connecting-to-apis-and-external-data/passing-parameters.md)
 * [Linking Data to Your Project](connecting-data/linking-data-to-your-project.md)
 
+## Publishing Data
+* [Publishing to Tableau](publishing-data/tableau.md)
+
 ***
 
 * [❓ Getting Help](getting-help.md)
