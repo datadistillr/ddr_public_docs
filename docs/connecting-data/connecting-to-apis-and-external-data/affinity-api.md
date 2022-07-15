@@ -15,7 +15,8 @@ description: How to Connect DataDistillr to the Affinity API
 
 ???+ rlimit "Rate Limits"
 
-    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are available in Affinity's [documentation](https://api-docs.affinity.co/#rate-limits){target=_blank}.
+    Your account plan tier will limit the number of requests each API key can make per month. Current rate limits are 
+    available in [Affinity's documentation](https://api-docs.affinity.co/#rate-limits){target=_blank}.
 
 ## How to Connect DataDistillr to Affinity
 To set up a data source connect for Affinity, you will need to have:
@@ -25,7 +26,8 @@ To set up a data source connect for Affinity, you will need to have:
 
 
 ### Data Source Form
-To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.
+To locate the Affinity form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.
 
 <figure markdown>
   ![Data Source Wizard][image-9]{ width="100%" }
@@ -37,7 +39,8 @@ On the API screen, select Affinity from the list of API forms.
   ![List of APIs][image-3]{ width="100%" }
 </figure>
 
-The following form will appear. Instructions are below on how to find the information required for each field on the Affinity API form.
+The following form will appear. Instructions are below on how to find the information required for each field on the
+Affinity API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -57,10 +60,16 @@ Enter any name that will help you recognize this data source within your query w
 
 
 ### API Key
-The API key is generated within your account's settings page. Head over to the [Affinity docs](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-API-Key){target=_blank} to learn how to generate your API Key. Once created, copy the key and enter it in the Affinity form.
+The API key is generated within your account's settings page. Head over to the
+[Affinity docs](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-API-Key){target=_blank}
+to learn how to generate your API Key. Once created, copy the key and enter it in the Affinity form.
 
 ## Endpoints
-The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form or [Contact Us](../../getting-help.md) for assistance.
+The table below shows a list of endpoints available to connect within the DataDistillr application. If you need to
+connect to any endpoints not listed in the table below, please use the
+[Custom API](../../connecting-to-apis-and-external-data/custom-apis) Form or [Contact Us](../../getting-help.md) for
+assistance.
+
 
 | Endpoint         | URL Parameters           | Required  | Optional                                                        | Description                                                                                                         |
 |------------------|--------------------------|-----------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -82,7 +91,8 @@ The endpoints above will display as follows in the nav tree once your API has su
 ## Sample Queries
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Affinity API data source was called `myaffinityapi` and I want to query an endpoint. In the `FROM` clause, the endpoint goes after the Affinity data source name:
+For the following examples, suppose that my Affinity API data source was called `myaffinityapi` and I want to query an
+endpoint. In the `FROM` clause, the endpoint goes after the Affinity data source name:
 
 !!! example "FROM Clause"
 
@@ -113,7 +123,8 @@ LIMIT 100
 
 ### List Entry
 
-Each list comprises a number of entries. Each list entry has a creator, a list that it belongs to, and the underlying entity it represents depending on the type of the list (people, organizations or opportunities).
+Each list comprises a number of entries. Each list entry has a creator, a list that it belongs to, and the underlying
+entity it represents depending on the type of the list (people, organizations or opportunities).
 
 ```sql
 SELECT *
@@ -125,7 +136,10 @@ LIMIT 100
 
 ### Fields
 
-Returns all fields based on the parameters provided. Pass the `list_id` to only fetch fields that are specific to that list. Otherwise, all global and list-specific fields will be returned. Pass the `value_type` to fetch fields of specific value types. Otherwise, all fields of any type will be returned. Pass the `with_modified_names` flag to return the fields such that the names have the list name prepended to them.
+Returns all fields based on the parameters provided. Pass the `list_id` to only fetch fields that are specific to that
+list. Otherwise, all global and list-specific fields will be returned. Pass the `value_type` to fetch fields of specific
+value types. Otherwise, all fields of any type will be returned. Pass the `with_modified_names` flag to return the 
+fields such that the names have the list name prepended to them.
 
 ```sql
 SELECT *
@@ -137,7 +151,8 @@ LIMIT 100
 
 ### Field Values
 
-Field values are displayed in Affinity as the data in the cells of an Affinity spreadsheet. This endpoint returns all field values attached to a person, organization, opportunity, or list_entry.
+Field values are displayed in Affinity as the data in the cells of an Affinity spreadsheet. This endpoint returns all
+field values attached to a person, organization, opportunity, or list_entry.
 
 ```sql
 SELECT *

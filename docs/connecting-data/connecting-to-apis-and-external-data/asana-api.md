@@ -33,7 +33,8 @@ On the API screen, select Asana from the list of API types as shown in the image
 ![Select Asana from API types] [image-4]{width=600}
 </figure>
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Asana API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each
+field on the Asana API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -50,7 +51,8 @@ Enter any name that will help you recognize this data source from within your qu
     - underscores
 
 ### API Key
-An API key is generated within your account page. The following steps will navigate you to its location. Once created, copy the key and enter it in the Asana form under 'API key'.
+An API key is generated within your account page. The following steps will navigate you to its location. Once created,
+copy the key and enter it in the Asana form under 'API key'.
 
 === "1. Home page"
     In the Asana app, click your profile icon in the top right corner of the page. Choose **My Settings**.
@@ -73,7 +75,8 @@ An API key is generated within your account page. The following steps will navig
     ![Click on 'Create new token'.] [image-8]
 
 === "5. New Token"
-    Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions. Click **Create token**.
+    Enter a descriptive name for your token and check the checkbox to agree to the API terms and conditions.
+    Click **Create token**.
 
     ![Enter name and check the checkbox. Click 'Create token'.] [image-9]
 
@@ -85,16 +88,17 @@ An API key is generated within your account page. The following steps will navig
 ## Endpoints
 Please see [Asana's API Reference](https://developers.asana.com/docs/asana){target=_blank} for more on Asana's endpoints.
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to 
+connect to any endpoints not listed in the table below, please use the [Custom APIs](https://docs.datadistillr.com/connecting-data/connecting-to-apis-and-external-data/custom-apis/) Form.
 
-| Endpoint | Required | Optional | Description |
-|  ----------- | ----------- | ----------- | ----------- |
-| `/tasks` | assignee<br>project<br>section<br>workspace<br> |  completed_since<br>modified_since<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the tasks which match the parameters provided. |
-| `/users` | | workspace<br>team<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the users that the current user has access to. |
-| `/workspaces` | | limit<br>offset<br>opt_pretty<br>opt_fields | Returns the workspaces associated with the current user. |
-| `/projects` | | workspace<br>team<br>archived<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the projects associated with the current user. (Asana recommends filtering by team to avoid timeouts for large domains). |
-| `/tags` | workspace | limit<br>offset<br>opt_pretty<br>opt_fields | Returns the tags for the given workspace. |
-| `/organizations/{workspace_gid}/teams` | | limit<br>offset<br>opt_pretty<br>opt_fields | Returns all of the teams in the organization connected to the current user. |
+| Endpoint                               | Required                                        | Optional                                                                         | Description                                                                                                                      |
+|----------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| `/tasks`                               | assignee<br>project<br>section<br>workspace<br> | completed_since<br>modified_since<br>limit<br>offset<br>opt_pretty<br>opt_fields | Returns the tasks which match the parameters provided.                                                                           |
+| `/users`                               |                                                 | workspace<br>team<br>limit<br>offset<br>opt_pretty<br>opt_fields                 | Returns the users that the current user has access to.                                                                           |
+| `/workspaces`                          |                                                 | limit<br>offset<br>opt_pretty<br>opt_fields                                      | Returns the workspaces associated with the current user.                                                                         |
+| `/projects`                            |                                                 | workspace<br>team<br>archived<br>limit<br>offset<br>opt_pretty<br>opt_fields     | Returns the projects associated with the current user. (Asana recommends filtering by team to avoid timeouts for large domains). |
+| `/tags`                                | workspace                                       | limit<br>offset<br>opt_pretty<br>opt_fields                                      | Returns the tags for the given workspace.                                                                                        |
+| `/organizations/{workspace_gid}/teams` |                                                 | limit<br>offset<br>opt_pretty<br>opt_fields                                      | Returns all of the teams in the organization connected to the current user.                                                      |
 
 
 ### Nav Tree
@@ -109,7 +113,8 @@ The endpoints above will display as follows in the nav tree once your API has su
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Asana API data source was called `asanaapi2000`, and I want to query an endpoint. The endpoint goes after the Asana data source name:
+For the following examples, suppose that my Asana API data source was called `asanaapi2000`, and I want to query an
+endpoint. The endpoint goes after the Asana data source name:
 
 !!! example "FROM Clause"
 

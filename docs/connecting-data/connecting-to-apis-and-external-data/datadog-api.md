@@ -14,7 +14,8 @@ Set up an account with [Datadog](https://www.datadoghq.com/){target=_blank}.
 
 ???+ rlimit "Rate Limits"
 
-    All of the API endpoints are [rate limited](https://docs.datadoghq.com/api/latest/rate-limits/){target=_blank}. Once you exceed a certain number of requests in a specific period, Datadog returns an error.
+    All of the API endpoints are [rate limited](https://docs.datadoghq.com/api/latest/rate-limits/){target=_blank}.
+    Once you exceed a certain number of requests in a specific period, Datadog returns an error.
 
 ## How to Connect DataDistillr to Datadog
 To set up a data source connection for Datadog, you will need to have:
@@ -27,7 +28,8 @@ To set up a data source connection for Datadog, you will need to have:
 
 ### Data Source Form
 
-To locate the Datadog form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the window to choose the data source type, select API as shown below.&#x20;
+To locate the Datadog form, follow the steps in [Connecting Your Data to DataDistillr](../../). When you get to the
+window to choose the data source type, select API as shown below.&#x20;
 
 ![Select API from the available choices][image-5]
 
@@ -35,7 +37,8 @@ On the API screen, select Datadog from list of API forms as shown in the image b
 
 ![Select Datadog API from available choices][image-6]
 
-The following form will appear. Instructions can be found below on how to find the information required to fill each field on the Datadog API form.
+The following form will appear. Instructions can be found below on how to find the information required to fill each
+field on the Datadog API form.
 
 Once you have filled out all the fields, press the green 'Save' button, and your API will be connected!
 
@@ -54,7 +57,8 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Sign In"
 
-    You can access your API Key at your [Datadog API Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Sign in.
+    You can access your API Key at your
+    [Datadog API Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Sign in.
     ![Sign in][image-8]
 
 === "2. Find your API Key"
@@ -71,19 +75,23 @@ Enter any name that will help you recognize this data source from within your qu
 
 === "1. Sign In"
 
-    You can access your Application Key at your [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}. Sign in.
+    You can access your Application Key at your
+    [Datadog Application Key Page](https://app.datadoghq.com/organization-settings/application-keys){target=_blank}.
+    Sign in.
     ![Sign in][image-8]
 
 === "2. Find your Application Key"
 
-    Hover your mouse over the Application Key and click the copy icon on the right hand side. Paste this Application Key into the form.
+    Hover over the Application Key and click the copy icon on the right hand side. Paste this Application Key
+    into the form.
     
     ![Copy Application Key][image-2]
 
 
 ## Endpoints
 
-The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
+The table below shows a list of endpoints available to connect to within the DataDistillr application. If you need to
+connect to any endpoints not listed in the table below, please use the [Custom API](custom-apis.md) Form.
 
 | Endpoint     | Required Params | Optional  Params             | Description                              |
 |--------------|-----------------|------------------------------|------------------------------------------|
@@ -102,7 +110,8 @@ The endpoint above will display as follows in the nav tree once your API has suc
 
 The following queries are intended to help you get started, and make life simpler querying within your API.
 
-For the following examples, suppose that my Datadog data source was called `mydatadog` and I want to query an endpoint. The endpoint goes after the Datadog data source name:
+For the following examples, suppose that my Datadog data source was called `mydatadog` and I want to query an endpoint.
+The endpoint goes after the Datadog data source name:
 
 !!! example "FROM Clause"
 
@@ -122,7 +131,8 @@ LIMIT 1000
 
 ### Get Metrics Endpoint
 
-Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read` authorization scope.
+Get the list of actively reporting metrics from a given time until now. This endpoint requires the `metrics_read`
+authorization scope.
 
 ```sql
 SELECT * FROM `mydatadog`.`metrics`
