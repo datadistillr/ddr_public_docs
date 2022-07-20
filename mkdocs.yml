@@ -45,6 +45,8 @@ nav:
       - VirusTotal: connecting-data/connecting-to-apis-and-external-data/virustotal-api.md
     - Python SDK: connecting-data/python-sdk.md
     - Linking Data To Your Project: connecting-data/linking-data-to-your-project.md
+  - Publishing Data:
+    - Publishing to Tableau: publishing-data/tableau.md
   - SQL Reference Guide:
     - SQL Introduction: sql-reference/sql-intro.md
     - Practice Basic SQL: sql-reference/sql-practice.md
