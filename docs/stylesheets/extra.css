@@ -75,3 +75,6 @@
   .md-footer {
       background-color: #1a202c; /* gray-900 */
   }
+.md-typeset h1, .md-typeset h2 {
+    font-weight: 600;
+}
