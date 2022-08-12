@@ -78,3 +78,8 @@
 .md-typeset h1, .md-typeset h2 {
     font-weight: 600;
 }
+
+
+:root, [data-md-color-scheme="default"] {
+    --md-default-fg-color: #718096; /* gray-600 */
+}
