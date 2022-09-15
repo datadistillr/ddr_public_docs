@@ -15,6 +15,7 @@ nav:
     - Uploading Files: connecting-data/uploading-files.md
     - Connecting Databases:
       - Connecting Databases: connecting-data/connecting-databases/README.md
+      - Connecting to Bit.io: connecting-data/connecting-databases/connecting-to-bit-dot-io.md
       - Connect To Splunk: connecting-data/connecting-databases/connecting-to-splunk.md
     - Connecting To Remote Storage: connecting-data/connecting-to-remote-storage.md
     - Connect To APIs And External Data:
