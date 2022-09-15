@@ -12,6 +12,7 @@ listed as a source that we support, please [email our support team](mailto:suppo
 
 DataDistillr currently supports:
 
+* [Bit.io](connecting-to-bit-dot-io.md) - Serverless Postgres
 * BitQuery
 * Elasticsearch
 * MySQL / MariaDB
