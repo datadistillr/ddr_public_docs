@@ -59,7 +59,7 @@ schema => 'inline=(`Last Name` VARCHAR, `First Name Address` VARCHAR,
 `field_1` VARCHAR, `Occupation Employer` VARCHAR, 
 `Date` VARCHAR, `field_2` DATE properties {`drill.format` = `M/d/yyyy`}, 
 `Amount` DOUBLE)')) 
-LIMIT 5
+LIMIT 10
 ```
 
 ### Encrypted Files
