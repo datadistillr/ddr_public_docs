@@ -31,6 +31,7 @@ The PDF reader reads tables from PDF files on each page.  If your PDF file has t
 PDF files have a considerable amount of metadata which can be useful for analysis.  Drill will extract the following fields from every PDF file.  Note that these fields are not projected in star queries and must be selected explicitly.  The document's creator populates these fields and some or all may be empty. With the exception of `_page_count` which is an `INT` and the two date fields, all the other fields are `VARCHAR` fields.
  
  The fields are:
+ 
  * `_page_count`
  * `_author`
  * `_title`
@@ -50,7 +51,8 @@ _keywords, _creator, _producer, _creation_date,
 _modification_date, _trapped 
 FROM dfs.`pdf/20.pdf`
 ```
-The query below demonstrates how to define a schema at query time:
+
+The query below demonstrates how to define a schema at query time.
 
 ```sql
 SELECT * FROM table(cp.`pdf/schools.pdf` (type => 'pdf', combinePages => true, 
