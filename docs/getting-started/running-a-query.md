@@ -36,9 +36,10 @@ FROM demo_project_data.`/Dummy-Customers-1.xlsx` LIMIT 1000
 
 This is a basic SQL query that displays all available fields in the dataset and limits the results to 1000 records.
 
-!!! info DataDistillr uses SQL to access and query data. While many tools use SQL, most have their own dialect of SQL.
-DataDistillr follows the ANSI standard, with additions to support data cleaning and dealing with complex data sets. Read
-more about SQL in the [SQL Reference Guide](../sql-reference/sql-intro.md).
+!!! info 
+    
+    DataDistillr uses SQL to access and query data. While many tools use SQL, most have their own dialect of SQL.
+    DataDistillr follows the ANSI standard, with additions to support data cleaning and dealing with complex data sets. Read more about SQL in the [SQL Reference Guide](../sql-reference/sql-intro.md).
 
 To Run this Query, you can press _Run_ or _Run Query_ as shown below. See the section: Additional Querying Options for
 more information on the difference between these two buttons.
@@ -57,9 +58,9 @@ function).
 
 ![Results View](<../img/getting-started/result-view.png>)
 
-!!! info Enriching your data is extremely useful in data analysis. DataDistillr has many functions like the one above
-that can enrich artifacts such as phone numbers, IP Addresses, bank routing numbers, MAC addresses, state, country
-codes, and much more. See the section: Enriching your Data for more!
+!!! info 
+    
+    Enriching your data is extremely useful in data analysis. DataDistillr has many functions like the one above that can enrich artifacts such as phone numbers, IP Addresses, bank routing numbers, MAC addresses, state, country codes, and much more. See the section: Enriching your Data for more!
 
 As you will see, working with data in DataDistillr is simpler than other analytics tools because it allows you to
 interact with different data types in exactly the same manner.
