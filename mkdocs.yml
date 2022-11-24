@@ -31,6 +31,7 @@ nav:
       - DonorSearch: connecting-data/connecting-to-apis-and-external-data/donorsearch-api.md
       - Fiscal Data: connecting-data/connecting-to-apis-and-external-data/fiscaldata-api.md
       - GitHub: connecting-data/connecting-to-apis-and-external-data/github-api.md
+      - GoogleSheets: connecting-data/connecting-to-apis-and-external-data/googlesheets.md
       - Harmonic: connecting-data/connecting-to-apis-and-external-data/harmonic-api.md
       - JIRA: connecting-data/connecting-to-apis-and-external-data/jira.md
       - Monday: connecting-data/connecting-to-apis-and-external-data/monday-api.md
