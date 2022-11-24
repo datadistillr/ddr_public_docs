@@ -38,6 +38,8 @@ While DataDistillr supports a wide range of various data sources, for simplicity
 * [File Systems and Cloud Storage](connecting-to-remote-storage.md)
 * [APIs and External Data Sources](connecting-to-apis-and-external-data/)
 
+There are some other data sources, such as [GoogleSheets](connecting-to-apis-and-external-data/googlesheets.md) which don't fit neatly into a category. 
+
 When you query the data, they will more or less all feel exactly the same, but the initial configuration differs slightly between data source types. &#x20;
 
 The specific instructions for connecting to data sources can be found in the links above. &#x20;
