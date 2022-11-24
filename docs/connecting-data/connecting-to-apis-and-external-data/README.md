@@ -58,6 +58,7 @@ DataDistillr currently supports:
 * [Crunchbase](crunchbase-api.md)
 * [Datadog](datadog-api.md)
 * [DonorSearch](donorsearch-api.md)
+* [GoogleSheets](googlesheets.md)
 * [Fiscal Data](fiscaldata-api.md)
 * [GitHub](github-api.md)
 * [Harmonic](harmonic-api.md)
